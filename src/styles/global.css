@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+:root{
+    --white: #FFF;
+    --black: rgba(32, 32, 32);
+    --gray-50: #F7F8FA;
+    --bronze: rgba(170, 131, 73, 0.5);
+    --orange: rgb(196, 116, 24);
+}
+
+
+
+body, input, textarea, button{
+    font: 500 1rem Arial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+button{
+    cursor: pointer;
+}
