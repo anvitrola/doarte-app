@@ -1,7 +1,8 @@
-import React from 'react'
 import styled from 'styled-components';
+
 import Banner from '../banner/Banner';
 import TextSection from '../textSection/TextSection';
+import CardCarousel from '../cardCarousel/CardCarousel';
 
 const Main = styled.main
 `
@@ -16,7 +17,7 @@ const Main = styled.main
     grid-template-areas: 
         "banner banner banner"
         "text text text"
-        "appeal appeal appeal"
+        "cards cards cards"
         "map map map";
     grid-gap: 5rem;
 `
@@ -26,6 +27,7 @@ function MainContent() {
         <Main>
             <Banner/>
             <TextSection/>
+            <CardCarousel/>
         </Main>
     )
 }

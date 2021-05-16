@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import InfoBar from '../infoBar/InfoBar';
-import MainText from '../mainText/MainText';
+import TextBox from '../textBox/TextBox';
 import HighlightButton from '../buttons/HighlightButton';
 
 const Container = styled.section
@@ -23,7 +23,7 @@ function Banner() {
     return (
         <Container>
             <InfoBar/>
-            <MainText 
+            <TextBox 
                 title={"Conectando doadores e causas"}
                 subtitle={"Encontre suporte financeiro de uma forma flexível e prática. Sem burocracias."}
                 main={true}

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-import MainText from '../mainText/MainText';
-import HighlightButton from '../buttons/HighlightButton';
+import TextBox from '../textBox/TextBox';
 import ProList from '../proList/ProList';
 
 const Container = styled.section
@@ -15,20 +14,16 @@ const Container = styled.section
     grid-template-areas: 
         "image text"
         "image list"
-        "image button";
+        "image list";
     grid-gap: 10px;
 `
 
 function TextSection() {
     return (
         <Container>
-            <MainText 
+            <TextBox 
                 title={"Por que o Doarte?"}
                 subtitle={"Fique por dentro de nossos benefícios exclusivos."}
-            />
-            <HighlightButton 
-                text={"Cadastre-se"}
-                primary={true}
             />
             <ProList/>
         </Container>
