@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import DefaultButton from '../buttons/DefaultButton';
 import Navbar from '../navbar/Navbar';
+import {Link} from 'react-router-dom'
 
 const HeaderContainer = styled.header
 `
     grid-area: header;
     padding: .3rem;
-    margin: 0 auto;
+    margin: 12px auto;
     width: 80%;
     display: flex;
     align-items: center;
@@ -23,6 +24,7 @@ const Buttons = styled.div
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin:2px;
 `
 
 function Header() {
@@ -31,8 +33,8 @@ function Header() {
             <Logo>Doarte</Logo>
             <Navbar/>
             <Buttons>
-                <DefaultButton text={"Cadastre-se"}/>
-                <DefaultButton text={"Entrar"} primary={true}/>
+               <Link to="/signUp"><DefaultButton text={"Cadastre-se"}/></Link> 
+                <Link to="/signIn"><DefaultButton text={"Entrar"} primary={true}/></Link>
             </Buttons>
         </HeaderContainer>
     )

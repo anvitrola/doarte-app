@@ -20,13 +20,26 @@ const Main = styled.main
         "map map map";
     grid-gap: 5rem;
 `
+const Container = styled.div
+`
+grid-template-rows: 1rem auto 50px;
+  	display: grid;
+  	grid-template-areas: 
+    	"header header"
+    	"main main"
+    	"footer footer";
+  	grid-gap: 10px;
+`
+
 
 function MainContent() {
     return (
+        <Container >
         <Main>
             <Banner/>
             <TextSection/>
         </Main>
+        </Container>
     )
 }
 
