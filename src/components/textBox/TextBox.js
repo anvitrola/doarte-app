@@ -7,7 +7,6 @@ const TextContainer = styled.div
     padding: .3rem;
     display: flex;
     justify-content: space-around;
-    height: 90%;
     flex-direction: column;
 
 `
@@ -15,6 +14,7 @@ const Title = styled.h1
 `
     color: var(--black);
     text-align: left;
+    margin-bottom: 1rem;
     font-size: ${props => props.main ? "3rem" : "2.3rem"};
 
 `
@@ -24,7 +24,7 @@ const Subtitle = styled.h3
     font-weight: 400;
 `
 
-function MainText({title, subtitle, main}) {
+function TextBox({title, subtitle, main}) {
     return (
         <TextContainer>
             <Title main={main}>{title}</Title>
@@ -33,4 +33,4 @@ function MainText({title, subtitle, main}) {
     )
 }
 
-export default MainText
+export default TextBox

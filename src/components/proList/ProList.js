@@ -17,10 +17,11 @@ const List = styled.ul
 const Item = styled.li
 `
     display: flex;
+    align-items: center;
 `
 const Text = styled.p
 `
-    color: var(--white);
+    color: var(--black);
     margin-left: 1rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -30,25 +31,25 @@ function ProList() {
     return (
         <List>
             <Item>
-                <IconContext.Provider value={{ color: "green", size: "1.7rem"}}>
+                <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
                 <Text>Ganhe 1000 moedas ao se cadastrar.</Text>
             </Item>
             <Item>
-                <IconContext.Provider value={{ color: "green", size: "1.7rem"}}>
+                <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
                 <Text>Cadastro simples. Sem burocracia.</Text>
             </Item>
             <Item>
-                <IconContext.Provider value={{ color: "green", size: "1.7rem"}}>
+                <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
                 <Text>Garantimos sua segurança.</Text>
             </Item>
             <Item>
-                <IconContext.Provider value={{ color: "green", size: "1.7rem"}}>
+                <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
                 <Text>Código aberto à comunidade.</Text>
