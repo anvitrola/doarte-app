@@ -7,6 +7,8 @@ import './styles/global.css';
 //Components
 import Header from './components/header/Header';
 import MainContent from './components/mainContent/MainContent';
+import SignIn from './components/signIn/SignIn'
+import SignUp from './components/signUp/SignUp';
 
 function App() {
   	return (
@@ -18,7 +20,12 @@ function App() {
 					<Route exact path="/">
               			<MainContent/>
             		</Route>
-
+					<Route path="/signIn">
+              			<SignIn/>
+            		</Route>
+					<Route path="/signUp">
+              			<SignUp/>
+            		</Route>
 				</Switch>
 
       		</AppBody>
