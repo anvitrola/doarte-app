@@ -22,4 +22,10 @@ export const FancyButton = styled.button
     background: ${props => props.primary  ? "var(--orange)" : "transparent"};
     padding: .3rem;
     color: ${props => props.primary ? "var(--white)" : "var(--black)"};
+
+    &:hover{
+        color: var(--orange);
+        background-color: var(--white);
+        border: 1px solid var(--orange);
+    }
 `;

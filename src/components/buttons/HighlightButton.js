@@ -1,8 +1,8 @@
 import {FancyButton} from './Buttons.styles';
 
-function HighlightButton({text, primary}) {
+function HighlightButton({text, primary, type}) {
     return (
-        <FancyButton primary={primary}>
+        <FancyButton primary={primary} type={type}>
             {text}
         </FancyButton>
     )
