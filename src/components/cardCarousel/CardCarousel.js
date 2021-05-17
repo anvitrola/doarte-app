@@ -1,19 +1,9 @@
+import {Cards} from "./CardCarousel.styles";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import styled from "styled-components";
+
 import TextBox from "../textBox/TextBox";
-
 import UserCard from "../userCard/UserCard";
-
-const Cards = styled.section`
-  grid-area: cards;
-  justify-self: center;
-  height: 80vh;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
 
 const responsive = {
   superLargeDesktop: {

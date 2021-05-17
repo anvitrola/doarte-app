@@ -1,30 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from "react-router-dom";
-
-
-const Nav = styled.nav
-`
-    width: 40%;
-`
-const List = styled.ul
-`
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-`
-const Item = styled.li
-`
-    color: var(--white);
-
-`
-const NavLink = styled(Link)
-`
-    text-decoration: none;
-    color: var(--black);
-`
+import {Nav, List, Item, NavLink} from './Navbar.styles';
 
 function Navbar() {
     return (
