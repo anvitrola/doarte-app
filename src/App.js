@@ -6,6 +6,7 @@ import './styles/global.css';
 
 //Components
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import MainContent from './components/mainContent/MainContent';
 import AdForm from './components/AdForm/AdForm';
 
@@ -29,6 +30,7 @@ function App() {
             		</Route>
 				</Switch>
 
+				<Footer/>
       		</AppBody>
     	</Router>
   	);
