@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
   grid-area: main;
   justify-self: center;
   align-self: center;

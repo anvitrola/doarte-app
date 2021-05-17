@@ -11,5 +11,5 @@ export const AppBody = styled.div
     	"header header"
     	"main main"
     	"footer footer";
-  	grid-gap: 10px;
+  	grid-gap: 1.5rem;
 `

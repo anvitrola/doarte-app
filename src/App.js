@@ -8,7 +8,7 @@ import './styles/global.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import MainContent from './components/mainContent/MainContent';
-import AdForm from './components/AdForm/AdForm';
+import AdForm from './components/adForm/AdForm';
 
 function App() {
   	return (
@@ -28,6 +28,10 @@ function App() {
 					<Route  path="/signUp">
               			<AdForm signUp={true}/>
             		</Route>
+
+					<Route path="/about">
+
+					</Route>
 				</Switch>
 
 				<Footer/>

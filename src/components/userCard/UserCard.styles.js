@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Card = styled.div
 `
-    width: 50%;
+    width: 90%;
     height: 60vh;
     margin: 0 auto;
     background: var(--white);

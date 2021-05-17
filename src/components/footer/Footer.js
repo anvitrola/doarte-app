@@ -5,14 +5,17 @@ function Footer() {
         <FooterContainer>
             <Lists>
                 <ul>
-                    <li>Quem somos</li>
                     <li>Criar vaquinha</li>
                     <li>Login</li>
                 </ul>
 
                 <ul>
-                    <li>Dúvidas Frequentes</li>
+                    <li>Quem somos</li>
                     <li>Taxas e prazos</li>
+                </ul>
+
+                <ul>
+                    <li>Dúvidas Frequentes</li>
                     <li>Fale conosco</li>
                 </ul>
             </Lists>
