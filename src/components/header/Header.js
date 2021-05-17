@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
 import DefaultButton from '../buttons/DefaultButton';
@@ -9,8 +11,12 @@ function Header() {
             <Logo>Doarte</Logo>
             <Navbar/>
             <Buttons>
-                <DefaultButton text={"Cadastre-se"}/>
-                <DefaultButton text={"Entrar"} primary={true}/>
+                <Link to="/signUp">
+                    <DefaultButton text={"Cadastre-se"}/>
+                </Link> 
+                <Link to="/signIn">
+                    <DefaultButton text={"Entrar"} primary={true}/>
+                </Link>
             </Buttons>
         </HeaderContainer>
     )
