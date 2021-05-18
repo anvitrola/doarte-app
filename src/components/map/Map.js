@@ -1,5 +1,5 @@
 import TextBox from '../textBox/TextBox';
-import Mapicture from "../../images/Map.png"
+import Mapicture from "../../images/Map.png";
 
 import {Container} from './Map.styles';
 

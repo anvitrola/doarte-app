@@ -16,5 +16,5 @@ export const Main = styled.main
         "exhi exhi exhi"
         "map map map"
         "cards cards cards";
-    grid-gap: 3rem;
+    grid-gap: 5rem;
 `;
