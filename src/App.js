@@ -6,9 +6,9 @@ import './styles/global.css';
 
 //Components
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import MainContent from './components/mainContent/MainContent';
-import SignUp from './components/signUp/SignUp';
-import SignIn from './components/SignIn/SignIn';
+import AdForm from './components/adForm/AdForm';
 
 function App() {
   	return (
@@ -22,14 +22,19 @@ function App() {
             		</Route>
 
 					<Route path="/signIn">
-              			<SignIn/>
+              			<AdForm/>
             		</Route>
 
 					<Route  path="/signUp">
-              			<SignUp/>
+              			<AdForm signUp={true}/>
             		</Route>
+
+					<Route path="/about">
+
+					</Route>
 				</Switch>
 
+				<Footer/>
       		</AppBody>
     	</Router>
   	);
