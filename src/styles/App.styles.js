@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const AppBody = styled.div
 `
 	background: rgb(219,155,109);
-	background: linear-gradient(0deg, rgba(219,155,109,1) 35%, rgba(255,255,255,1) 100%);
+	background: rgba(240, 212, 163, 1);
   	height: auto;
-	grid-template-rows: 5rem auto 6rem;
+	grid-template-rows: 5rem auto 463px;
   	display: grid;
   	grid-template-areas: 
     	"header header"

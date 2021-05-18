@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TextContainer = styled.section
 `   
-    width: 80%;
+    width: 85%;
     grid-area: text;
     justify-self: center;
     display: grid;
@@ -12,4 +12,10 @@ export const TextContainer = styled.section
         "image text"
         "image list";
     grid-gap: 10px;
+
+    img{
+        grid-area: image;
+        width: 350px;
+        align-self: center;
+    }
 `;

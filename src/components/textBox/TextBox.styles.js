@@ -12,14 +12,15 @@ export const TextContainer = styled.div
 
 export const Title = styled.h1
 `
-    color: var(--black);
     text-align: left;
     margin-bottom: 1rem;
-    font-size: ${props => props.main ? "3rem" : "2.3rem"};
+    font-size: ${props => props.main ? "50px" : "35px"};
+    font-weight: ${props => props.main ? "700" : "500"};
+    font-family: 'Montserrat', sans-serif;
 `;
 
 export const Subtitle = styled.h3
 `
-    color: var(--black);
+    color: var(--gray);
     font-weight: 400;
 `;

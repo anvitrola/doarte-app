@@ -19,8 +19,8 @@ export const Item = styled.li
 
 export const Text = styled.p
 `
-    color: var(--black);
+    color: var(--gray);
     margin-left: 1rem;
-    font-weight: 600;
+    font: 500 16px 'Rubik', sans-serif;
     text-transform: capitalize;
 `;

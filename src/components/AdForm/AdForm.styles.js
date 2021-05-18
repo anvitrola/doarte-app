@@ -13,6 +13,7 @@ export const Container = styled.section`
 export const Form = styled.form`
   width: 400px;
   height: 400px;
+  border-radius: 3px;
   background: var(--white);
   padding: 20px;
   display: flex;
@@ -40,6 +41,8 @@ export const Form = styled.form`
     margin-bottom: 15px;
     border: 1px solid var(--orange);
     padding: 10px;
+    border-radius: 10px;
+    font: 500 16px 'Rubik', sans-serif;
     width: 100%;
     text-align: center;
     cursor: pointer;

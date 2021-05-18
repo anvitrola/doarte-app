@@ -1,21 +1,21 @@
-import {Nav, List, Item, NavLink} from './Navbar.styles';
+import {Nav, List, NavLink} from './Navbar.styles';
 
 function Navbar() {
     return (
         <Nav>
             <List>
-                <Item>
+                <li>
                     <NavLink to="/">Sobre</NavLink>
-                </Item>
-                <Item>
+                </li>
+                <li>
                     <NavLink to="/">Aliados</NavLink>
-                </Item>
-                <Item>
+                </li>
+                <li>
                     <NavLink to="/">Projetos</NavLink>
-                </Item>
-                <Item>
+                </li>
+                <li>
                     <NavLink to="/">Dúvidas</NavLink>
-                </Item>
+                </li>
             </List>
         </Nav>
     )

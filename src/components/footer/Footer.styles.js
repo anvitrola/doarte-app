@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer
 `
     grid-area: footer;
-    background: var(--white);
+    background: var(--snow);
     display: flex;
     padding: 1em;
     align-items: space-between;

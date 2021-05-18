@@ -9,6 +9,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import MainContent from './components/mainContent/MainContent';
 import AdForm from './components/adForm/AdForm';
+import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 
 function App() {
   	return (
@@ -19,6 +20,7 @@ function App() {
 				<Switch>
 					<Route exact path="/">
               			<MainContent/>
+						<FloatingDiv/>
             		</Route>
 
 					<Route path="/signIn">

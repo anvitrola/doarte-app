@@ -15,14 +15,9 @@ export const List = styled.ul
     justify-content: space-evenly;
 `;
 
-export const Item = styled.li
-`
-    color: var(--white);
-
-`;
-
 export const NavLink = styled(Link)
 `
     text-decoration: none;
-    color: var(--black);
+    color: var(--gray);
+    font: 400 19px 'Rubik', sans-serif;
 `;
