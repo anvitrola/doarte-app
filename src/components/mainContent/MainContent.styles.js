@@ -13,7 +13,8 @@ export const Main = styled.main
     grid-template-areas: 
         "banner banner banner"
         "text text text"
-        "cards cards cards"
-        "map map map";
-    grid-gap: 5rem;
+        "exhi exhi exhi"
+        "map map map"
+        "cards cards cards";
+    grid-gap: 3rem;
 `;

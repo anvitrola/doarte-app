@@ -7,7 +7,7 @@ function TextSection() {
     return (
         <TextContainer>
             <TextBox 
-                title={"Por que o Doarte?"}
+                title={"Vantagens Doarte"}
                 subtitle={"Fique por dentro de nossos benefícios exclusivos."}
             />
             <ProList/>

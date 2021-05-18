@@ -10,25 +10,25 @@ function ProList() {
                 <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
-                <Text>Ganhe 1000 moedas ao se cadastrar.</Text>
+                <Text>Ganhe 1000 moedas ao se cadastrar</Text>
             </Item>
             <Item>
                 <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
-                <Text>Cadastro simples. Sem burocracia.</Text>
+                <Text>Cadastro simples. Sem burocracia</Text>
             </Item>
             <Item>
                 <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
-                <Text>Garantimos sua segurança.</Text>
+                <Text>Garantimos sua segurança</Text>
             </Item>
             <Item>
                 <IconContext.Provider value={{ color: "green", size: "1.5rem"}}>
                     <FaCheckCircle/>
                 </IconContext.Provider>
-                <Text>Código aberto à comunidade.</Text>
+                <Text>Código aberto à comunidade</Text>
             </Item>
         </List>
     )

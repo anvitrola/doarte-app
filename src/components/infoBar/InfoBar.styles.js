@@ -30,4 +30,5 @@ export const TextDiv = styled.div
 export const Text = styled.p
 `
     color: var(--black);
+    font: 400 20px 'Rubik', sans-serif;
 `;

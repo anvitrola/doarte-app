@@ -10,11 +10,11 @@ function Banner() {
             <InfoBar/>
             <TextBox 
                 title={"Conectando doadores e causas"}
-                subtitle={"Encontre suporte financeiro de uma forma flexível e prática. Sem burocracias."}
+                subtitle={"Encontre suporte financeiro de uma forma flexível e prática."}
                 main={true}
             />
             <HighlightButton 
-                text={"Cadastre-se"} 
+                text={"Quero doar"} 
                 position={"button"}
                 primary={true}
             />

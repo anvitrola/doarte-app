@@ -5,11 +5,14 @@
 } 
 
 :root{
-    --white: #FFF;
-    --black: rgba(32, 32, 32);
-    --gray-50: #F7F8FA;
-    --bronze: rgba(170, 131, 73, 0.5);
-    --orange: rgb(196, 116, 24);
+    --white: #FFFFFF;
+    --black: #0B132A;
+    --yellow: #FEA250;
+    --bronze: #F0D4A3;
+    --orange: #FF823F;
+    --blue: #084D6E;
+    --dark-blue: #0B132A;
+    --gray: #4F5665;
 }
 
 body, input, textarea, button{
@@ -18,6 +21,7 @@ body, input, textarea, button{
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    color: var(--black);
 }
 
 h1{

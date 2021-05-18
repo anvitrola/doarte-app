@@ -29,7 +29,7 @@ function CardCarousel() {
   return (
     <Cards>
       <TextBox 
-      title={"Quem usa?"} 
+      title={"Quem já usou o Doarte"} 
       subtitle={"Confira algumas das personalidades influentes que confiam em nossa plataforma"}/>
 
       <Carousel
@@ -51,14 +51,20 @@ function CardCarousel() {
       <UserCard
         name={"Rafael Guarilha"}
         comment={"Lorem ipsilum. Morte ao itaú etc etcétera"}
+        rate={4.5}
+        location={"Rio de Janeiro, Brasil"}
       />
       <UserCard
         name={"Daniel Ferreira"}
         comment={"Lorem ipsilum. Morte ao itaú etc etcétera"}
+        location={"Rio de Janeiro, Brasil"}
+        rate={4.8}
       />
       <UserCard
         name={"Júlia Coutinho"}
         comment={"Lorem ipsilum. Morte ao itaú etc etcétera"}
+        location={"Rio de Janeiro, Brasil"}
+        rate={4.8}
       />
       </Carousel>
 
