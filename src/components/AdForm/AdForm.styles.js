@@ -22,8 +22,8 @@ export const Form = styled.form`
   align-items: center;
 
   img {
-    width: 100px;
-    margin: 10px 0 40px;
+    width: 120px;
+    margin: 8px 0 40px;
   }
 
   button {

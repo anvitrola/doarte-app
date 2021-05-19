@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import HighlightButton from "../buttons/HighlightButton";
-
+import Logo from "../../images/logo-doarte.png";
 import { Form, Container } from "./AdForm.styles";
 
 function AdForm({signUp}) {
   return (
     <Container>
       <Form method="POST">
-        <img src={"Logo"} alt="DOARTE" />
+        <img src={Logo} alt="DOARTE" />
         
         {signUp && (<input type="text" placeholder="Nome completo"/>)}
 

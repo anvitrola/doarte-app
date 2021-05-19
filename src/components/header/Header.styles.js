@@ -15,6 +15,10 @@ export const HeaderContainer = styled.header
 export const Logo = styled.h1
 `
     color: var(--black);
+
+    img {
+        width: 125px;
+      }
 `; 
 
 export const Buttons = styled.div

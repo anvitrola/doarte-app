@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo from "../../images/logo-doarte.png";
 import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
 import DefaultButton from '../buttons/DefaultButton';
@@ -8,7 +8,7 @@ import Navbar from '../navbar/Navbar';
 function Header() {
     return (
         <HeaderContainer>
-            <Logo>Doarte</Logo>
+            <Logo><img src={logo}></img></Logo>
             <Navbar/>
             <Buttons>
                 <Link to="/signUp">
