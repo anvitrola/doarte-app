@@ -8,9 +8,9 @@ export const Div = styled.div
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
-    bottom: 644.5px;
+    position: absolute;
     left: 150px;
+    top: 2880px;
     border-radius: 10px;
 
     div{
