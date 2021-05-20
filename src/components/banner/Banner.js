@@ -11,7 +11,7 @@ function Banner() {
             <img src={Picture} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
             <InfoBar/>
             <TextBox 
-                title={"Conectando doadores e causas"}
+                title={"Conectando doadores á causas"}
                 subtitle={"Encontre suporte financeiro de uma forma flexível e prática."}
                 main={true}
             />
