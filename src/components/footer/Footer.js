@@ -1,7 +1,7 @@
 import { FooterContainer, Lists, Signature } from "./Footer.styles";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import Logo from "../../images/logo-doarte.png";
+import Logo from "../../images/circule-logo.png";
 function Footer() {
   return (
     <FooterContainer>
