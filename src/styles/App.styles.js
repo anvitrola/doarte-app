@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const AppBody = styled.div
 `
-	background: rgb(219,155,109);
-	background: rgba(240, 212, 163, 1);
+	background: linear-gradient(to bottom, var(--bronze) 20%, var(--snow) 50%, var(--bronze) 70%, var(--bronze) 100%);
   	height: auto;
 	grid-template-rows: 5rem auto auto 463px;
   	display: grid;
