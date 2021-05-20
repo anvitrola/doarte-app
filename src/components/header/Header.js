@@ -9,7 +9,9 @@ function Header() {
     return (
         <HeaderContainer>
             <Logo>
-                <img src={logo} alt={"Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."}/>
+                <Link to="/">
+                    <img src={logo} alt={"Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."}/>
+                </Link>
             </Logo>
             <Navbar/>
             <Buttons>

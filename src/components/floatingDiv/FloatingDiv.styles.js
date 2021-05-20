@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Div = styled.div
 `
-    width: 1000px;
-    height: 230px;
+    width: 62.5rem;
+    height: 14.375rem;
     background: var(--white);
     display: flex;
     justify-content: space-around;
@@ -14,6 +14,6 @@ export const Div = styled.div
     border-radius: 10px;
 
     div{
-        width: 30%;
+        width: 50%;
     }
 `

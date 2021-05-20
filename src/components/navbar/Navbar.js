@@ -5,16 +5,16 @@ function Navbar() {
         <Nav>
             <List>
                 <li>
-                    <NavLink to="/">Sobre</NavLink>
+                    <NavLink to="/about">Sobre</NavLink>
                 </li>
                 <li>
                     <NavLink to="/">Aliados</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Projetos</NavLink>
+                    <NavLink to="/fundraisings">Projetos</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Dúvidas</NavLink>
+                    <NavLink to="/doubts">Dúvidas</NavLink>
                 </li>
             </List>
         </Nav>

@@ -2,7 +2,7 @@ import {Card} from './Product.styles';
 import HighlightButton from '../buttons/HighlightButton';
 import Progress from '../progress/Progress';
 
-function ProductCard({title, desc, amount, current}) {
+function Product({title, desc, amount, current}) {
     return (
         <Card>
             <h3>{title}</h3>
@@ -13,4 +13,4 @@ function ProductCard({title, desc, amount, current}) {
     )
 }
 
-export default ProductCard
+export default Product

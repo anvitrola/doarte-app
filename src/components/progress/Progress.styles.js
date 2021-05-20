@@ -8,6 +8,12 @@ export const Bar = styled.div
     justify-content: space-around;
     height: 100px;
 
+    h6{
+        font-size: 14px;
+        color: var(--dark-blue);
+        font-family: 'Rubik', sans-serif;
+    }
+
     div{
         width: 100px;
     }
