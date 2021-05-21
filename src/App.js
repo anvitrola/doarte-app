@@ -11,6 +11,7 @@ import MainContent from './components/mainContent/MainContent';
 import AdForm from './components/adForm/AdForm';
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 import ProductDashboard from "./components/productDashboard/ProductDashboard";
+import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
   	return (
@@ -35,6 +36,11 @@ function App() {
 					<Route path="/fundraisings">
 						<ProductDashboard/>
 					</Route>
+
+					<Route path="/profile">
+						<UserProfile/>
+					</Route>
+
 				</Switch>
 
 				<Footer/>
