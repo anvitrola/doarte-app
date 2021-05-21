@@ -1,24 +1,24 @@
-import ProgressBar from 'react-customizable-progressbar';
+import ProgressBar from "@ramonak/react-progress-bar";
 import {Bar} from './Progress.styles';
 
-const progressBar = {
-    display: "flex",
-    justifyContent: "center",
-    textAlign: "center",
-    position: "absolute",
-    width: "100px",
-    height: "100%",
-    margin: "0 auto",
-    userSelect: "none"
-}
 
 function Progress({amount, current}) {
+
+    const percent = (current * 100)/amount;
+
     return (
         <Bar>
-            <h6>Meta: {amount}</h6>
-            <div>
-            </div>
-            <h6>Valor atual: {current}</h6>
+            <h6>META: R${amount}</h6>
+            <ProgressBar 
+                completed={percent}
+                bgColor={"var(--orange)"}
+                margin={"1rem 0"}
+                baseBgColor={"var(--bronze)"}
+                labelAlignment={"outside"}
+                labelColor={"var(--blue)"}
+                borderRadius={"10px"}
+            />
+            <h6>Valor arrecadado: R${current}</h6>
         </Bar>
     )
 }
