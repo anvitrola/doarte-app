@@ -10,7 +10,7 @@ export const Div = styled.div
     align-items: center;
     position: absolute;
     left: 150px;
-    top: 2880px;
+    top: 2820px;
     border-radius: 10px;
 
     div{
