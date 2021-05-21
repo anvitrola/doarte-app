@@ -47,8 +47,12 @@ export const Signature = styled.div`
     width: 125px;
     margin-bottom: 15px;
   }
+  
   p {
     width: 80%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
   }
 
   section{
@@ -57,5 +61,5 @@ export const Signature = styled.div`
     margin-top:15px;
     justify-content: space-between;
     color:var(--black);
-     }
+  }
 `;

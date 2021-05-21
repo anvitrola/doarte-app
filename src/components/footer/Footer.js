@@ -1,12 +1,12 @@
 import { FooterContainer, Lists, Signature } from "./Footer.styles";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import Logo from "../../images/logo-doarte.png";
+import Logo from "../../images/circule-logo.png";
 function Footer() {
   return (
     <FooterContainer>
       <Signature>
-        <img src={Logo}></img>
+        <img src={Logo} alt={"Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."}/>
         <p>
           A ideia central da Doarte é unir causas e projetos que precisam de um
           intermediário competente e integro{" "}
