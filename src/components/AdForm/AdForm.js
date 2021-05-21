@@ -1,31 +1,66 @@
 import { Link } from "react-router-dom";
 import HighlightButton from "../buttons/HighlightButton";
+import { FaMicrosoft, FaGoogle, FaGithub } from "react-icons/fa";
+import { SocialIcon } from 'react-social-icons';
+import FormButton from "../buttons/ConnectButton";
 import Logo from "../../images/logo-doarte.png";
 import { Form, Container } from "./AdForm.styles";
 
-function AdForm({signUp}) {
+function AdForm({ signUp }) {
   return (
     <Container>
       <Form method="POST">
         <img src={Logo} alt="DOARTE" />
-        
-        {signUp && (<input type="text" placeholder="Nome completo"/>)}
+        {signUp ? (
+          <h4>Fazer Cadastro na Doarte</h4>
+        ) : (
+          <h4>Fazer Login na Doarte</h4>
+        )}
 
-        <input type="email" placeholder="Endereço de e-mail" required />
-        <input type="password" placeholder="Senha" required />
+        {signUp && <label type="text">Nome</label>}
 
-        {signUp 
-          ? (<HighlightButton type={"submit"} text={"Cadastrar-me"}/>) 
-          : (<HighlightButton type={"submit"} text={"Entrar"}/>)
-        } 
+        {signUp && <input type="text" />}
+        <label htmlFor="id">E-mail</label>
+        <input type="email" required />
+        <label htmlFor="id">Senha</label>
+        <input type="password" required />
 
-        <hr/>
+        {signUp ? (
+          <HighlightButton type={"submit"} text={"Cadastrar"} />
+        ) : (
+          <HighlightButton type={"submit"} text={"Entrar"} />
+        )}
 
-        {signUp 
-          ? (<Link to="/signIn">Fazer login</Link>)
-          : (<Link to="/signUp">Criar conta grátis</Link>) 
-        } 
-        
+        <h3>OU</h3>
+        <div>
+          <FaGoogle />
+          <FormButton type={"submit"} text={"Conectar com o Google"} />
+        </div>
+
+        <div>
+          <FaMicrosoft />
+          <FormButton type={"submit"} text={"Conectar com a Microsoft"} />
+        </div>
+        <div>
+          <FaGithub />
+          <FormButton type={"submit"} text={"Conectar com Github"} />
+        </div>
+
+        <hr />
+
+        {signUp ? (
+          <Link to="/signIn">Já tem conta? Entrar</Link>
+        ) : (
+          <Link to="/signUp">Criar conta</Link>
+        )}
+
+        {signUp ? (
+          ""
+        ) : (
+          <Link type="text" placeholder="Nome completo">
+            Recuper senha
+          </Link>
+        )}
       </Form>
     </Container>
   );
