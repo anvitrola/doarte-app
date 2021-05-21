@@ -9,7 +9,7 @@ const responsive = {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 2,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -25,8 +25,8 @@ function CustomCarousel({children}) {
     return (
         <Carousel
         swipeable={false}
+        centerMode={true}
         draggable={false}
-        showDots={false}
         responsive={responsive}
         infinite={true}
         autoPlay={true}
