@@ -29,12 +29,13 @@ export const FancyButton = styled.button`
     border: 1px solid var(--orange);
   }
 `;
-  
- export const ConnectButton = styled.text`
-    cursor: pointer;
-    text-align: center;
-    border-radius:18px;
-    color:var(--black);
-    font-size: 15px;
-    padding: 0.5rem;
-  `;
+
+export const ConnectButton = styled.text`
+  cursor: pointer;
+  text-align: center;
+  border-radius: 18px;
+  color: var(--black);
+  font-size: 15px;
+  padding: 0.5rem;
+`;
+

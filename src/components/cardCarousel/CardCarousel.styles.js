@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const Cards = styled.section`
   grid-area: cards;
   justify-self: center;
-  height: 70vh;
-  width: 90%;
+  height: 85vh;
+  width: 920px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
-  div{
+  div {
     margin-bottom: 2rem;
+    border-radius: 8px;
+    text-align: left;
   }
 `;

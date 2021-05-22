@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import HighlightButton from "../buttons/HighlightButton";
-import { FaMicrosoft, FaGoogle, FaGithub } from "react-icons/fa";
-import { SocialIcon } from 'react-social-icons';
 import FormButton from "../buttons/ConnectButton";
 import Logo from "../../images/logo-doarte.png";
+import Github from "../../images/githubimg.png";
+import Microsoft from "../../images/microsoftimg.png";
+import Google from "../../images/googleimg.png";
+import {Checkbox} from "../buttons/Checkbox"
 import { Form, Container } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
@@ -25,6 +27,10 @@ function AdForm({ signUp }) {
         <label htmlFor="id">Senha</label>
         <input type="password" required />
 
+        {signUp && (
+          <Checkbox />
+        )}
+
         {signUp ? (
           <HighlightButton type={"submit"} text={"Cadastrar"} />
         ) : (
@@ -33,16 +39,16 @@ function AdForm({ signUp }) {
 
         <h3>OU</h3>
         <div>
-          <FaGoogle />
+          <img className="icon" src={Google} />
           <FormButton type={"submit"} text={"Conectar com o Google"} />
         </div>
 
         <div>
-          <FaMicrosoft />
+          <img className="icon" src={Microsoft} />
           <FormButton type={"submit"} text={"Conectar com a Microsoft"} />
         </div>
         <div>
-          <FaGithub />
+          <img className="icon" src={Github} />
           <FormButton type={"submit"} text={"Conectar com Github"} />
         </div>
 
