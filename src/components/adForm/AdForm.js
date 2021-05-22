@@ -1,23 +1,27 @@
 import {useState} from "react";
 import { Link } from "react-router-dom";
+//components + services
 import HighlightButton from "../buttons/HighlightButton";
+import { createUser, loginUser } from "../../services/userServices";
+//css and image
 import Logo from "../../images/logo-doarte.png";
 import { Form, Container } from "./AdForm.styles";
-import { createUser,loginUser } from "../../services/userServices";
+
 
 function AdForm({ signUp }) {
   
-    const [user, setUser] = useState({
-      name: "",
-      email: "",
-      password: "",
-    });
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
   
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    signUp?createUser(user):loginUser(user);
+    signUp ? createUser(user) : loginUser(user);
   };
+
   const takeValue = e =>{
     const {id,value} = e.target;
     setUser(prevState =>({
