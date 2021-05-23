@@ -1,9 +1,9 @@
-import { useContext } from 'react';
+//import { useContext } from 'react';
 
 import {api} from '../services/api';
-import {Context} from '../contexts/AuthContext';
+//import {Context} from '../contexts/AuthContext';
 
-const {handleAuth} = useContext(Context);
+//const {handleAuth} = useContext(Context);
 
 export const getUser = async (id) => {
     try{
@@ -45,7 +45,7 @@ export const createUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
+    //handleAuth(data);
 
     const data = response.data;
     console.log(response);
@@ -62,7 +62,23 @@ export const loginUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
+    //handleAuth(data);
+
+    const data = response.data;
+    
+    console.log(data);
+  } 
+  catch (err){
+    console.log(err);
+  }
+};
+export const updateUser = async (user) => {
+  try{
+    const response = await api.patch("user/update", user);
+    
+    if (!response.status === 200) throw new Error();
+
+    //handleAuth(data);
 
     const data = response.data;
     
