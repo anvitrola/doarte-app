@@ -9,13 +9,13 @@ export const Container = styled.div
     background: linear-gradient(to bottom, var(--bronze) 50%, var(--snow) 50%);
     display: flex;
     justify-content: center;
+    height:150px;
 `
 export const Div = styled.div
 `
     align-items: center;
     justify-content: center;
-    width: 62.5rem;
-    height: 12.375rem;
+    width: 59.5rem;
     background: var(--white);
     display: flex;
     justify-content: space-around;

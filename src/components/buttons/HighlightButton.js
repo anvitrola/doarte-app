@@ -1,4 +1,4 @@
-import {FancyButton} from './Buttons.styles';
+import { FancyButton } from './Buttons.styles';
 
 function HighlightButton({text, primary, type}) {
     return (
@@ -6,6 +6,6 @@ function HighlightButton({text, primary, type}) {
             {text}
         </FancyButton>
     )
-}
+};
 
-export default HighlightButton
+export default HighlightButton;

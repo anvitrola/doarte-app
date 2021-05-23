@@ -1,20 +1,20 @@
-import {Nav, List, NavLink} from './Navbar.styles';
+import { Nav, List, NavLink } from './Navbar.styles';
 
 function Navbar() {
     return (
         <Nav>
             <List>
                 <li>
-                    <NavLink to="/about">Sobre</NavLink>
+                    <NavLink to="/">Sobre</NavLink>
                 </li>
                 <li>
                     <NavLink to="/">Aliados</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/fundraisings">Projetos</NavLink>
+                    <NavLink to="/explore">Projetos</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/doubts">Dúvidas</NavLink>
+                    <NavLink to="/">Dúvidas</NavLink>
                 </li>
                 <li>
                     <NavLink to="/updateUser">Atualizar</NavLink>
@@ -22,6 +22,6 @@ function Navbar() {
             </List>
         </Nav>
     )
-}
+};
 
-export default Navbar
+export default Navbar;

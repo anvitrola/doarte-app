@@ -1,5 +1,4 @@
 import {Cards} from "./CardCarousel.styles";
-
 import TextBox from "../textBox/TextBox";
 import UserCard from "../userCard/UserCard";
 import CustomCarousel from "../customCarousel/CustomCarousel";
@@ -21,13 +20,13 @@ function CardCarousel() {
         <UserCard
           name={"Daniel Ferreira"}
           comment={"Lorem ipsilum. Morte ao itaú etc etcétera"}
-          location={"Rio de Janeiro, Brasil"}
+          location={"São Paulo, Brasil"}
           rate={4.8}
         />
         <UserCard
           name={"Júlia Coutinho"}
           comment={"Lorem ipsilum. Morte ao itaú etc etcétera"}
-          location={"Rio de Janeiro, Brasil"}
+          location={"Espirito Santo, Brasil"}
           rate={4.8}
         />
       </CustomCarousel>
