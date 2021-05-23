@@ -3,14 +3,18 @@ import styled from "styled-components";
 export const Card = styled.div`
   width: 90%;
   height: 230px;
-  margin: 0 auto;
+  margin: 10px auto;
   background: var(--white);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  p {
+    font-size: 12px;
+      }
 `;
 
 export const Profile = styled.div`
@@ -18,10 +22,10 @@ export const Profile = styled.div`
   align-items: center;
   justify-content: space-around;
   img {
-      width:50px;
-      border-radius:50%;
-      margin:5px;
-    }
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px 9px 10px 0;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -40,7 +44,6 @@ export const Profile = styled.div`
       font-size: 14px;
       color: var(--blue);
     }
-    
   }
 `;
 

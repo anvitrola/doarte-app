@@ -22,10 +22,10 @@ function AdForm({ signUp }) {
         {signUp && <label type="text">Nome</label>}
 
         {signUp && <input type="text" />}
-        <label htmlFor="id">E-mail</label>
-        <input type="email" required />
-        <label htmlFor="id">Senha</label>
-        <input type="password" required />
+        <label htmlFor="email">E-mail</label>
+        <input type="email" id="email" required />
+        <label htmlFor="password">Senha</label>
+        <input type="password" id='password' required />
 
         {signUp && (
           <Checkbox />
