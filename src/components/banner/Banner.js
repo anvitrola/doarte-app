@@ -11,12 +11,12 @@ function Banner() {
             <img src={Picture} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
             <InfoBar/>
             <TextBox 
-                title={"Conectando doadores e causas"}
-                subtitle={"Encontre suporte financeiro de uma forma flexível e prática."}
+                title={"Conectando doadores á causas"}
+                subtitle={"A ajuda financeira que você precisa de maneira flexível e prática"}
                 main={true}
             />
             <HighlightButton 
-                text={"Quero doar"} 
+                text={"QUERO DOAR"} 
                 position={"button"}
                 primary={true}
             />
