@@ -57,6 +57,10 @@ export const createUser = async (user) => {
 };
 
 export const loginUser = async (user) => {
+  
+  if(!user.name || !user.email || !user.password){
+    throw new Error();
+  }
   try{
     const response = await api.post("auth/signIn", user);
     
