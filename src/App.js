@@ -1,55 +1,34 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router} from "react-router-dom";
+
+//history track
+import history from './history';
+
+//Auth
+import { AuthProvider } from "./contexts/AuthContext";
 
 //CSS global files
 import { AppBody } from "./styles/App.styles";
 import "./styles/global.css";
 
-//Auth
-import { AuthProvider } from "./contexts/AuthContext";
 
-//Components
+//Global Components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import MainContent from "./components/mainContent/MainContent";
-import AdForm from "./components/adForm/AdForm";
-import FloatingDiv from "./components/floatingDiv/FloatingDiv";
-import ProductDashboard from "./components/productDashboard/ProductDashboard";
-import UserProfile from "./components/userProfile/UserProfile";
+import Routes from "./routes";
 
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router history={history}>
         <AppBody>
           <Header />
 
-          <Switch>
-            <Route exact path="/">
-              <MainContent />
-              <FloatingDiv />
-            </Route>
-
-            <Route path="/signIn">
-              <AdForm />
-            </Route>
-
-            <Route path="/signUp">
-              <AdForm signUp={true} />
-            </Route>
-
-            <Route path="/fundraisings">
-              <ProductDashboard />
-            </Route>
-
-            <Route path="/profile">
-              <UserProfile />
-            </Route>
-          </Switch>
+          <Routes/>
 
           <Footer />
         </AppBody>
       </Router>
-    </AuthProvider>
+  //  </AuthProvider>
   );
 }
 

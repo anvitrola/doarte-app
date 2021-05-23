@@ -16,14 +16,10 @@ export const Div = styled.div
     align-items: center;
     justify-content: center;
     width: 59.5rem;
-    height: 12.375rem;
     background: var(--white);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
-    left: 80px;
-    top: 2720px;
     border-radius: 10px;
 
     div{
