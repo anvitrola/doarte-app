@@ -6,7 +6,7 @@ import "./styles/global.css";
 
 //Auth
 
-import { AuthProvider } from "./contexts/AuthContext";
+//import { AuthProvider } from "./contexts/AuthContext";
 
 //Components
 import Header from "./components/header/Header";
@@ -16,10 +16,11 @@ import AdForm from "./components/adForm/AdForm";
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 import ProductDashboard from "./components/productDashboard/ProductDashboard";
 import UserProfile from "./components/userProfile/UserProfile";
+import UpdateForm from "./components/updateForm/UpdateForm";
 
 function App() {
   return (
-    <AuthProvider>
+   // <AuthProvider>
       <Router>
         <AppBody>
           <Header />
@@ -45,12 +46,16 @@ function App() {
             <Route path="/profile">
               <UserProfile />
             </Route>
+
+            <Route path="/updateUser">
+                <UpdateForm/>
+            </Route>
           </Switch>
 
           <Footer />
         </AppBody>
       </Router>
-    </AuthProvider>
+  //  </AuthProvider>
   );
 }
 
