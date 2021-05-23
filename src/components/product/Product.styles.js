@@ -18,4 +18,10 @@ export const Card = styled.div
         align-self: flex-start;
         width: 90%;
     }
+
+    @media (max-width: 768px) {
+        height: 400px;
+        margin-bottom: 1.5rem;
+
+      }
 `

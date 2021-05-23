@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+/*import { useContext } from 'react';
 
 import {api} from '../services/api';
 import {Context} from '../contexts/AuthContext';
@@ -74,3 +74,4 @@ export const loginUser = async (user) => {
 };
 
 
+*/

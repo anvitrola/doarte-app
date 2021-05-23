@@ -1,60 +1,71 @@
-import {useState} from "react";
 import { Link } from "react-router-dom";
-//components + services
 import HighlightButton from "../buttons/HighlightButton";
-import { createUser, loginUser } from "../../services/userServices";
-//css and image
+import FormButton from "../buttons/ConnectButton";
 import Logo from "../../images/logo-doarte.png";
+import Github from "../../images/githubimg.png";
+import Microsoft from "../../images/microsoftimg.png";
+import Google from "../../images/googleimg.png";
+import {Checkbox} from "../buttons/Checkbox"
 import { Form, Container } from "./AdForm.styles";
 
-
 function AdForm({ signUp }) {
-  
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-  
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    signUp ? createUser(user) : loginUser(user);
-  };
-
-  const takeValue = e =>{
-    const {id,value} = e.target;
-    setUser(prevState =>({
-      ...prevState,
-      [id]:value
-    }))
-    
-  }
-
   return (
     <Container>
-      <Form method="POST" onSubmit={handleSubmit}>
+      <Form method="POST">
         <img src={Logo} alt="DOARTE" />
-
-        {signUp && (
-          <input type="text" placeholder="Nome completo" id="name" onBlur={takeValue} required />
+        {signUp ? (
+          <h4>Fazer Cadastro na Doarte</h4>
+        ) : (
+          <h4>Fazer Login na Doarte</h4>
         )}
 
-        <input type="email" placeholder="Endereço de e-mail" id="email" onBlur={takeValue} required/>
-        <input type="password" placeholder="Senha" id="password" onBlur={takeValue} required />
+        {signUp && <label type="text">Nome</label>}
+
+        {signUp && <input type="text" />}
+        <label htmlFor="email">E-mail</label>
+        <input type="email" id="email" required />
+        <label htmlFor="password">Senha</label>
+        <input type="password" id='password' required />
+
+        {signUp && (
+          <Checkbox />
+        )}
 
         {signUp ? (
-          <HighlightButton type={"submit"} text={"Cadastrar-me"} />
+          <HighlightButton type={"submit"} text={"Cadastrar"} />
         ) : (
           <HighlightButton type={"submit"} text={"Entrar"} />
         )}
 
+        <h3>OU</h3>
+        <div>
+          <img className="icon" src={Google} alt="googleIcon" />
+          <FormButton type={"submit"} text={"Conectar com o Google"} />
+        </div>
+
+        <div>
+          <img className="icon" src={Microsoft} alt="microsoftIcon"  />
+          <FormButton type={"submit"} text={"Conectar com a Microsoft"} />
+        </div>
+        <div>
+          <img className="icon" src={Github} alt="githubIcon"  />
+          <FormButton type={"submit"} text={"Conectar com Github"} />
+        </div>
+
         <hr />
 
         {signUp ? (
-          <Link to="/signIn">Fazer login</Link>
+          <Link to="/signIn">Já tem conta? Entrar</Link>
         ) : (
-          <Link to="/signUp">Criar conta grátis</Link>
+          <Link to="/signUp">Criar conta</Link>
+        )}
+
+        {signUp ? (
+          ""
+        ) : (
+          <Link type="text" placeholder="Nome completo">
+            Recuper senha
+          </Link>
         )}
       </Form>
     </Container>

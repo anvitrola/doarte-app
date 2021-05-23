@@ -12,9 +12,10 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  p {
-    font-size: 12px;
-      }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
 `;
 
 export const Profile = styled.div`
@@ -45,12 +46,15 @@ export const Profile = styled.div`
       color: var(--blue);
     }
   }
+  @media (max-width: 768px) {
+    min-width: 80%;
+  }
 `;
 
 export const Review = styled.p`
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   color: var(--black);
   line-height: 30px;
 `;

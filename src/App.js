@@ -5,7 +5,7 @@ import { AppBody } from "./styles/App.styles";
 import "./styles/global.css";
 
 //Auth
-import { AuthProvider } from "./contexts/AuthContext";
+//import { AuthProvider } from "./contexts/AuthContext";
 
 //Components
 import Header from "./components/header/Header";
@@ -18,7 +18,7 @@ import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
   return (
-    <AuthProvider>
+    //<AuthProvider>
       <Router>
         <AppBody>
           <Header />
@@ -49,7 +49,7 @@ function App() {
           <Footer />
         </AppBody>
       </Router>
-    </AuthProvider>
+    //</AuthProvider>
   );
 }
 

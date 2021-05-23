@@ -18,4 +18,15 @@ export const TextContainer = styled.section
         width: 350px;
         align-self: center;
     }
+
+    @media (max-width: 768px) {
+        display: flex;
+        width:100%;
+        align-items:center;
+        flex-wrap:wrap;
+        
+        img{
+            width:200px;
+        }
+      }
 `;

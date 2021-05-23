@@ -13,4 +13,5 @@ export const Cards = styled.section`
     border-radius: 8px;
     text-align: left;
   }
+
 `;
