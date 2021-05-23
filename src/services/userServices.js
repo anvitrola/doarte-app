@@ -1,9 +1,4 @@
-import { useContext } from 'react';
-
-import {api} from '../services/api';
-import {Context} from '../contexts/AuthContext';
-
-const {handleAuth} = useContext(Context);
+import { api } from '../services/api';
 
 export const getUser = async (id) => {
     try{
@@ -45,11 +40,7 @@ export const createUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
-
-    const data = response.data;
-    console.log(response);
-    console.log(data);
+    return response.data;
   } 
   catch (err){
     console.log(err);
@@ -62,11 +53,8 @@ export const loginUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
-
-    const data = response.data;
-    
-    console.log(data);
+    console.log(response.data);
+    return response.data;
   } 
   catch (err){
     console.log(err);
