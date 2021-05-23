@@ -5,7 +5,6 @@ import { AppBody } from "./styles/App.styles";
 import "./styles/global.css";
 
 //Auth
-
 import { AuthProvider } from "./contexts/AuthContext";
 
 //Components
