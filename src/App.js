@@ -1,52 +1,56 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //CSS global files
-import {AppBody} from './styles/App.styles';
-import './styles/global.css';
+import { AppBody } from "./styles/App.styles";
+import "./styles/global.css";
+
+//Auth
+import { AuthProvider } from "./contexts/AuthContext";
 
 //Components
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import MainContent from './components/mainContent/MainContent';
-import AdForm from './components/AdForm/AdForm';
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import MainContent from "./components/mainContent/MainContent";
+import AdForm from "./components/adForm/AdForm";
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 import ProductDashboard from "./components/productDashboard/ProductDashboard";
 import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
-  	return (
-    	<Router>
-    		<AppBody>
-        		<Header/>
+  return (
+    <AuthProvider>
+      <Router>
+        <AppBody>
+          <Header />
 
-				<Switch>
-					<Route exact path="/">
-              			<MainContent/>
-						<FloatingDiv/>
-            		</Route>
+          <Switch>
+            <Route exact path="/">
+              <MainContent />
+              <FloatingDiv />
+            </Route>
 
-					<Route path="/signIn">
-              			<AdForm/>
-            		</Route>
+            <Route path="/signIn">
+              <AdForm />
+            </Route>
 
-					<Route  path="/signUp">
-              			<AdForm signUp={true}/>
-            		</Route>
+            <Route path="/signUp">
+              <AdForm signUp={true} />
+            </Route>
 
-					<Route path="/fundraisings">
-						<ProductDashboard/>
-					</Route>
+            <Route path="/fundraisings">
+              <ProductDashboard />
+            </Route>
 
-					<Route path="/profile">
-						<UserProfile/>
-					</Route>
+            <Route path="/profile">
+              <UserProfile />
+            </Route>
+          </Switch>
 
-				</Switch>
-
-				<Footer/>
-      		</AppBody>
-    	</Router>
-  	);
+          <Footer />
+        </AppBody>
+      </Router>
+    </AuthProvider>
+  );
 }
 
 export default App;
