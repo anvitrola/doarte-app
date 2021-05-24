@@ -7,7 +7,7 @@ export const Form = styled.form
     width: 30rem;
     border-radius: 10px;
     display:flex;
-    box-shadow: 20px 15px  var(--blue);
+    box-shadow: 20px 15px  var(--yellow);
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -32,10 +32,10 @@ export const Form = styled.form
         }
 
         button{
-            width: 7rem;
+            width: 50%;
             height: 2.3rem;
             border-radius: 3px;
             background-color: var(--blue);
             color: var(--white);
         }
-`
+`;

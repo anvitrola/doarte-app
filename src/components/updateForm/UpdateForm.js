@@ -1,44 +1,46 @@
-import HighlightButton from '../buttons/HighlightButton'
-import {Form} from './UpdateForm.styles'
-import {updateUser} from './../../services/userServices'
-import {useState} from 'react'
+import { useState } from "react";
 
+//api services
+import { updateUser } from "./../../services/userServices";
+
+//components
+import HighlightButton from "../buttons/HighlightButton";
+import FormField from "../formField/FormField";
+
+//styled components
+import { Form } from "./UpdateForm.styles";
 
 function UpdateForm() {
-    const [user, setUser] = useState({
-        name: "",
-        email: "",
-        password: "",
-      });
-      
-      const handleSubmit = (event) => {
-        event.preventDefault();
-    
-        updateUser(user);
-      };
-    
-      const takeValue = e =>{
-        const {id,value} = e.target;
-        setUser(prevState =>({
-          ...prevState,
-          [id]:value
-        }))
-        
-      }
-    return (
-        <Form method="PATCH" onSubmit={handleSubmit}>
-            <label htmlFor="name">Nome </label>
-            <input type="text" id="name" placeholder={"Ana Viana"} onBlur={takeValue}/>
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-            <label htmlFor="email">Email </label>
-            <input type="email" id="email" placeholder={"ana@email.com"} onBlur={takeValue}/>
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-            <label htmlFor="password">Senha </label>
-            <input type="password" id="password" placeholder={"*********"} onBlur={takeValue}/>
+    updateUser(user);
+  };
 
-            <HighlightButton text={"Update infos"} type={"submit"}/>
-        </Form>
-    )
-}
+  const takeValue = (e) => {
+    const { id, value } = e.target;
+    setUser((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+  
+  return (
+    <Form method="PATCH" onSubmit={handleSubmit}>
 
-export default UpdateForm
+      <FormField text={"Nome"} type={"text"} getValue={takeValue} holder={"Name"}/>
+      <FormField text={"Email"} type={"email"} getValue={takeValue} holder={"name@example.com"}/>
+      <FormField text={"Senha"} type={"password"} getValue={takeValue} holder={"********"}/>
+
+      <HighlightButton text={"Update my infos"} type={"submit"} />
+    </Form>
+  )
+};
+
+export default UpdateForm;

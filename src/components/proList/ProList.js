@@ -1,7 +1,10 @@
-import {List, Item, Text} from "./ProList.styles";
-
 import { IconContext } from "react-icons";
+
+//icons
 import { FaCheckCircle } from 'react-icons/fa';
+
+//styled components
+import {List, Item, Text} from "./ProList.styles";
 
 function ProList() {
     return (
@@ -32,6 +35,6 @@ function ProList() {
             </Item>
         </List>
     )
-}
+};
 
-export default ProList
+export default ProList;

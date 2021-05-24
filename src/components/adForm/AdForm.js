@@ -5,24 +5,19 @@ import React, { useState, useContext } from "react";
 import { createUser, loginUser } from "../../services/userServices";
 import { Context } from "../../contexts/AuthContext";
 
-//components
-import HighlightButton from "../buttons/HighlightButton";
-import DefaultButton from "../buttons/DefaultButton";
-import { Checkbox } from "../buttons/Checkbox"
-import FormButton from "../buttons/ConnectButton";
+//component
+import SocialMediaLogin from "../socialMediaLogin/SocialMediaLogin";
+import FormField from "../formField/FormField";
 
-//images
-import Logo from "../../images/logo-doarte.png";
-import Github from "../../images/githubimg.png";
-import Microsoft from "../../images/microsoftimg.png";
-import Google from "../../images/googleimg.png";
-
+//brand logo
+import BrandLogo from "../../images/logo-doarte.png";
 
 //styled components
-import { Form, Container } from "./AdForm.styles";
+import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 
 function AdForm({ signUp }) {
+
   const { authenticated, handleAuth } = useContext(Context);
   console.log(authenticated);
 
@@ -49,47 +44,27 @@ function AdForm({ signUp }) {
   return (
     <Container>
       <Form method="POST" onSubmit={handleSubmit}>
-        <img src={Logo} alt="DOARTE" />
-          
-        {signUp ? (
-          <h4>Fazer Cadastro na Doarte</h4>
-        ) : (
-          <h4>Fazer Login na Doarte</h4>
-        )}
 
-        {signUp && <label htmlFor="name">Nome</label>}
-        {signUp && <input type="text" id="name" onBlur={takeValue} />}       
+        <Logo src={BrandLogo} alt="Logotimo do site Doarte. Um círculo composto por várias mãos"/>
 
-        <label htmlFor="email">E-mail</label>
-        <input type="email" id="email" onBlur={takeValue} required/>
-        <label htmlFor="password">Senha</label>
-        <input type="password" id="password" onBlur={takeValue} required/>
-        
-        {signUp && (<Checkbox label={"Li e concordo com as Condições e Termos de Uso."}/>)}
+        <Fields>
+
+          {signUp && <FormField text={"Nome"} type={"text"} getValue={takeValue}/>}
+
+          <FormField text={"Email"} type={"email"} getValue={takeValue}/>
+          <FormField text={"Senha"} type={"password"} getValue={takeValue}/>
+
+        </Fields>
 
         {signUp ? (
-            <HighlightButton type={"submit"} text={"Cadastrar"} />
+          <SubmitButton type={"submit"} text={"Cadastrar"} />
         ) : (
-            <HighlightButton type={"submit"} text={"Entrar"}/>
+          <SubmitButton type={"submit"} text={"Entrar"}/>
         )}
 
         <h3>OU</h3>
-        <div>
-          <img className="icon" src={Google} alt="googleIcon" />
-          <FormButton text={"Conectar com o Google"} />
-        </div>
-
-        <div>
-          <img className="icon" src={Microsoft} alt="microsoftIcon"  />
-          <FormButton text={"Conectar com a Microsoft"} />
-        </div>
-        <div>
-          <img className="icon" src={Github} alt="githubIcon"  />
-          <FormButton text={"Conectar com Github"} />
-
-        </div>
-
-        <hr />
+        <SocialMediaLogin/>
+        <hr/>
 
         {signUp ? (
           <Link to="/signIn">Já tem conta? Entrar</Link>
@@ -97,10 +72,9 @@ function AdForm({ signUp }) {
           <Link to="/signUp">Criar conta</Link>
         )}
 
-        {signUp && (<h6>Recuperar senha</h6>)}
       </Form>
     </Container>
   );
-}
+};
 
 export default AdForm;

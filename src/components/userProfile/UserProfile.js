@@ -1,9 +1,14 @@
+//icons
 import { IconContext } from "react-icons";
 import { FaPiggyBank } from 'react-icons/fa';
+
+//components
+import UpdateForm from '../updateForm/UpdateForm';
+
+//image
 import Picture from "../../images/4.png";
 
-
-import UpdateForm from '../updateForm/UpdateForm';
+//styled components
 import {Container, Greetings} from './UserProfile.styles';
 
 function UserProfile({name, email, amount_money}) {
@@ -25,6 +30,6 @@ function UserProfile({name, email, amount_money}) {
 
         </Container>
     )
-}
+};
 
-export default UserProfile
+export default UserProfile;

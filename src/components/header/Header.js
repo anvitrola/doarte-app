@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
-import logo from "../../images/logo-doarte.png";
-import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
+//components
 import DefaultButton from '../buttons/DefaultButton';
 import Navbar from '../navbar/Navbar';
+
+//image
+import logo from "../../images/logo-doarte.png";
+
+//styled components
+import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
 function Header() {
     return (
@@ -24,6 +29,6 @@ function Header() {
             </Buttons>
         </HeaderContainer>
     )
-}
+};
 
-export default Header
+export default Header;

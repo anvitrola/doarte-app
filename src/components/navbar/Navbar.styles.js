@@ -15,10 +15,8 @@ export const List = styled.ul
     justify-content: space-evenly;
     
     @media (max-width: 768px) {
-      
-        flex-direction: column;
-     
-      }
+      flex-direction: column;
+    }
 `;
 
 export const NavLink = styled(Link)
