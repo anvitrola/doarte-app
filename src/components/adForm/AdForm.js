@@ -9,15 +9,18 @@ import { Context } from "../../contexts/AuthContext";
 import HighlightButton from "../buttons/HighlightButton";
 import DefaultButton from "../buttons/DefaultButton";
 import { Checkbox } from "../buttons/Checkbox"
+import FormButton from "../buttons/ConnectButton";
 
 //images
 import Logo from "../../images/logo-doarte.png";
 import Github from "../../images/githubimg.png";
 import Microsoft from "../../images/microsoftimg.png";
 import Google from "../../images/googleimg.png";
+import { Form, Container } from "./AdForm.styles";
 
 //styled components
 import { Form, Container } from "./AdForm.styles";
+
 
 function AdForm({ signUp }) {
   const { authenticated, handleAuth } = useContext(Context);
@@ -45,6 +48,20 @@ function AdForm({ signUp }) {
     <Container>
       <Form method="POST" onSubmit={handleSubmit}>
         <img src={Logo} alt="DOARTE" />
+          
+        {signUp ? (
+          <h4>Fazer Cadastro na Doarte</h4>
+        ) : (
+          <h4>Fazer Login na Doarte</h4>
+        )}
+
+        {signUp && <label type="text">Nome</label>}
+
+        {signUp && <input type="text" />}
+        <label htmlFor="email">E-mail</label>
+        <input type="email" id="email" required />
+        <label htmlFor="password">Senha</label>
+        <input type="password" id='password' required />
 
         {signUp && (
           <label type="text">Nome</label>
@@ -58,7 +75,6 @@ function AdForm({ signUp }) {
         <label htmlFor="id">Senha</label>
         <input type="password" onBlur={takeValue} required/>
         
-
         {signUp && (<Checkbox label={"Li e concordo com as Condições e Termos de Uso."}/>)}
 
         {signUp ? (
@@ -68,25 +84,34 @@ function AdForm({ signUp }) {
         )}
 
         <h3>OU</h3>
-
         <div>
-          <img src={Google} alt="Logo da empresa Google"/>
-          <DefaultButton text={"Conectar com o Google"} />
+          <img className="icon" src={Google} alt="googleIcon" />
+          <FormButton text={"Conectar com o Google"} />
         </div>
 
         <div>
-          <img src={Microsoft} alt="Logo da empresa Microsoft"/>
-          <DefaultButton text={"Conectar com a Microsoft"} />
+          <img className="icon" src={Microsoft} alt="microsoftIcon"  />
+          <FormButton text={"Conectar com a Microsoft"} />
         </div>
         <div>
-          <img src={Github} alt="Logo da plataforma Github"/>
-          <DefaultButton text={"Conectar com Github"} />
+          <img className="icon" src={Github} alt="githubIcon"  />
+          <FormButton text={"Conectar com Github"} />
+
         </div>
 
         <hr />
 
         {signUp ? (
           <Link to="/signIn">Já tem conta? Entrar</Link>
+        ) : (
+          <Link to="/signUp">Criar conta</Link>
+        )}
+
+        {signUp ? (
+          ""
+        ) : (
+          <Link type="text" placeholder="Nome completo">
+            Recuper senha
         ) : (
           <Link to="/signUp">Criar conta</Link>
         )}

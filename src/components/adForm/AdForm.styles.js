@@ -9,6 +9,12 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+     margin-top:1rem;
+			max-width:100%;
+		  }
+
 `;
 
 export const Form = styled.form`
@@ -21,6 +27,11 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h4 {
+    margin: 10px;
+  }
+
 
   h3 {
     margin: 1rem;
@@ -37,6 +48,7 @@ export const Form = styled.form`
 
   img {
     width: 120px;
+
     margin: 1rem 0;
   }
 
@@ -48,6 +60,10 @@ export const Form = styled.form`
     border: 0;
     border-radius: 18px;
     width: 40%;
+    margin-top: 2rem;
+  }
+
+  a {
     margin: 2rem 0;
   }
 
@@ -88,8 +104,13 @@ export const Form = styled.form`
     border-radius: 18px;
     width: 90%;
     margin: 10px;
-    padding: 0.3rem;
+  }
 
+  .icon {
+    width: 5%;
+    margin: 0;
+    padding: 0.3rem;
+}
     button {
       margin: 0;
       background: none;
@@ -106,5 +127,27 @@ export const Form = styled.form`
       margin: 0;
     }
   }
+  .checkbox {
+    width: 5%;
+    height: 14px;
+  }
+
+  .termText {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: 768px) {
+			max-width:90%;
+
+      button{
+        width: 55%;
+      }
+      input{
+        width:100%
+      }
+		  }
 `;
 

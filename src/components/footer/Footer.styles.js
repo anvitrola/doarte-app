@@ -7,6 +7,12 @@ export const FooterContainer = styled.footer`
   padding: 1em;
   align-items: center;
   justify-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const Lists = styled.div`
@@ -15,6 +21,17 @@ export const Lists = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   margin-top: 50px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    padding:0.3rem;
+
+    ul{
+      margin: 0.2rem;
+      padding: 0.3rem;
+    }
+  }
 
   ul {
     display: flex;
@@ -27,10 +44,9 @@ export const Lists = styled.div`
       font-size: 15px;
     }
 
-    h4{
+    h4 {
       margin-bottom: 1rem;
     }
-
   }
 `;
 
@@ -47,19 +63,24 @@ export const Signature = styled.div`
     width: 125px;
     margin-bottom: 15px;
   }
-  
+
   p {
     width: 80%;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     line-height: 30px;
   }
 
-  section{
+  section {
     display: flex;
-    width:40%;
-    margin-top:15px;
+    width: 40%;
+    margin-top: 15px;
     justify-content: space-between;
-    color:var(--black);
+    color: var(--black);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0.3rem;
   }
 `;

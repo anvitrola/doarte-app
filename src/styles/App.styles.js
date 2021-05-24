@@ -11,4 +11,12 @@ export const AppBody = styled.div
     	"main main"
 		"div div"
     	"footer footer";
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			width:100%;
+			justify-content: center;
+			align-items:center;
+		  }
 `

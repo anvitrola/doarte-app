@@ -10,6 +10,10 @@ export const HeaderContainer = styled.header
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+        align-items: space-around;
+      flex-direction: column;}
+
 `;
 
 export const Logo = styled.h1
@@ -17,6 +21,10 @@ export const Logo = styled.h1
     img {
         width: 125px;
     }
+
+    @media (max-width: 768px) {
+        width:100px;}
+
 `; 
 
 export const Buttons = styled.div

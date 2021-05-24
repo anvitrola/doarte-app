@@ -1,4 +1,3 @@
-
 import { api } from '../services/api';
 
 export const getUser = async (id) => {
@@ -24,7 +23,7 @@ export const getUsers = async () => {
   try{
     const response = await api.get("all");
     
-    //if (!response.ok) throw new Error();
+    if (!response.status === 200) throw new Error();
 
     const data = response.data;
 
@@ -58,23 +57,18 @@ export const loginUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-
-    const data = response.data;
-    
-    console.log(data);
+    return response.data;
   } 
   catch (err){
     console.log(err);
   }
 };
+
 export const updateUser = async (user) => {
   try{
     const response = await api.patch("user/update", user);
     
     if (!response.status === 200) throw new Error();
-
-
-  
 
     console.log(response.data);
     return response.data;
@@ -83,5 +77,3 @@ export const updateUser = async (user) => {
     console.log(err);
   }
 };
-
-

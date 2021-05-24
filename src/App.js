@@ -10,7 +10,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { AppBody } from "./styles/App.styles";
 import "./styles/global.css";
 
-
 //Global Components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -18,6 +17,7 @@ import Routes from "./routes";
 
 function App() {
   return (
+
     <AuthProvider>
       <Router history={history}>
         <AppBody>
@@ -28,7 +28,7 @@ function App() {
           <Footer />
         </AppBody>
       </Router>
-  //  </AuthProvider>
+</AuthProvider>
   );
 }
 
