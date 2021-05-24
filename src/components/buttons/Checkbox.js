@@ -1,17 +1,17 @@
-import { React, useState } from "react";
+import { useState } from "react";
+import { Check, CheckLabel } from "./Buttons.styles";
 
-export function Checkbox() {
+export function Checkbox({label}) {
   const [checked, setChecked] = useState(false);
 
   return (
-    <label className="termText">
-      <input
-        className="checkbox"
+    <CheckLabel>
+      <Check
         type="checkbox"
         defaultChecked={checked}
         onChange={() => setChecked(!checked)}
       />
-      Li e concordo com as Condições e Termos de Uso.
-    </label>
+      {label}
+    </CheckLabel>
   );
 }
