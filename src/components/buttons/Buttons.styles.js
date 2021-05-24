@@ -31,14 +31,20 @@ export const FancyButton = styled.button`
 `;
 
 export const Check = styled.input`
-  width: 5%;
-  height: 5px;
+  width: 80%;
 `;
 
 export const CheckLabel = styled.label`
-  width: 90%;
-  display: flex;
+  font-size: 13px;
+
+  input[type="checkbox"] {
+    height: 15px;
+    width: 10%;
+    margin-left: 10px;
+  }
+`;
+export const ConnectButton = styled.text`
   justify-content: center;
-  font-size: 12px;
-  margin-bottom: 2px;
+  cursor: pointer;
+  margin-left: 5px;
 `;

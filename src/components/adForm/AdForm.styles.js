@@ -4,7 +4,7 @@ export const Container = styled.section`
   grid-area: main;
   justify-self: center;
   align-self: center;
-  padding: 0.5rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@ export const Form = styled.form`
   height: 850px;
   border-radius: 10px;
   background: var(--white);
-  padding: 0 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,22 +32,20 @@ export const Form = styled.form`
   }
 
   h3 {
-    margin: 1rem;
-    color: var(--blue);
+    margin: 2rem;
+    color: var(--black);
   }
 
-  label {
+  label{
     width: 85%;
     text-align: left;
     margin-top: 15px;
-    font-size: 16px;
     padding: 2px;
   }
 
   img {
-    width: 120px;
-
-    margin: 1rem 0;
+    width: 130px;
+    margin-bottom: 1.5rem;
   }
 
   button {
@@ -57,17 +55,17 @@ export const Form = styled.form`
     height: 40px;
     border: 0;
     border-radius: 18px;
-    width: 40%;
-    margin-top: 2rem;
+    width: 50%;
+    margin-top: 2.5rem;
   }
 
   a {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
   }
 
   a,
   h6 {
-    color: #3e9ec8;
+    color: var(--blue-link);
     padding: 10px;
     border-radius: 18px;
     font: 500 12px "Rubik", sans-serif;
@@ -82,9 +80,9 @@ export const Form = styled.form`
     border-radius: 18px;
     padding: 0 20px;
     color: #777;
-    font-size: 15px;
+    font-size: 18px;
     width: 90%;
-    border: 2px solid #f0d4a3;
+    border: 2px solid var(--bronze);
   }
 
   hr {
@@ -98,45 +96,24 @@ export const Form = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #f0d4a3;
+    border: 2px solid var(--bronze);
     border-radius: 18px;
     width: 90%;
     margin: 10px;
   }
 
   .icon {
-    width: 5%;
+    width: 7%;
     margin: 0;
     padding: 0.3rem;
   }
-  button {
-    margin: 0;
-    background: none;
-    text-align: center;
-    border-radius: 18px;
-    color: var(--gray);
-    font-size: 15px;
-    padding: 0.5rem;
-    width: 70%;
-  }
-
-  img {
-    width: 5%;
-    margin: 0;
-  }
 
   .checkbox {
-    width: 5%;
-    height: 14px;
+    font-size:12px;
   }
 
-  .termText {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    margin-bottom: 2px;
-  }
-
+ 
+  
   @media (max-width: 768px) {
     max-width: 90%;
 
