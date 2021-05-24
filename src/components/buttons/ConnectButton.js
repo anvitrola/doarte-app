@@ -1,8 +1,8 @@
-import { ConnectButton } from "./Buttons.styles";
+//import { ConnectButton } from "./Buttons.styles";
 
 function FormButton({ text }) {
   return (
-      <ConnectButton>{text}</ConnectButton>
+      <button>{text}</button>
   );
 }
 

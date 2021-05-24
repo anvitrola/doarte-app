@@ -63,7 +63,10 @@ function AdForm({ signUp }) {
         <input type="password" onBlur={takeValue} required />
 
         {signUp && (
-          <Checkbox className="checkbox" label={"Li e concordo com as Condições e Termos de Uso."} />
+          <Checkbox
+            className="checkbox"
+            label={"Li e concordo com as Condições e Termos de Uso."}
+          />
         )}
 
         {signUp ? (
