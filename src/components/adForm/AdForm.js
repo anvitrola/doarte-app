@@ -18,10 +18,9 @@ import Microsoft from "../../images/microsoftimg.png";
 import Google from "../../images/googleimg.png";
 import { Form, Container } from "./AdForm.styles";
 
-function AdForm({ signUp }) {
-
 //styled components
 import { Form, Container } from "./AdForm.styles";
+
 
 function AdForm({ signUp }) {
   const { authenticated, handleAuth } = useContext(Context);
@@ -47,8 +46,9 @@ function AdForm({ signUp }) {
 
   return (
     <Container>
-      <Form method="POST">
+      <Form method="POST" onSubmit={handleSubmit}>
         <img src={Logo} alt="DOARTE" />
+          
         {signUp ? (
           <h4>Fazer Cadastro na Doarte</h4>
         ) : (
@@ -64,7 +64,6 @@ function AdForm({ signUp }) {
         <input type="password" id='password' required />
 
         {signUp && (
-          <Checkbox />
           <label type="text">Nome</label>
         )}
         {signUp && (
@@ -76,8 +75,6 @@ function AdForm({ signUp }) {
         <label htmlFor="id">Senha</label>
         <input type="password" onBlur={takeValue} required/>
         
-
-
         {signUp && (<Checkbox label={"Li e concordo com as Condições e Termos de Uso."}/>)}
 
         {signUp ? (
@@ -89,16 +86,16 @@ function AdForm({ signUp }) {
         <h3>OU</h3>
         <div>
           <img className="icon" src={Google} alt="googleIcon" />
-          <FormButton type={"submit"} text={"Conectar com o Google"} />
+          <FormButton text={"Conectar com o Google"} />
         </div>
 
         <div>
           <img className="icon" src={Microsoft} alt="microsoftIcon"  />
-          <FormButton type={"submit"} text={"Conectar com a Microsoft"} />
+          <FormButton text={"Conectar com a Microsoft"} />
         </div>
         <div>
           <img className="icon" src={Github} alt="githubIcon"  />
-          <FormButton type={"submit"} text={"Conectar com Github"} />
+          <FormButton text={"Conectar com Github"} />
 
         </div>
 
