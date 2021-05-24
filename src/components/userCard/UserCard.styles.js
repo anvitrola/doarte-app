@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 90%;
-  height: 230px;
-  margin: 10px auto;
+  height: 17.5rem;
+  margin: 0.625rem auto;
   background: var(--white);
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ export const Card = styled.div`
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 50%;
   }
 
 `;
@@ -47,16 +47,16 @@ export const Profile = styled.div`
     }
   }
   @media (max-width: 768px) {
-    min-width: 80%;
+    min-width: 100%;
   }
 `;
 
 export const Review = styled.p`
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--black);
-  line-height: 30px;
+  line-height: 25px;
 `;
 
 export const Rate = styled.h6`

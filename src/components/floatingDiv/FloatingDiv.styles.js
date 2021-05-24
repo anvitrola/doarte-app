@@ -10,7 +10,8 @@ export const Container = styled.div`
   justify-content: center;
   height: 150px;
   @media (max-width: 768px) {
-display: none;  }
+    display: none;
+  }
 `;
 export const Div = styled.div`
   align-items: center;
@@ -22,8 +23,8 @@ export const Div = styled.div`
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  left: 80px;
-  top: 2720px;
+  left: 180px;
+  top: 2760px;
   border-radius: 10px;
 
   div {

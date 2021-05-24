@@ -23,5 +23,7 @@ export const Main = styled.main`
     width: 90%;
     flex-direction: column;
     justify-content: center;
+    grid-gap: 2.5rem;
+
   }
 `;
