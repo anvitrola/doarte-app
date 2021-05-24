@@ -16,7 +16,7 @@ import Logo from "../../images/logo-doarte.png";
 import Github from "../../images/githubimg.png";
 import Microsoft from "../../images/microsoftimg.png";
 import Google from "../../images/googleimg.png";
-import { Form, Container } from "./AdForm.styles";
+
 
 //styled components
 import { Form, Container } from "./AdForm.styles";
@@ -42,6 +42,8 @@ function AdForm({ signUp }) {
     const {id, value} = e.target;
 
     setUser(prevState =>({...prevState, [id]:value}));
+
+    console.log(user);
   }
 
   return (
@@ -55,25 +57,13 @@ function AdForm({ signUp }) {
           <h4>Fazer Login na Doarte</h4>
         )}
 
-        {signUp && <label type="text">Nome</label>}
+        {signUp && <label htmlFor="name">Nome</label>}
+        {signUp && <input type="text" id="name" onBlur={takeValue} />}       
 
-        {signUp && <input type="text" />}
         <label htmlFor="email">E-mail</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" onBlur={takeValue} required/>
         <label htmlFor="password">Senha</label>
-        <input type="password" id='password' required />
-
-        {signUp && (
-          <label type="text">Nome</label>
-        )}
-        {signUp && (
-          <input type="text" onBlur={takeValue} required/>
-        )}
-
-        <label htmlFor="id">E-mail</label>
-        <input type="email"  onBlur={takeValue} required/>
-        <label htmlFor="id">Senha</label>
-        <input type="password" onBlur={takeValue} required/>
+        <input type="password" id="password" onBlur={takeValue} required/>
         
         {signUp && (<Checkbox label={"Li e concordo com as Condições e Termos de Uso."}/>)}
 
@@ -107,16 +97,7 @@ function AdForm({ signUp }) {
           <Link to="/signUp">Criar conta</Link>
         )}
 
-        {signUp ? (
-          ""
-        ) : (
-          <Link type="text" placeholder="Nome completo">
-            Recuper senha
-        ) : (
-          <Link to="/signUp">Criar conta</Link>
-        )}
-
-        {signUp && (<h6>Recuper senha</h6>)}
+        {signUp && (<h6>Recuperar senha</h6>)}
       </Form>
     </Container>
   );

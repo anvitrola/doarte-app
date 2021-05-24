@@ -5,7 +5,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import { api } from '../services/api';
 import history from '../history';
 
-// const Context = createContext();
+const Context = createContext();
 
 
 function AuthProvider({children}){
@@ -43,11 +43,11 @@ function AuthProvider({children}){
         history.push('/signIn');
     }**/
 
-//     return(
-//         <Context.Provider value={{authenticated, handleAuth}}>
-//             {children}
-//         </Context.Provider>
-//     );
-// };
+    return(
+        <Context.Provider value={{authenticated, handleAuth}}>
+            {children}
+        </Context.Provider>
+    );
+};
 
-// export {Context, AuthProvider};
+export {Context, AuthProvider};
