@@ -1,9 +1,4 @@
-/*import { useContext } from 'react';
-
-import {api} from '../services/api';
-import {Context} from '../contexts/AuthContext';
-
-const {handleAuth} = useContext(Context);
+import { api } from '../services/api';
 
 export const getUser = async (id) => {
     try{
@@ -28,7 +23,7 @@ export const getUsers = async () => {
   try{
     const response = await api.get("all");
     
-    //if (!response.ok) throw new Error();
+    if (!response.status === 200) throw new Error();
 
     const data = response.data;
 
@@ -45,11 +40,7 @@ export const createUser = async (user) => {
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
-
-    const data = response.data;
-    console.log(response);
-    console.log(data);
+    return response.data;
   } 
   catch (err){
     console.log(err);
@@ -57,21 +48,32 @@ export const createUser = async (user) => {
 };
 
 export const loginUser = async (user) => {
+  
+  if(!user.name || !user.email || !user.password){
+    throw new Error();
+  }
   try{
     const response = await api.post("auth/signIn", user);
     
     if (!response.status === 200) throw new Error();
 
-    handleAuth(data);
-
-    const data = response.data;
-    
-    console.log(data);
+    return response.data;
   } 
   catch (err){
     console.log(err);
   }
 };
 
+export const updateUser = async (user) => {
+  try{
+    const response = await api.patch("user/update", user);
+    
+    if (!response.status === 200) throw new Error();
 
-*/
+    console.log(response.data);
+    return response.data;
+  } 
+  catch (err){
+    console.log(err);
+  }
+};

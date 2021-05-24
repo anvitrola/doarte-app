@@ -1,4 +1,4 @@
-/*import {api} from '../services/api';
+import {api} from '../services/api';
 
 export const getProducts = () => {
     try{
@@ -70,4 +70,3 @@ export const updateProduct = (id, title, category, goal_value, deadline, descrip
         console.log(err);
     }
 };
-*/

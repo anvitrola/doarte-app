@@ -4,15 +4,16 @@ export const Container = styled.section`
   grid-area: main;
   justify-self: center;
   align-self: center;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
 
   @media (max-width: 768px) {
-     margin-top:1rem;
-			max-width:100%;
-		  }
+    margin-top: 1rem;
+    max-width: 100%;
+  }
 `;
 
 export const Form = styled.form`
@@ -31,7 +32,8 @@ export const Form = styled.form`
   }
 
   h3 {
-    margin: 40px;
+    margin: 1rem;
+    color: var(--blue);
   }
 
   label {
@@ -44,7 +46,8 @@ export const Form = styled.form`
 
   img {
     width: 120px;
-    margin: 0 0 40px;
+
+    margin: 1rem 0;
   }
 
   button {
@@ -59,6 +62,11 @@ export const Form = styled.form`
   }
 
   a {
+    margin: 2rem 0;
+  }
+
+  a,
+  h6 {
     color: #3e9ec8;
     padding: 10px;
     border-radius: 18px;
@@ -99,7 +107,24 @@ export const Form = styled.form`
   .icon {
     width: 5%;
     margin: 0;
+    padding: 0.3rem;
   }
+  button {
+    margin: 0;
+    background: none;
+    text-align: center;
+    border-radius: 18px;
+    color: var(--gray);
+    font-size: 15px;
+    padding: 0.5rem;
+    width: 70%;
+  }
+
+  img {
+    width: 5%;
+    margin: 0;
+  }
+
   .checkbox {
     width: 5%;
     height: 14px;
@@ -113,13 +138,13 @@ export const Form = styled.form`
   }
 
   @media (max-width: 768px) {
-			max-width:90%;
+    max-width: 90%;
 
-      button{
-        width: 55%;
-      }
-      input{
-        width:100%
-      }
-		  }
+    button {
+      width: 55%;
+    }
+    input {
+      width: 100%;
+    }
+  }
 `;
