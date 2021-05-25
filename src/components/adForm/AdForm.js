@@ -28,10 +28,13 @@ function AdForm({ signUp }) {
     event.preventDefault();
 
     signUp
-      ? createUser(user)
-      : loginUser(user).then(({ acessToken }) => {
-          handleAuth(acessToken);
-        });
+
+    ? createUser(user)
+    : loginUser(user)
+      .then(({ acessToken, id }) => {
+        handleAuth(acessToken, id);
+        console.log(acessToken)
+      })
   };
 
   const takeValue = (e) => {

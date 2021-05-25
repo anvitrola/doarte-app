@@ -24,34 +24,38 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   );
 };
 
-const Routes = () => (
-  <Switch>
-    <Route
-      exact
-      path="/"
-      component={() => (
-        <>
-          <MainContent />
-          <FloatingDiv />
-        </>
-      )}
-    />
 
-    <PrivateRoute
-      path={`/profile`}
-      component={() => <FormArea profile={true} />}
-    />
+const Routes = () => {
+    const { userID } = useContext(Context);
+    return (
+    <Switch>
+      <Route
+        exact
+        path="/"
+        component={() => (
+          <>
+            <MainContent />
+            <FloatingDiv />
+          </>
+        )}
+      />
 
-    <PrivateRoute path={`/create`} component={() => <FormArea />} />
+      <PrivateRoute
+        path={`/profile/${userID}`}
+        component={() => <FormArea profile={true} />}
+      />
 
-    <Route path="/signIn" component={() => <AdForm />} />
+      <PrivateRoute path={`/create/${userID}`} component={() => <FormArea />} />
 
-    <Route path="/signUp" component={() => <AdForm signUp={true} />} />
+      <Route path="/signIn" component={() => <AdForm />} />
 
-    <Route path="/explore" component={() => <GenericDashboard />} />
+      <Route path="/signUp" component={() => <AdForm signUp={true} />} />
 
-    <Route exact path="*" component={() => <h1>404: Page not found</h1>} />
-  </Switch>
-);
+      <Route path="/explore" component={() => <GenericDashboard />} />
+
+      <Route exact path="*" component={() => <h1>404: Page not found</h1>} />
+    </Switch>
+  );
+};
 
 export default Routes;
