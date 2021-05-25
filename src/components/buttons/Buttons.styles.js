@@ -35,22 +35,3 @@ export const FancyButton = styled.button`
     border: 1px solid var(--orange);
   }
 `;
-
-export const Check = styled.input`
-  width: 80%;
-`;
-
-export const CheckLabel = styled.label`
-  font-size: 13px;
-
-  input[type="checkbox"] {
-    height: 15px;
-    width: 10%;
-    margin-left: 10px;
-  }
-`;
-export const ConnectButton = styled.text`
-  justify-content: center;
-  cursor: pointer;
-  margin-left: 5px;
-`;
