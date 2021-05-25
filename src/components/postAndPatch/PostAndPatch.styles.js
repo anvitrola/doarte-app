@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Form = styled.form`
   grid-area: form;
   padding: 1.5rem;
-  width: 30rem;
+  width: ${(props) => (props.larger ? "35rem" : "33rem")};  
   border-radius: 10px;
   display: flex;
   box-shadow: 20px 15px var(--blue);
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 20rem;
+  height: ${(props) => (props.larger ? "33rem" : "25rem")};
   background-color: var(--snow);
 
   label {
