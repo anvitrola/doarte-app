@@ -1,6 +1,6 @@
 <div align="center">
       <h1></h1>
-    <img src="/.github/logo-doarte.png" width="400"/>  
+    <img src="/.github/logo.png" width="600"/>  
     <h1></h1>
     <p>Doarte | A arte de doar  </p>    
     <hr />    
