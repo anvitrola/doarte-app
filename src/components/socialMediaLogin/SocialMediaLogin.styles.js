@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
+export const Container = styled.div
+`
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const Socials = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #f0d4a3;
   border-radius: 18px;
-  width: 50%;
   margin: 10px;
   padding: .3rem;
 

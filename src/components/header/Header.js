@@ -1,4 +1,8 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+//authentication context
+import { Context } from "../../contexts/AuthContext";
 
 //components
 import DefaultButton from '../buttons/DefaultButton';
@@ -11,22 +15,38 @@ import logo from "../../images/logo-doarte.png";
 import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
 function Header() {
+    const { authenticated, handleLogout } = useContext(Context);
+
     return (
         <HeaderContainer>
             <Logo>
-                <Link to="/">
+                <Link to={authenticated ? "/explore" : "/"}>
                     <img src={logo} alt={"Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."}/>
                 </Link>
             </Logo>
-            <Navbar/>
-            <Buttons>
-                <Link to="/signUp">
-                    <DefaultButton text={"Cadastre-se"}/>
-                </Link> 
-                <Link to="/signIn">
-                    <DefaultButton text={"Entrar"} primary={true}/>
+
+            <Navbar auth={authenticated ? true : false}/>
+
+            {authenticated && (
+                <Link to="/profile">
+                    <DefaultButton text={"Meu perfil"}/>
                 </Link>
-            </Buttons>
+            )}
+            
+            {!authenticated ? (
+                <Buttons>
+                    <Link to="/signUp">
+                        <DefaultButton text={"Cadastre-se"}/>
+                    </Link> 
+                    <Link to="/signIn">
+                        <DefaultButton text={"Entrar"} primary={true}/>
+                    </Link>
+                </Buttons>
+                
+            ) : (
+                <DefaultButton text={"Sair"} primary={true} clickEvent={handleLogout}/>
+            )}
+
         </HeaderContainer>
     )
 };

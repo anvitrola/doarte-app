@@ -5,7 +5,7 @@ import TextBox from "../textBox/TextBox";
 //styled components
 import { Exhibition, Cards } from "./ProductExhi.styles";
 
-function ProductExpo() {
+function ProductExhi() {
     return (
         <Exhibition>
             <TextBox title={"Algumas das causas que precisam de suporte"}/>
@@ -16,6 +16,6 @@ function ProductExpo() {
             </Cards>
         </Exhibition>
     )
-}
+};
 
-export default ProductExpo
+export default ProductExhi;
