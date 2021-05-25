@@ -56,7 +56,6 @@ Aplicação web construída com React.js e integração com API própria.
 - [Peter Helder](https://github.com/petersilvahs)
 
 <br>
-<br>
 
 
 <div align="center">
