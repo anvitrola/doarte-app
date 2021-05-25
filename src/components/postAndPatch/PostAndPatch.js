@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router";
+//import { useParams } from "react-router";
 
 //api services
 import { updateUser } from "./../../services/userServices";

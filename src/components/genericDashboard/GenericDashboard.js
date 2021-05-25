@@ -27,7 +27,7 @@ function GenericDashboard() {
             } 
             subtitle={"Gentileza gera gentileza"}/>
 
-            <LinkBox to={authenticated ? "/create" : "/signUp"}>
+            <LinkBox to={authenticated ? `/create/${userID}` : "/signUp"}>
                 <HighlightButton primary={true} text={authenticated ? "Criar vaquinha" : "Cadastre-se"}/>
             </LinkBox>
 

@@ -44,7 +44,7 @@ const Routes = () => {
         component={() => <FormArea profile={true} />}
       />
 
-      <PrivateRoute path={`/create`} component={() => <FormArea />} />
+      <PrivateRoute path={`/create/${userID}`} component={() => <FormArea />} />
 
       <Route path="/signIn" component={() => <AdForm />} />
 
