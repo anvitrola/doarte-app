@@ -40,12 +40,10 @@ function AuthProvider({children}){
         history.push('/explore');
     }
 
-   /* function handleLogout(){
+    function handleLogout(){
         setAuthenticated(false);
         localStorage.removeItem(TOKEN_KEY);
-        history.push('/signIn');
-    }*/
-
+        history.push('/');
 
     return(
         <Context.Provider value={{authenticated, handleAuth, handleLogout, userID}}>
