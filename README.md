@@ -1,6 +1,6 @@
 <div align="center">
       <h1></h1>
-    <img src="/.github/logo.png" width="600"/>  
+    <img src="/.github/logo.png" width="400"/>  
     <h1></h1>
     <p>Doarte | A arte de doar  </p>    
     <hr />    
@@ -57,8 +57,7 @@ Aplicação web construída com React.js e integração com API própria.
 
 <br>
 <br>
-<br>
-<br>
+
 
 <div align="center">
   <h1>Open Source</h1>
