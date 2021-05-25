@@ -1,32 +1,30 @@
 <div align="center">
-    <img src="/.github/avatar.png" width="400"/>    
+      <h1></h1>
+    <img src="/.github/logo-doarte.png" width="400"/>  
     <h1></h1>
-    <img src="/.github/SPACE.NEWS.png" width="400"/>  
-    <h1></h1>
-    <p>🚀 News about the Space & world.</p>    
+    <p>Doarte | A arte de doar  </p>    
     <hr />    
     <p>
-        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/language-typescript-blue" alt="Repo Main Language" /></a>
+        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/language-Javascript-yellow" alt="Repo Main Language" /></a>
         <img src="https://img.shields.io/badge/platform-web-blueviolet" alt="Project Platform" />
         <a href="https://nlw4moveit-p6fhlbbtu-brunosampaiodev.vercel.app/">
-        <a href="https://github.com/BrunoSampaioDev/React-Movit-project-nlw4/blob/main/LICENSE"><img src="https://img.shields.io/badge/licence-MIT-red" alt="Repo License" /></a>
+        <a href=""><img src="https://img.shields.io/badge/licence-MIT-red" alt="Repo License" /></a>
     </p>     
-    <p>
-        <a href="https://www.linkedin.com/in/bruno-sampaio-a374b1170/" target="_blank">
-        <img src="https://img.shields.io/twitter/url?label=Connect%20%40BrunoSampaio&logo=linkedin&url=https%3A%2F%2F%2%2F" alt="Follow" />
-        </a>
-    <p>
+       <hr />    
+
 </div>
 
 # About
 
-App serverless construída utilizando os conceitos de SSR, SSG e JAMStack, integração com API de pagamentos Stripe, Gerenciador de conteúdo Prismic e banco de dados Fauna db.
+A ideia central da Doarte é unir causas e projetos que precisam de um intermediário competente e integro.
+
+Aplicação web construída com React.js e integração com API própria.
 
 <div align="center">
-    <img src="/.github/02.png" width="700" /> 
-    <img src="/.github/05.png" width="700" />
-    <img src="/.github/03.png" width="700" /> 
-    <img src="/.github/04.png" width="700" /> 
+    <img src="/.github/index.png" width="700" /> 
+    <img src="/" width="700" />
+    <img src="/" width="700" /> 
+    <img src="" width="700" /> 
 </div>
 
 # Techs
@@ -66,5 +64,5 @@ App serverless construída utilizando os conceitos de SSR, SSG e JAMStack, integ
   <h1>Open Source</h1>
   <sub>Copyright © 2021</sub>
   <p>DOARTE <a href="https://github.com/BrunoSampaioDev/space-news/blob/main/LICENSE">is MIT licensed 💖</a></p>
-  <img src="/public/favicon.png" width="35" />
+ 
 </div>
