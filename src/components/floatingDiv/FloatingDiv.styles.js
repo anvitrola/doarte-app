@@ -10,24 +10,18 @@ export const Container = styled.div`
   justify-content: center;
   height: 150px;
 `;
-
 export const Div = styled.div`
   align-items: center;
   justify-content: center;
-  width: 59.5rem;
   background: var(--white);
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-
-  div {
-    width: 50%;
-  }
+  width: 80%;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    
+   
     div {
       width: 100%;
       font-size: 14px;

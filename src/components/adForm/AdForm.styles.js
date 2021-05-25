@@ -10,7 +10,6 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
-
   @media (max-width: 768px) {
     margin-top: 1rem;
     max-width: 100%;
@@ -38,14 +37,12 @@ export const Form = styled.form`
     cursor: pointer;
     text-decoration: none;
   }
-
   hr {
     margin: 20px 0;
     border: none;
     border-bottom: 1px solid #cdcdcd;
     width: 50%;
   }
-
   @media (max-width: 768px) {
 		max-width: 90%;
     button {
@@ -60,7 +57,7 @@ export const Form = styled.form`
 export const SubmitButton = styled(HighlightButton)`
   color: var(--white);
   font-size: 16px;
-  background: var(--orange);
+  background-color: var(--orange);
   height: 20px;
   border: 0;
   border-radius: 18px;
