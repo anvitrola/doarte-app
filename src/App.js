@@ -14,7 +14,7 @@ import "./styles/global.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Routes from "./routes";
-import ModalTeste from "./components/modal/Modal";
+import ModalTemplate from "./components/modal/Modal";
 
 function App() {
   return (
@@ -23,7 +23,6 @@ function App() {
         <AppBody>
           <Header />
           <Routes />
-          <ModalTeste />
           <Footer />
         </AppBody>
       </Router>
