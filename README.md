@@ -63,6 +63,6 @@ Aplicação web construída com React.js e integração com API própria.
 <div align="center">
   <h1>Open Source</h1>
   <sub>Copyright © 2021</sub>
-  <p>DOARTE <a href="https://github.com/BrunoSampaioDev/space-news/blob/main/LICENSE">is MIT licensed 💖</a></p>
+  <p>DOARTE <a href="https://github.com/anvitrola/doarte-app/blob/responsiveness/LICENSE">is MIT licensed 💖</a></p>
  
 </div>
