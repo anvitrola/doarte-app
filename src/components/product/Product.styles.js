@@ -23,4 +23,4 @@ export const Card = styled.div
         height: 400px;
         margin-bottom: 1.5rem;
     }
-`
+`;

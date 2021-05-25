@@ -15,7 +15,7 @@ export const getUser = async (id) => {
       return data;
     } 
     catch (err){
-      console.log(err);
+      console.log(err)
     }
 };
 
@@ -43,7 +43,7 @@ export const createUser = async (user) => {
     return response.data;
   } 
   catch (err){
-    console.log(err);
+    console.log(err.message);
   }
 };
 
@@ -56,7 +56,6 @@ export const loginUser = async (user) => {
     return response.data;
   } 
   catch (err){
-    console.log(err.status);
     console.log(err);
   }
 };

@@ -32,17 +32,17 @@ function AuthProvider({children}){
         api.defaults.headers.Authorization = `Bearer ${token}`;
 
         setAuthenticated(true);
-        history.push('/profile');
+        history.push('/explore');
     }
 
-    /**function handleLogout(){
+    function handleLogout(){
         setAuthenticated(false);
         localStorage.removeItem(TOKEN_KEY);
-        history.push('/signIn');
-    }**/
+        history.push('/');
+    }
 
     return(
-        <Context.Provider value={{authenticated, handleAuth}}>
+        <Context.Provider value={{authenticated, handleAuth, handleLogout}}>
             {children}
         </Context.Provider>
     );

@@ -15,56 +15,55 @@ import BrandLogo from "../../images/logo-doarte.png";
 //styled components
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
-
 function AdForm({ signUp }) {
-
-  const { authenticated, handleAuth } = useContext(Context);
-  console.log(authenticated);
+  const { handleAuth } = useContext(Context);
 
   const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
   });
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    signUp ? createUser(user) : loginUser(user)
-    .then(({acessToken}) => handleAuth(acessToken))
+
+    signUp
+    ? createUser(user)
+    : loginUser(user)
+      .then(({ acessToken }) => {
+        handleAuth(acessToken);
+      })
   };
 
-  const takeValue = e => {
-    const {id, value} = e.target;
+  const takeValue = (e) => {
+    const { id, value } = e.target;
 
-    setUser(prevState =>({...prevState, [id]:value}));
+    setUser((prevState) => ({ ...prevState, [id]: value }));
 
     console.log(user);
-  }
+  };
 
   return (
     <Container>
       <Form method="POST" onSubmit={handleSubmit}>
-
         <Logo src={BrandLogo} alt="Logotimo do site Doarte. Um círculo composto por várias mãos"/>
 
         <Fields>
 
-          {signUp && <FormField text={"Nome"} type={"text"} getValue={takeValue}/>}
+          {signUp && (
+            <FormField text={"Nome"} type={"text"} getValue={takeValue} />
+          )}
 
-          <FormField text={"Email"} type={"email"} getValue={takeValue}/>
-          <FormField text={"Senha"} type={"password"} getValue={takeValue}/>
+          <FormField text={"Email"} type={"email"} getValue={takeValue} />
+          <FormField text={"Senha"} type={"password"} getValue={takeValue} />
 
         </Fields>
 
-        {signUp ? (
-          <SubmitButton type={"submit"} text={"Cadastrar"} />
-        ) : (
-          <SubmitButton type={"submit"} text={"Entrar"}/>
-        )}
+        <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
 
         <h3>OU</h3>
-        <SocialMediaLogin/>
-        <hr/>
+        <SocialMediaLogin />
+        <hr />
 
         {signUp ? (
           <Link to="/signIn">Já tem conta? Entrar</Link>
@@ -75,6 +74,6 @@ function AdForm({ signUp }) {
       </Form>
     </Container>
   );
-};
+}
 
 export default AdForm;
