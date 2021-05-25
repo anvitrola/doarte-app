@@ -28,5 +28,5 @@ export const TextContainer = styled.section
         img{
             width:200px;
         }
-      }
+    }
 `;

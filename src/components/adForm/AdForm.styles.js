@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HighlightButton from "../buttons/HighlightButton";
 
 export const Container = styled.section`
   grid-area: main;
@@ -11,64 +12,23 @@ export const Container = styled.section`
   margin-bottom: 40px;
 
   @media (max-width: 768px) {
-     margin-top:1rem;
-			max-width:100%;
-		  }
-
+    margin-top: 1rem;
+    max-width: 100%;
+  }
 `;
 
 export const Form = styled.form`
-  width: 500px;
-  height: 850px;
+  width: 600px;
+  height: 800px;
   border-radius: 10px;
   background: var(--white);
-  padding: 0 30px;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-
-  h4 {
-    margin: 10px;
-  }
-
-
-  h3 {
-    margin: 1rem;
-    color: var(--blue);
-  }
-
-  label {
-    width: 85%;
-    text-align: left;
-    margin-top: 15px;
-    font-size: 16px;
-    padding: 2px;
-  }
-
-  img {
-    width: 120px;
-
-    margin: 1rem 0;
-  }
-
-  button {
-    color: var(--white);
-    font-size: 16px;
-    background-color: var(--orange);
-    height: 40px;
-    border: 0;
-    border-radius: 18px;
-    width: 40%;
-    margin-top: 2rem;
-  }
-
-  a {
-    margin: 2rem 0;
-  }
-
-  a,
-  h6 {
+  
+  a, h6 {
     color: #3e9ec8;
     padding: 10px;
     border-radius: 18px;
@@ -79,16 +39,6 @@ export const Form = styled.form`
     text-decoration: none;
   }
 
-  input {
-    height: 35px;
-    border-radius: 18px;
-    padding: 0 20px;
-    color: #777;
-    font-size: 15px;
-    width: 90%;
-    border: 2px solid #f0d4a3;
-  }
-
   hr {
     margin: 20px 0;
     border: none;
@@ -96,58 +46,37 @@ export const Form = styled.form`
     width: 50%;
   }
 
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #f0d4a3;
-    border-radius: 18px;
-    width: 90%;
-    margin: 10px;
-  }
-
-  .icon {
-    width: 5%;
-    margin: 0;
-    padding: 0.3rem;
-}
-    button {
-      margin: 0;
-      background: none;
-      text-align: center;
-      border-radius: 18px;
-      color: var(--gray);
-      font-size: 15px;
-      padding: 0.5rem;
-      width: 70%;
-    }
-
-    img{
-      width: 5%;
-      margin: 0;
-    }
-  }
-  .checkbox {
-    width: 5%;
-    height: 14px;
-  }
-
-  .termText {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    margin-bottom: 2px;
-  }
-
   @media (max-width: 768px) {
-			max-width:90%;
-
-      button{
-        width: 55%;
-      }
-      input{
-        width:100%
-      }
-		  }
+		max-width: 90%;
+    button {
+      width: 55%;
+    }
+    input {
+      width: 100%;
+    }
+	}
 `;
 
+export const SubmitButton = styled(HighlightButton)`
+  color: var(--white);
+  font-size: 16px;
+  background: var(--orange);
+  height: 20px;
+  border: 0;
+  border-radius: 18px;
+  width: 40%;
+  margin-top: 2rem;
+`;
+
+export const Logo = styled.img
+`
+  width: 120px; 
+`;
+
+export const Fields = styled.div
+`
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+`;

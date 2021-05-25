@@ -29,18 +29,3 @@ export const FancyButton = styled.button`
     border: 1px solid var(--orange);
   }
 `;
-
-export const Check = styled.input
-`
-  width: 5%;
-  height: 5px;
-`;
-
-export const CheckLabel= styled.label
-`
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  font-size: 12px;
-  margin-bottom: 2px;
-`;

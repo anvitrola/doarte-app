@@ -16,9 +16,6 @@ function Navbar() {
                 <li>
                     <NavLink to="/">Dúvidas</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/updateUser">Atualizar</NavLink>
-                </li>
             </List>
         </Nav>
     )

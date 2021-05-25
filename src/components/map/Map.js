@@ -1,7 +1,9 @@
+//components
 import TextBox from '../textBox/TextBox';
 import Mapicture from "../../images/mappoints.png";
 
-import {Container} from './Map.styles';
+//styled components
+import { Container } from './Map.styles';
 
 function Map() {
     return (
@@ -11,6 +13,6 @@ function Map() {
             <img src={Mapicture} alt="Mapa mundi em tom bege"/>
         </Container>
     )
-}
+};
 
-export default Map
+export default Map;
