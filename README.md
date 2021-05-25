@@ -63,5 +63,5 @@ Aplicação web construída com React.js e integração com API própria.
   <h1>Open Source</h1>
   <sub>Copyright © 2021</sub>
   <p>DOARTE <a href="https://github.com/anvitrola/doarte-app/blob/responsiveness/LICENSE">is MIT licensed 💖</a></p>
-  <img src="/.github/circule-logo.png" width="35" />
+  <img src="/.github/circule-logo.png" width="50" />
 </div>
