@@ -21,9 +21,7 @@ import Google from "../../images/googleimg.png";
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
-
-  const { authenticated, handleAuth } = useContext(Context);
-  console.log(authenticated);
+  const { handleAuth } = useContext(Context);
 
   const [user, setUser] = useState({
     name: "",
@@ -33,20 +31,36 @@ function AdForm({ signUp }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+<<<<<<< HEAD
     signUp
       ? createUser(user)
       : loginUser(user).then(({ acessToken }) => handleAuth(acessToken));
+=======
+
+    signUp
+    ? createUser(user)
+    : loginUser(user)
+      .then(({ acessToken }) => {
+        handleAuth(acessToken);
+      })
+>>>>>>> f7d0ad0a7c4ef2b5f15515e96c4adec9b875eb48
   };
 
   const takeValue = (e) => {
     const { id, value } = e.target;
 
     setUser((prevState) => ({ ...prevState, [id]: value }));
+<<<<<<< HEAD
+=======
+
+    console.log(user);
+>>>>>>> f7d0ad0a7c4ef2b5f15515e96c4adec9b875eb48
   };
 
   return (
     <Container>
       <Form method="POST" onSubmit={handleSubmit}>
+<<<<<<< HEAD
         <img src={Logo} alt="DOARTE" />
 
         {signUp ? (
@@ -62,6 +76,18 @@ function AdForm({ signUp }) {
         <input type="email" onBlur={takeValue} required />
         <label htmlFor="id">Senha</label>
         <input type="password" onBlur={takeValue} required />
+=======
+        <Logo src={BrandLogo} alt="Logotimo do site Doarte. Um círculo composto por várias mãos"/>
+
+        <Fields>
+
+          {signUp && (
+            <FormField text={"Nome"} type={"text"} getValue={takeValue} />
+          )}
+
+          <FormField text={"Email"} type={"email"} getValue={takeValue} />
+          <FormField text={"Senha"} type={"password"} getValue={takeValue} />
+>>>>>>> f7d0ad0a7c4ef2b5f15515e96c4adec9b875eb48
 
         {signUp && (
           <Checkbox
@@ -70,6 +96,7 @@ function AdForm({ signUp }) {
           />
         )}
 
+<<<<<<< HEAD
         {signUp ? (
           <HighlightButton type={"submit"} text={"Cadastrar"} />
         ) : (
@@ -91,6 +118,12 @@ function AdForm({ signUp }) {
           <FormButton text={"Conectar com Github"} />
         </div>
 
+=======
+        <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
+
+        <h3>OU</h3>
+        <SocialMediaLogin />
+>>>>>>> f7d0ad0a7c4ef2b5f15515e96c4adec9b875eb48
         <hr />
 
         {signUp ? (
@@ -103,6 +136,6 @@ function AdForm({ signUp }) {
       </Form>
     </Container>
   );
-};
+}
 
 export default AdForm;

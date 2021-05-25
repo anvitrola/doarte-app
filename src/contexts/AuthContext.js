@@ -32,7 +32,7 @@ function AuthProvider({children}){
         api.defaults.headers.Authorization = `Bearer ${token}`;
 
         setAuthenticated(true);
-        history.push('/profile');
+        history.push('/explore');
     }
 
    /* function handleLogout(){

@@ -8,8 +8,8 @@ import { Context } from "./contexts/AuthContext";
 import MainContent from "./components/mainContent/MainContent";
 import AdForm from "./components/adForm/AdForm";
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
-import ProductDashboard from "./components/productDashboard/ProductDashboard";
-import UserProfile from "./components/userProfile/UserProfile";
+import GenericDashboard from "./components/genericDashboard/GenericDashboard";
+import FormArea from "./components/formArea/FormArea";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { authenticated } = useContext(Context);
