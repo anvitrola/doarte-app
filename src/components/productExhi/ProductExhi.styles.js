@@ -10,23 +10,20 @@ export const Exhibition = styled.section`
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-
     h1{
       width:100%;
       font-size:26px;
     }
   }
 `;
+
 export const Cards = styled.div`
   display: flex;
   margin: 2rem 0;
   align-items: center;
-  justify-content: flex-start;
 
   @media (max-width: 768px) {
-    display: flex;
     flex-direction: column;
     margin: 0 auto;
-
   }
 `;

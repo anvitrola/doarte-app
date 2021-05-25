@@ -1,6 +1,9 @@
-import {Card} from './Product.styles';
+//components
 import HighlightButton from '../buttons/HighlightButton';
 import Progress from '../progress/Progress';
+
+//styled components
+import { Card } from './Product.styles';
 
 function Product({title, desc, amount, current}) {
     return (
@@ -11,6 +14,6 @@ function Product({title, desc, amount, current}) {
             <HighlightButton text={"Doar"}/>
         </Card>
     )
-}
+};
 
-export default Product
+export default Product;

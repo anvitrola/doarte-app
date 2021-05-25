@@ -16,7 +16,6 @@ export const InfoContainer = styled.div
         justify-content: center;
         width:100%;
     }
-
 `;
 
 export const InfoDiv = styled.div
@@ -54,6 +53,5 @@ export const Text = styled.p
         width:5%;
         margin-left: 0.5rem;
         font-size:16px;
-
     }
 `;

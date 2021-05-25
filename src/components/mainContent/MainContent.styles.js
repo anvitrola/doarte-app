@@ -7,7 +7,7 @@ export const Main = styled.main`
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80vh auto auto auto auto;
+  grid-template-rows: 80vh repeat(4, auto);
 
   grid-template-areas:
     "banner banner banner"

@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect } from 'react';
 
 //api config + history to create dinamic flow
@@ -6,7 +5,6 @@ import { api } from '../services/api';
 import history from '../history';
 
 const Context = createContext();
-
 
 function AuthProvider({children}){
     const [authenticated, setAuthenticated] = useState(false);

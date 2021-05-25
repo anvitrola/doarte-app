@@ -1,4 +1,4 @@
-import {CommonButton} from './Buttons.styles';
+import { CommonButton } from './Buttons.styles';
 
 function DefaultButton({text, primary}) {
     return (
@@ -6,6 +6,6 @@ function DefaultButton({text, primary}) {
             {text}
         </CommonButton>
     )
-}
+};
 
 export default DefaultButton;

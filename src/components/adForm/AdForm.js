@@ -18,9 +18,10 @@ import Microsoft from "../../images/microsoftimg.png";
 import Google from "../../images/googleimg.png";
 
 //styled components
-import { Form, Container } from "./AdForm.styles";
+import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
+
   const { authenticated, handleAuth } = useContext(Context);
   console.log(authenticated);
 
@@ -102,6 +103,6 @@ function AdForm({ signUp }) {
       </Form>
     </Container>
   );
-}
+};
 
 export default AdForm;

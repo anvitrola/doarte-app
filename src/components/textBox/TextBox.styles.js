@@ -22,6 +22,7 @@ export const Title = styled.h1
     font-size: ${props => props.main ? "50px" : "35px"};
     font-weight: ${props => props.main ? "700" : "500"};
     font-family: 'Montserrat', sans-serif;
+
     @media (max-width: 768px) {
        font-size: 28px;;
     }
@@ -35,5 +36,5 @@ export const Subtitle = styled.h3
     @media (max-width: 768px) {
         font-size: 15px;
         width:100%;
-     }
+    }
 `;

@@ -1,30 +1,57 @@
+import React from "react";
+import Modal from "react-modal";
 
-import {Model, Container} from './Modal.styles'
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
-export default function ConfirmationModalImpl(props) {
-	const {
-    	handleClose, // renderProp fn expects truthy or falsey
-    	show,             // boolean - visible/invisible
-    	headerText,   // text
-    	detailText,     // html / inner text
-    	openPos       // placement choice
-	} = {...props};
+ 
+function ModalTeste() {
+  var subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
 
-	const sendYes = () => handleClose(true);
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
 
-	const sendNo = () => handleClose(false);
+  function closeModal() {
+    setIsOpen(false);
+  }
 
-	return (
-    	<Model show={show}>
-        	<Container openPos={openPos}>
-            	<Header>{headerText}</Header>
-            	<HBar/>
-            	<Slot>{detailText}</Slot>
-            	<ButtonBar>
-                	<Button onClick={sendYes} primary={true}>Yes</Button>
-                	<Button onClick={sendNo} primary={false}>No</Button>
-            	</ButtonBar>
-        	</Container>
-    	</Model>
-	);
+  return (
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
+    </div>
+  );
 }
+
+export default ModalTeste

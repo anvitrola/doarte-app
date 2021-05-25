@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HighlightButton from "../buttons/HighlightButton";
 
 export const Container = styled.section`
   grid-area: main;
@@ -17,15 +18,20 @@ export const Container = styled.section`
 `;
 
 export const Form = styled.form`
-  width: 500px;
-  height: 850px;
+  width: 600px;
+  height: 800px;
   border-radius: 10px;
   background: var(--white);
+<<<<<<< HEAD
   padding: 10px;
+=======
+  padding: 2rem 1rem;
+>>>>>>> 9d5dc5d38ccbb06066adc67839a7fec38e1c7dbd
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+<<<<<<< HEAD
 
   h4 {
     margin: 10px;
@@ -66,6 +72,11 @@ export const Form = styled.form`
   a,
   h6 {
     color: var(--blue-link);
+=======
+  
+  a, h6 {
+    color: #3e9ec8;
+>>>>>>> 9d5dc5d38ccbb06066adc67839a7fec38e1c7dbd
     padding: 10px;
     border-radius: 18px;
     font: 500 12px "Rubik", sans-serif;
@@ -75,6 +86,7 @@ export const Form = styled.form`
     text-decoration: none;
   }
 
+<<<<<<< HEAD
   input {
     height: 35px;
     border-radius: 18px;
@@ -85,6 +97,8 @@ export const Form = styled.form`
     border: 2px solid var(--bronze);
   }
 
+=======
+>>>>>>> 9d5dc5d38ccbb06066adc67839a7fec38e1c7dbd
   hr {
     margin: 20px 0;
     border: none;
@@ -92,6 +106,7 @@ export const Form = styled.form`
     width: 50%;
   }
 
+<<<<<<< HEAD
   div {
     display: flex;
     align-items: center;
@@ -124,4 +139,39 @@ export const Form = styled.form`
       width: 100%;
     }
   }
+=======
+  @media (max-width: 768px) {
+		max-width: 90%;
+    button {
+      width: 55%;
+    }
+    input {
+      width: 100%;
+    }
+	}
+`;
+
+export const SubmitButton = styled(HighlightButton)`
+  color: var(--white);
+  font-size: 16px;
+  background: var(--orange);
+  height: 20px;
+  border: 0;
+  border-radius: 18px;
+  width: 40%;
+  margin-top: 2rem;
+`;
+
+export const Logo = styled.img
+`
+  width: 120px; 
+`;
+
+export const Fields = styled.div
+`
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+>>>>>>> 9d5dc5d38ccbb06066adc67839a7fec38e1c7dbd
 `;

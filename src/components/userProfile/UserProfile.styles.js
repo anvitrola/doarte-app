@@ -4,6 +4,7 @@ export const Container = styled.main
 `
     grid-area: main;
     padding: 2rem;
+    height: 90vh;
     width: 80%;
     align-self: center;
     justify-self: center;

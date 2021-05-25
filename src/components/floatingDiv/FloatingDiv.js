@@ -1,6 +1,8 @@
+//components
 import TextBox from '../textBox/TextBox';
 import HighlightButton from '../buttons/HighlightButton';
 
+//styled components
 import {Div, Container} from './FloatingDiv.styles';
 
 function FloatingDiv() {
@@ -12,6 +14,6 @@ function FloatingDiv() {
             </Div>
         </Container>
     )
-}
+};
 
-export default FloatingDiv
+export default FloatingDiv;
