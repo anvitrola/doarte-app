@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+
+//components
 import TextBox from "../textBox/TextBox";
 import DefaultButton from "../buttons/DefaultButton";
+
+//styled components
 import customStyles from "./Modal.styles";
 
 function ModalTemplate() {
