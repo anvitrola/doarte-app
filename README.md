@@ -57,8 +57,7 @@ Aplicação web construída com React.js e integração com API própria.
 
 <br>
 <br>
-<br>
-<br>
+
 
 <div align="center">
   <h1>Open Source</h1>
