@@ -44,6 +44,7 @@ function AuthProvider({children}){
         setAuthenticated(false);
         localStorage.removeItem(TOKEN_KEY);
         history.push('/');
+    }
 
     return(
         <Context.Provider value={{authenticated, handleAuth, handleLogout, userID}}>
