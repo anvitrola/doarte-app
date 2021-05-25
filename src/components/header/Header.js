@@ -15,7 +15,7 @@ import logo from "../../images/logo-doarte.png";
 import {HeaderContainer, Buttons, Logo} from './Header.styles';
 
 function Header() {
-    const { authenticated, handleLogout } = useContext(Context);
+    const { authenticated, handleLogout, userID } = useContext(Context);
 
     return (
         <HeaderContainer>
@@ -25,10 +25,10 @@ function Header() {
                 </Link>
             </Logo>
 
-            <Navbar auth={authenticated ? true : false}/>
+            <Navbar/>
 
             {authenticated && (
-                <Link to="/profile">
+                <Link to={`/profile/${userID}`}>
                     <DefaultButton text={"Meu perfil"}/>
                 </Link>
             )}

@@ -7,6 +7,9 @@ import history from '../history';
 const Context = createContext();
 
 function AuthProvider({children}){
+
+    const [userID, setUserID] = useState(null);
+
     const [authenticated, setAuthenticated] = useState(false);
     // eslint-disable-next-line 
     const [loading, setLoading] = useState(true);
@@ -24,7 +27,7 @@ function AuthProvider({children}){
         setLoading(false);
     }, []);
 
-    function handleAuth(token){
+    function handleAuth(token, id){
         //saving token in localstorage under our key
         localStorage.setItem(TOKEN_KEY, token);
 
@@ -32,6 +35,8 @@ function AuthProvider({children}){
         api.defaults.headers.Authorization = `Bearer ${token}`;
 
         setAuthenticated(true);
+        setUserID(id);
+        
         history.push('/explore');
     }
 
@@ -42,7 +47,7 @@ function AuthProvider({children}){
     }
 
     return(
-        <Context.Provider value={{authenticated, handleAuth, handleLogout}}>
+        <Context.Provider value={{authenticated, handleAuth, handleLogout, userID}}>
             {children}
         </Context.Provider>
     );

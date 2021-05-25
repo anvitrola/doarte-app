@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router";
 
 //api services
 import { updateUser } from "./../../services/userServices";
@@ -11,6 +12,8 @@ import FormField from "../formField/FormField";
 import { Form } from "./PostAndPatch.styles";
 
 function PostAndPatch({isUpdate}) {
+  //let { id } = useParams(); --> está dando undefined. why? to be discovered...
+
   const [user, setUser] = useState({
     name: "",
     email: "",
