@@ -8,8 +8,8 @@ import { Context } from "./contexts/AuthContext";
 import MainContent from "./components/mainContent/MainContent";
 import AdForm from "./components/adForm/AdForm";
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
-import ProductDashboard from "./components/productDashboard/ProductDashboard";
-import UserProfile from "./components/userProfile/UserProfile";
+import GenericDashboard from "./components/genericDashboard/GenericDashboard";
+import FormArea from "./components/formArea/FormArea";
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
     const { authenticated } = useContext(Context);
@@ -38,13 +38,15 @@ const Routes = () => (
             </>
         )}/>
 
-        <PrivateRoute path={`/profile`} component={() => (<UserProfile />)}/>
+        <PrivateRoute path={`/profile`} component={() => (<FormArea profile={true}/>)}/>
+
+        <PrivateRoute path={`/create`} component={() => (<FormArea/>)}/>
 
         <Route path="/signIn" component={() =><AdForm />}/>
 
         <Route path="/signUp" component={() =><AdForm signUp={true}/>}/>
 
-        <Route path="/explore" component={() => (<ProductDashboard />)}/>
+        <Route path="/explore" component={() => (<GenericDashboard />)}/>
 
         <Route exact path="*" component={() => (<h1>404: Page not found</h1>)}/>
 

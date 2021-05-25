@@ -1,5 +1,8 @@
+//icons
 import { IconContext } from "react-icons";
 import { AiFillStar } from 'react-icons/ai';
+
+//styled components
 import {Card, Profile, Review, Rate} from './UserCard.styles'
 
 function UserCard({name, location, photo, comment, rate}) {
@@ -20,9 +23,9 @@ function UserCard({name, location, photo, comment, rate}) {
                     <AiFillStar/>
                 </IconContext.Provider>
             </Profile>
-            <Review><p>{comment}</p></Review>
+            <Review>{comment}</Review>
         </Card>
     )
-}
+};
 
-export default UserCard
+export default UserCard;

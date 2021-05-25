@@ -1,9 +1,12 @@
-import { InfoContainer, InfoDiv, TextDiv, Text } from "./InfoBar.styles";
-
 import { IconContext } from "react-icons";
+
+//icons
 import { FaUserCircle } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { BiDonateHeart } from "react-icons/bi";
+
+//styled components
+import { InfoContainer, InfoDiv, TextDiv, Text } from "./InfoBar.styles";
 
 function InfoBar() {
   return (

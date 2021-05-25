@@ -1,9 +1,9 @@
 import ProgressBar from "@ramonak/react-progress-bar";
-import {Bar} from './Progress.styles';
 
+//styled component
+import { Bar } from './Progress.styles';
 
 function Progress({amount, current}) {
-
     const percent = (current * 100)/amount;
 
     return (
@@ -21,6 +21,6 @@ function Progress({amount, current}) {
             <h6>Valor arrecadado: R${current}</h6>
         </Bar>
     )
-}
+};
 
-export default Progress
+export default Progress;

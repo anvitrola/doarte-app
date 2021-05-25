@@ -1,8 +1,12 @@
-import { TextContainer } from './TextSection.styles';
-import Picture from "../../images/1.png";
-
+//components
 import TextBox from '../textBox/TextBox';
 import ProList from '../proList/ProList';
+
+//image
+import Picture from "../../images/1.png";
+
+//styled components
+import { TextContainer } from './TextSection.styles';
 
 function TextSection() {
     return (
@@ -15,6 +19,6 @@ function TextSection() {
             <ProList/>
         </TextContainer>
     )
-}
+};
 
-export default TextSection
+export default TextSection;

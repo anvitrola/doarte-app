@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.main
 `
     grid-area: main;
-    padding: 2rem;
+    padding: 2rem 0 4rem 0;
+    height: auto;
     width: 80%;
     align-self: center;
     justify-self: center;

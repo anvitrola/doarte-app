@@ -1,27 +1,29 @@
-import { Nav, List, NavLink } from './Navbar.styles';
+import { Nav, List, NavLink } from "./Navbar.styles";
 
-function Navbar() {
-    return (
-        <Nav>
-            <List>
-                <li>
-                    <NavLink to="/">Sobre</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/">Aliados</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/explore">Projetos</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/">Dúvidas</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/updateUser">Atualizar</NavLink>
-                </li>
-            </List>
-        </Nav>
-    )
-};
+function Navbar({ auth }) {
+  return (
+    <Nav>
+      <List>
+        {!auth && (
+          <li>
+            <NavLink to={auth ? "/explore" : "/"}>Sobre</NavLink>
+          </li>
+        )}
+
+        <li>
+          <NavLink to={auth ? "/explore" : "/"}>Aliados</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/explore">Explorar</NavLink>
+        </li>
+        
+        <li>
+          <NavLink to={auth ? "/explore" : "/"}>Dúvidas</NavLink>
+        </li>
+      </List>
+    </Nav>
+  );
+}
 
 export default Navbar;

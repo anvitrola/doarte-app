@@ -1,4 +1,4 @@
-import {TextContainer, Title, Subtitle} from './TextBox.styles';
+import { TextContainer, Title, Subtitle } from './TextBox.styles';
 
 function TextBox({title, subtitle, main}) {
     return (
@@ -7,6 +7,6 @@ function TextBox({title, subtitle, main}) {
             <Subtitle>{subtitle}</Subtitle>
         </TextContainer>
     )
-}
+};
 
-export default TextBox
+export default TextBox;

@@ -15,7 +15,7 @@ export const getUser = async (id) => {
       return data;
     } 
     catch (err){
-      console.log(err);
+      console.log(err)
     }
 };
 
@@ -43,15 +43,11 @@ export const createUser = async (user) => {
     return response.data;
   } 
   catch (err){
-    console.log(err);
+    console.log(err.message);
   }
 };
 
-export const loginUser = async (user) => {
-  
-  if(!user.name || !user.email || !user.password){
-    throw new Error();
-  }
+export const loginUser = async (user) => {  
   try{
     const response = await api.post("auth/signIn", user);
     

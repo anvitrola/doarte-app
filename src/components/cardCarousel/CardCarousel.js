@@ -1,12 +1,16 @@
-import { Cards } from "./CardCarousel.styles";
+//components
 import TextBox from "../textBox/TextBox";
 import UserCard from "../userCard/UserCard";
 import CustomCarousel from "../customCarousel/CustomCarousel";
+
+//images
 import Augusto from "../../images/augusto.jpeg";
 import Daniel from "../../images/daniel.jpeg";
 import Julia from "../../images/julia.jpg";
 import Rafael from "../../images/rafael.jpg";
 
+//styled components
+import { Cards } from "./CardCarousel.styles";
 
 function CardCarousel() {
   return (

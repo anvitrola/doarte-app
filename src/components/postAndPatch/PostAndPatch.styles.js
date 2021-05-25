@@ -4,14 +4,15 @@ export const Form = styled.form
 `
     grid-area: form;
     padding: 1.5rem;
-    width: 30rem;
+    width: ${(props) => (props.larger ? "35rem" : "33rem")};
+
     border-radius: 10px;
-    display:flex;
-    box-shadow: 20px 15px  var(--blue);
+    display: flex;
+    box-shadow: 20px 15px  var(--yellow);
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
-    height: 20rem;
+    justify-content: space-around;
+    height: ${(props) => (props.larger ? "33rem" : "25rem")};
     background-color: var(--snow);
 
         label{
@@ -23,7 +24,6 @@ export const Form = styled.form
         input{
             width: 90%;
             padding: .3rem;
-            border: none;
             border-radius: 10px;
 
             &::placeholder{
@@ -32,10 +32,10 @@ export const Form = styled.form
         }
 
         button{
-            width: 7rem;
+            width: 50%;
             height: 2.3rem;
             border-radius: 3px;
             background-color: var(--blue);
             color: var(--white);
         }
-`
+`;

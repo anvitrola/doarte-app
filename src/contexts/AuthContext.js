@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect } from 'react';
 
 //api config + history to create dinamic flow
@@ -6,7 +5,6 @@ import { api } from '../services/api';
 import history from '../history';
 
 const Context = createContext();
-
 
 function AuthProvider({children}){
     const [authenticated, setAuthenticated] = useState(false);
@@ -34,17 +32,17 @@ function AuthProvider({children}){
         api.defaults.headers.Authorization = `Bearer ${token}`;
 
         setAuthenticated(true);
-        history.push('/profile');
+        history.push('/explore');
     }
 
-    /**function handleLogout(){
+    function handleLogout(){
         setAuthenticated(false);
         localStorage.removeItem(TOKEN_KEY);
-        history.push('/signIn');
-    }**/
+        history.push('/');
+    }
 
     return(
-        <Context.Provider value={{authenticated, handleAuth}}>
+        <Context.Provider value={{authenticated, handleAuth, handleLogout}}>
             {children}
         </Context.Provider>
     );

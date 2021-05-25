@@ -17,4 +17,4 @@ export const Bar = styled.div
     div{
         width: 100px;
     }
-`
+`;

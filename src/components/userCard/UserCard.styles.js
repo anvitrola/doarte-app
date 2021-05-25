@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 90%;
-  height: 230px;
   margin: 10px auto;
   background: var(--white);
   padding: 1.5rem;
@@ -22,20 +21,22 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   img {
     width: 50px;
     border-radius: 50%;
     margin: 5px 9px 10px 0;
   }
+
   div {
     display: flex;
     flex-direction: column;
     width: 70%;
 
-    h6 {
+    h4 {
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 15px;
       color: var(--black);
     }
 
@@ -46,6 +47,7 @@ export const Profile = styled.div`
       color: var(--blue);
     }
   }
+  
   @media (max-width: 768px) {
     min-width: 80%;
   }

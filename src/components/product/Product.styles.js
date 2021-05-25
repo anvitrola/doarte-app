@@ -22,6 +22,5 @@ export const Card = styled.div
     @media (max-width: 768px) {
         height: 400px;
         margin-bottom: 1.5rem;
-
-      }
-`
+    }
+`;

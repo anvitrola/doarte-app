@@ -1,7 +1,7 @@
-import { Router} from "react-router-dom";
+import { Router } from "react-router-dom";
 
 //history track
-import history from './history';
+import history from "./history";
 
 //Auth
 import { AuthProvider } from "./contexts/AuthContext";
@@ -17,18 +17,17 @@ import Routes from "./routes";
 
 function App() {
   return (
-
     <AuthProvider>
       <Router history={history}>
         <AppBody>
           <Header />
 
-          <Routes/>
+          <Routes />
 
           <Footer />
         </AppBody>
       </Router>
-</AuthProvider>
+    </AuthProvider>
   );
 }
 
