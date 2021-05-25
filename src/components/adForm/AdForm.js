@@ -30,8 +30,9 @@ function AdForm({ signUp }) {
     signUp
     ? createUser(user)
     : loginUser(user)
-      .then(({ acessToken }) => {
-        handleAuth(acessToken);
+      .then(({ acessToken, id }) => {
+        handleAuth(acessToken, id);
+        console.log(acessToken)
       })
   };
 
