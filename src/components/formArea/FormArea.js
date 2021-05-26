@@ -1,5 +1,5 @@
 //react
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 //icons
 import { IconContext } from "react-icons";
@@ -19,16 +19,16 @@ import {Container, Greetings} from './FormArea.styles';
 
 
 function FormArea({profile}) {
-    const [user,setUser] = useState({
+    const [user, setUser] = useState({
         name:"Default",
         amount_money:0
     });
 
     useEffect(async () => {
         const data = await getUser();
-        setUser(data);
-        
+        setUser(data);     
     }, []);
+    
     return (
         <Container>
             <Greetings>
