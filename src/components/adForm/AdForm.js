@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -16,10 +16,6 @@ import BrandLogo from "../../images/logo-doarte.png";
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
-
-  useEffect(() => {
-    console.log(signUp);
-  }, [])
   const { handleAuth } = useContext(Context);
 
   const [user, setUser] = useState({
