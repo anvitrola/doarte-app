@@ -31,15 +31,16 @@ function AdForm({ signUp }) {
     if(signUp){
       createUser(user)
       .then(response => {
-        if(!response === undefined)alert(response);
-        else(setErr(true))
+        if(response === undefined)setErr(true);
+        else(alert(response))
       })
     } 
     else {
       loginUser(user)
       .then((data) => {
-        if(!data === undefined)handleAuth(data.acessToken, data.id);
-        else(setErr(true))
+        console.log(data)
+        if(data === undefined)setErr(true)
+        else handleAuth(data.acessToken, data.id);
       })
     }
   };

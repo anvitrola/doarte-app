@@ -4,7 +4,7 @@ function FormField({text, id, type, getValue, holder}) {
     return (
         <>
             <Label htmlFor={id}>{text}</Label>
-            <Input type={type} id={id} onBlur={getValue} placeholder={holder}/>
+            <Input type={type} id={id} onBlur={getValue} placeholder={holder} required/>
         </>
     )
 }
