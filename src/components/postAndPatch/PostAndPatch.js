@@ -42,7 +42,8 @@ function PostAndPatch({isUpdate}) {
     >
 
       <FormField 
-      text={isUpdate ? "Nome" : "Dê um título à sua vaquinha"} 
+      text={isUpdate ? "Nome" : "Dê um título à sua vaquinha"}
+      id={isUpdate ? "name" : "title"}
       type={"text"} 
       getValue={takeValue} 
       holder={isUpdate 
@@ -51,7 +52,8 @@ function PostAndPatch({isUpdate}) {
       }/>
       
       <FormField 
-      text={isUpdate ? "Email" : "Descrição"} 
+      text={isUpdate ? "Email" : "Descrição"}
+      id={isUpdate ? "email" : "description"} 
       type={isUpdate ? "email" : "text"} 
       getValue={takeValue} 
       holder={isUpdate 
@@ -63,14 +65,15 @@ function PostAndPatch({isUpdate}) {
       text={isUpdate 
         ? "Senha" 
         : "Quanto você deseja arrecadar?"
-      } 
+      }
+      id={isUpdate ? "password" : "goal_value"} 
       type={isUpdate ? "password" : "number"} 
       getValue={takeValue} 
       holder={isUpdate && "********"}
       />
 
       {!isUpdate && (
-        <FormField text={"Prazo final: "} type={"date"}/>
+        <FormField text={"Prazo final: "} id={"deadline"} type={"date"}/>
       )}
 
       <HighlightButton 

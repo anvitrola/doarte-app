@@ -1,10 +1,10 @@
 import { Label, Input } from "./FormField.styles";
 
-function FormField({text, type, getValue, holder}) {
+function FormField({text, id, type, getValue, holder}) {
     return (
         <>
-            <Label htmlFor={text}>{text}</Label>
-            <Input type={type} id={text} onBlur={getValue} placeholder={holder}/>
+            <Label htmlFor={id}>{text}</Label>
+            <Input type={type} id={id} onBlur={getValue} placeholder={holder}/>
         </>
     )
 }

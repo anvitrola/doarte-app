@@ -55,11 +55,14 @@ function AdForm({ signUp }) {
 
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} type={"text"} getValue={takeValue} />
+            <FormField text={"Nome"} id={"name"} type={"text"} getValue={takeValue} />
           )}
 
-          <FormField text={"Email"} type={"email"} getValue={takeValue} />
-          <FormField text={"Senha"} type={"password"} getValue={takeValue} />
+
+          <FormField text={"Email"} id={"email"} type={"email"} getValue={takeValue} />
+          <FormField text={"Senha"} id={"password"} type={"password"} getValue={takeValue} />
+
+
         </Fields>
 
         <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
