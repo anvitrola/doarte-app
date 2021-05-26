@@ -27,7 +27,7 @@ function FormArea({profile}) {
     useEffect(async () => {
         const data = await getUser();
         setUser(data);
-        console.log(user);
+        
     }, []);
     return (
         <Container>
