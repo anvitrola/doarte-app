@@ -7,9 +7,7 @@ export const getUser = async () => {
           'x-access-token':localStorage.getItem('@doartexszsA-token')
         }
       });
-
-      
-  
+ 
       if (!response.status === 200) throw new Error(JSON.stringify(response));
   
       const data = response.data;

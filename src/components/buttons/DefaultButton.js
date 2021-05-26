@@ -1,8 +1,8 @@
 import { CommonButton } from './Buttons.styles';
 
-function DefaultButton({text, primary, clickEvent}) {
+function DefaultButton({text, type, primary, clickEvent}) {
     return (
-        <CommonButton primary={primary} onClick={clickEvent}>
+        <CommonButton type={type} primary={primary} onClick={clickEvent}>
             {text}
         </CommonButton>
     )

@@ -13,7 +13,7 @@ function MainContent() {
         <Main>
             <Banner/>
             <TextSection/>
-            <ProductExhi/>
+            <ProductExhi main={true}/>
             <Map/>
             <CardCarousel/>
         </Main>
