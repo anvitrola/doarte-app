@@ -17,6 +17,7 @@ import { deleteUser } from './../../services/userServices';
 
 function TinyForm({isDelete}) {
     const { handleLogout } = useContext(Context);
+    
     const handleDelete = () =>{
         deleteUser();
         handleLogout();
@@ -41,7 +42,7 @@ function TinyForm({isDelete}) {
             text={"Confirmar"} 
             primary={true} 
             type={"submit"}
-            clickEvent={handleDelete}
+            {isDelete && clickEvent={handleDelete}}
             />
         </Form>
     )
