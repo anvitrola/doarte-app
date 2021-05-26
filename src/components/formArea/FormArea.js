@@ -9,13 +9,15 @@ import { FaPiggyBank } from 'react-icons/fa';
 import PostAndPatch from '../postAndPatch/PostAndPatch';
 
 //services
-import {getUser} from './../../services/userServices';
+import { getUser } from './../../services/userServices';
 
 //image
 import Picture from "../../images/4.png";
 
 //styled components
-import {Container, Greetings} from './FormArea.styles';
+import { Container, Greetings, DeleteArea } from './FormArea.styles';
+import ModalTemplate from '../modal/Modal';
+import TinyForm from '../tinyForm/TinyForm';
 
 
 function FormArea({profile}) {
@@ -24,9 +26,12 @@ function FormArea({profile}) {
         amount_money:0
     });
 
-    useEffect(async () => {
-        const data = await getUser();
-        setUser(data);     
+    useEffect(() => {
+        const fetchedUser = async () => {
+            const data = await getUser();
+            return data;
+        }
+        setUser(fetchedUser);     
     }, []);
     
     return (
@@ -44,6 +49,14 @@ function FormArea({profile}) {
             <PostAndPatch isUpdate={profile && true}/>
 
             <img src={Picture} alt="Bloco de notas ilustrado por um contorno preto"/>
+
+            {profile &&(
+                <DeleteArea>
+                    <ModalTemplate isDelete={true} text={"Deletar conta"}>
+                        <TinyForm isDelete={true}/>
+                    </ModalTemplate>
+                </DeleteArea>
+            )}
 
         </Container>
     )

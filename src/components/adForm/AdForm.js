@@ -27,22 +27,24 @@ function AdForm({ signUp }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    signUp
-
-    ? createUser(user)
-    : loginUser(user)
+    if(signUp){
+      createUser(user)
+      .then(sucess => {
+        alert(sucess)
+      })
+    } 
+    else {
+      loginUser(user)
       .then(({ acessToken, id }) => {
         handleAuth(acessToken, id);
-        console.log(acessToken)
       })
+    }
   };
 
   const takeValue = (e) => {
     const { id, value } = e.target;
 
     setUser((prevState) => ({ ...prevState, [id]: value }));
-
-    console.log(user);
   };
 
   return (

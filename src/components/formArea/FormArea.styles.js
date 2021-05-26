@@ -11,7 +11,8 @@ export const Container = styled.main
     display: grid;
     grid-template-areas:
         "greeting greeting image"
-        "form form image";
+        "form form image"
+        "delete delete delete";
     grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
 
@@ -47,3 +48,8 @@ export const Greetings = styled.section
     }
 `;
 
+export const DeleteArea = styled.section
+`
+    grid-area: delete;
+    align-self: end;
+`
