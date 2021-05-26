@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -18,6 +18,8 @@ import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
   const { handleAuth } = useContext(Context);
+
+  const [err,setErr] = useState(false);
 
   const formElement = useRef(null);
 
