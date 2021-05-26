@@ -53,7 +53,7 @@ export const updateUser = async (data) => {
         user = {...user,[key]:data[key]}
       }
     }
-    console.log(user);
+    
     const response = await api.patch("user/update", user,{
       headers:{
         'x-access-token':localStorage.getItem('@doartexszsA-token')
