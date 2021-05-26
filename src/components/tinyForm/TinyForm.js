@@ -42,7 +42,7 @@ function TinyForm({isDelete}) {
             text={"Confirmar"} 
             primary={true} 
             type={"submit"}
-            {isDelete && clickEvent={handleDelete}}
+            clickEvent={isDelete && handleDelete}
             />
         </Form>
     )
