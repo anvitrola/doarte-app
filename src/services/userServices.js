@@ -20,21 +20,6 @@ export const getUser = async () => {
     }
 };
 
-export const getUsers = async () => {
-  try{
-    const response = await api.get("all");
-    
-    if (!response.status === 200) throw new Error();
-
-    const data = response.data;
-
-    console.log(data);
-  } 
-  catch (err){
-    console.log(err);
-  }
-};
-
 export const createUser = async (user) => {
   try{
     const response = await api.post("auth/signUp", user);
