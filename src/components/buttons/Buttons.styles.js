@@ -9,6 +9,12 @@ export const CommonButton = styled.button`
   padding: 0.3rem;
   font: 500 16px "Rubik", sans-serif;
   color: ${(props) => (props.primary ? "var(--orange)" : "var(--black)")};
+  transition: all 0.3s;
+  &:hover {
+    color: var(--white);
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+  }
 `;
 
 export const FancyButton = styled.button`

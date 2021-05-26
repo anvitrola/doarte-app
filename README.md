@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+<div align="center">
+      <h1></h1>
+    <img src="/.github/logo.png" width="400"/>  
+    <h1></h1>
+    <p>Doarte | A arte de doar  </p>    
+    <hr />    
+    <p>
+        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/language-Javascript-yellow" alt="Repo Main Language" /></a>
+        <img src="https://img.shields.io/badge/platform-web-blueviolet" alt="Project Platform" />
+        <a href="https://nlw4moveit-p6fhlbbtu-brunosampaiodev.vercel.app/">
+        <a href=""><img src="https://img.shields.io/badge/licence-MIT-red" alt="Repo License" /></a>
+    </p>     
+       <hr />    
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</div>
 
-## Available Scripts
+# About
 
-In the project directory, you can run:
+A ideia central da Doarte é unir causas e projetos que precisam de um intermediário competente e integro.
 
-### `yarn start`
+Aplicação web construída com React.js e integração com API própria.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center">
+    <img src="/.github/index.png" width="700" /> 
+    <img src="/" width="700" />
+    <img src="/" width="700" /> 
+    <img src="" width="700" /> 
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Techs
 
-### `yarn test`
+- [React.js](https://reactjs.org/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Styled-components](https://styled-components.com/docs/basics#getting-started)
+- [Axios](https://www.npmjs.com/package/axios)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Requeriments
 
-### `yarn build`
+- [Git](https://git-scm.com/) installed
+- [Node](https://node.js.org/) installed
+- Npm or [Yarn](https://yarnpkg.com/) installed
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Initializing the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Run `npm install` or `yarn install`.
+- Run `yarn dev` and access `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Contributors
 
-### `yarn eject`
+- [Ana Vitória Viana](https://github.com/anvitrola)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Elivelton Souza](https://github.com/EliveltonSouzaDev)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Rafael Almeida](https://github.com/RafaelVi)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Peter Helder](https://github.com/petersilvahs)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <h1>Open Source</h1>
+  <sub>Copyright © 2021</sub>
+  <p>DOARTE <a href="https://github.com/anvitrola/doarte-app/blob/responsiveness/LICENSE">is MIT licensed 💖</a></p>
+  <img src="/.github/circule-logo.png" width="50" />
+</div>

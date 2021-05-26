@@ -1,17 +1,24 @@
+import React, { useContext } from "react";
+
+//authentication context
+import { Context } from "../../contexts/AuthContext";
+
 import { Nav, List, NavLink } from "./Navbar.styles";
 
-function Navbar({ auth }) {
+function Navbar() {
+  const { authenticated } = useContext(Context);
+
   return (
     <Nav>
       <List>
-        {!auth && (
+        {!authenticated && (
           <li>
-            <NavLink to={auth ? "/explore" : "/"}>Sobre</NavLink>
+            <NavLink to={authenticated ? "/explore" : "/"}>Sobre</NavLink>
           </li>
         )}
 
         <li>
-          <NavLink to={auth ? "/explore" : "/"}>Aliados</NavLink>
+          <NavLink to={authenticated ? "/explore" : "/"}>Aliados</NavLink>
         </li>
 
         <li>
@@ -19,11 +26,11 @@ function Navbar({ auth }) {
         </li>
         
         <li>
-          <NavLink to={auth ? "/explore" : "/"}>Dúvidas</NavLink>
+          <NavLink to={authenticated ? "/explore" : "/"}>Dúvidas</NavLink>
         </li>
       </List>
     </Nav>
   );
-}
+};
 
 export default Navbar;

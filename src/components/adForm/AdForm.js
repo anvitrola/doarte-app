@@ -28,10 +28,12 @@ function AdForm({ signUp }) {
     event.preventDefault();
 
     signUp
+
     ? createUser(user)
     : loginUser(user)
-      .then(({ acessToken }) => {
-        handleAuth(acessToken);
+      .then(({ acessToken, id }) => {
+        handleAuth(acessToken, id);
+        console.log(acessToken)
       })
   };
 
@@ -46,17 +48,18 @@ function AdForm({ signUp }) {
   return (
     <Container>
       <Form method="POST" onSubmit={handleSubmit}>
-        <Logo src={BrandLogo} alt="Logotimo do site Doarte. Um círculo composto por várias mãos"/>
+        <Logo
+          src={BrandLogo}
+          alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
+        />
 
         <Fields>
-
           {signUp && (
             <FormField text={"Nome"} type={"text"} getValue={takeValue} />
           )}
 
           <FormField text={"Email"} type={"email"} getValue={takeValue} />
           <FormField text={"Senha"} type={"password"} getValue={takeValue} />
-
         </Fields>
 
         <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
@@ -70,7 +73,6 @@ function AdForm({ signUp }) {
         ) : (
           <Link to="/signUp">Criar conta</Link>
         )}
-
       </Form>
     </Container>
   );
