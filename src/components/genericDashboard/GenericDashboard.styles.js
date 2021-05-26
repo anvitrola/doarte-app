@@ -24,6 +24,19 @@ export const Main = styled.main`
     grid-area: pic;
     align-self: center;
     justify-self: center;
+    margin: 8rem 0 0 20rem;
+    width: 45%;
+    transform: translate(-50%, -50%);
+    animation: rotate 12s infinite linear;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
 
   div {

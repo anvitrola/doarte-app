@@ -77,7 +77,7 @@ function PostAndPatch({isUpdate}) {
       )}
 
       <HighlightButton 
-      text={isUpdate ? "Update my infos" : "Publicar vaquinha"} type={"submit"} 
+      text={isUpdate ? "Atualizar informações" : "Publicar vaquinha"} type={"submit"} 
       />
       
     </Form>
