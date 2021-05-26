@@ -10,6 +10,7 @@ import AdForm from "./components/adForm/AdForm";
 import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 import GenericDashboard from "./components/genericDashboard/GenericDashboard";
 import FormArea from "./components/formArea/FormArea";
+import Error404 from "./components/error/Error404";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { authenticated } = useContext(Context);
@@ -53,7 +54,7 @@ const Routes = () => {
 
       <Route path="/explore" component={() => <GenericDashboard />} />
 
-      <Route exact path="*" component={() => <h1>404: Page not found</h1>} />
+      <Route exact path="*" component={() => <Error404/>} />
     </Switch>
   );
 };
