@@ -1,21 +1,22 @@
 import { api } from '../services/api';
 
-export const getUser = async (id) => {
+export const getUser = async () => {
     try{
-      const response = await api.get("user", {
-        params: {
-          ID: id
+      const response = await api.get("user",{
+        headers:{
+          'x-access-token':localStorage.getItem('@doartexszsA-token')
         }
       });
+
+      
   
-      if (!response.ok) throw new Error();
+      if (!response.status === 200) throw new Error(JSON.stringify(response));
   
-      const data = response.json();
-  
-      return data;
+      const data = response.data;
+      return(data);
     } 
     catch (err){
-      console.log(err)
+      console.log('ERRO:' + err)
     }
 };
 
@@ -62,7 +63,16 @@ export const loginUser = async (user) => {
 
 export const updateUser = async (user) => {
   try{
-    const response = await api.patch("user/update", user);
+    for (const key in user) {
+      if (!key) {
+        delete user.key;
+      }
+    }
+    const response = await api.patch("user/update", user,{
+      headers:{
+        'x-access-token':localStorage.getItem('@doartexszsA-token')
+      }
+    });
     
     if (!response.status === 200) throw new Error();
 

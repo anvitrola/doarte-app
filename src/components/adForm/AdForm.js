@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -16,6 +16,10 @@ import BrandLogo from "../../images/logo-doarte.png";
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
 function AdForm({ signUp }) {
+
+  useEffect(() => {
+    console.log(signUp);
+  }, [])
   const { handleAuth } = useContext(Context);
 
   const [user, setUser] = useState({
@@ -55,11 +59,14 @@ function AdForm({ signUp }) {
 
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} type={"text"} getValue={takeValue} />
+            <FormField text={"Nome"} id={"name"} type={"text"} getValue={takeValue} />
           )}
 
-          <FormField text={"Email"} type={"email"} getValue={takeValue} />
-          <FormField text={"Senha"} type={"password"} getValue={takeValue} />
+
+          <FormField text={"Email"} id={"email"} type={"email"} getValue={takeValue} />
+          <FormField text={"Senha"} id={"password"} type={"password"} getValue={takeValue} />
+
+
         </Fields>
 
         <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />

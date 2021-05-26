@@ -31,8 +31,8 @@ function AuthProvider({children}){
         //saving token in localstorage under our key
         localStorage.setItem(TOKEN_KEY, token);
 
-        //defining default header w/ token to all next requests
-        api.defaults.headers.Authorization = `Bearer ${token}`;
+        //defining default header w/ token to all next requests [NOT WORKING]
+        //api.defaults.headers.common['x-access-token'] = token;
 
         setAuthenticated(true);
         setUserID(id);
