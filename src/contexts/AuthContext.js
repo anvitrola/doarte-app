@@ -31,7 +31,6 @@ function AuthProvider({children}){
 
         setAuthenticated(true);
         setUserID(id);
-        
         history.push('/explore');
     }
 
