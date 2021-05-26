@@ -18,6 +18,7 @@ import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 function AdForm({ signUp }) {
   const { handleAuth } = useContext(Context);
 
+  const [err, setErr] = useState(false);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -29,14 +30,16 @@ function AdForm({ signUp }) {
 
     if(signUp){
       createUser(user)
-      .then(sucess => {
-        alert(sucess)
+      .then(response => {
+        if(!response === undefined)alert(response);
+        else(setErr(true))
       })
     } 
     else {
       loginUser(user)
-      .then(({ acessToken, id }) => {
-        handleAuth(acessToken, id);
+      .then((data) => {
+        if(!data === undefined)handleAuth(data.acessToken, data.id);
+        else(setErr(true))
       })
     }
   };
@@ -55,6 +58,9 @@ function AdForm({ signUp }) {
           alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
         />
 
+        {err && !signUp && (<h6>Usuário e/ou senha inválidos</h6>)}
+        {err && signUp && (<h6>Oooops! Usuário já cadastrado!</h6>)}
+
         <Fields>
           {signUp && (
             <FormField text={"Nome"} id={"name"} type={"text"} getValue={takeValue} />
@@ -67,7 +73,9 @@ function AdForm({ signUp }) {
 
         </Fields>
 
-        <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
+        <SubmitButton type="submit">
+          {signUp ? "Cadastrar" : "Entrar"}
+        </SubmitButton>
 
         <h3>OU</h3>
         <SocialMediaLogin />
