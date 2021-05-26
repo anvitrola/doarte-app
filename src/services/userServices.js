@@ -11,6 +11,7 @@ export const getUser = async () => {
       if (!response.status === 200) throw new Error(JSON.stringify(response));
   
       const data = response.data;
+      console.log(data);
       return(data);
     } 
     catch (err){
@@ -44,13 +45,15 @@ export const loginUser = async (user) => {
   }
 };
 
-export const updateUser = async (user) => {
+export const updateUser = async (data) => {
   try{
-    for (const key in user) {
-      if (!key) {
-        delete user.key;
+    let user = {};
+    for (const key in data) {
+      if (data[key] !== "") {
+        user = {...user,[key]:data[key]}
       }
     }
+    console.log(user);
     const response = await api.patch("user/update", user,{
       headers:{
         'x-access-token':localStorage.getItem('@doartexszsA-token')
@@ -66,3 +69,21 @@ export const updateUser = async (user) => {
     console.log(err);
   }
 };
+
+export const deleteUser = async () => {
+  try{
+    const response = await api.patch("user/delete",{
+      headers:{
+        'x-access-token':localStorage.getItem('@doartexszsA-token')
+      }
+    });
+    
+    if (!response.status === 200) throw new Error();
+
+    console.log(response);
+  } 
+  catch (err){
+    console.log(err);
+  }
+};
+

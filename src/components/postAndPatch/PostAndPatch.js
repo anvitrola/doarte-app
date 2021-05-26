@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 //import { useParams } from "react-router";
 
 //api services
@@ -13,39 +13,41 @@ import { Form } from "./PostAndPatch.styles";
 
 function PostAndPatch({isUpdate}) {
   //let { id } = useParams(); --> está dando undefined. why? to be discovered...
-
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  
+  const formElement = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const user = takeValue();
+  
     updateUser(user);
   };
+  function takeValue(){
+    const form = formElement.current;
 
-  const takeValue = (e) => {
-    const { id, value } = e.target;
-    setUser((prevState) => ({
-      ...prevState,
-      [id]: value,
-    }));
-  };
+    let user =
+    {
+      name: form['name'].value,
+      email: form['email'].value,
+      password: form['password'].value,
+    }
+   
+    return user;
+  }
+
   
   return (
     <Form 
     larger={isUpdate ? false : true} 
     method={isUpdate ? "PATCH" : "POST"} 
-    onSubmit={handleSubmit}
+    onSubmit={handleSubmit} ref={formElement}
     >
 
       <FormField 
       text={isUpdate ? "Nome" : "Dê um título à sua vaquinha"}
       id={isUpdate ? "name" : "title"}
       type={"text"} 
-      getValue={takeValue} 
       holder={isUpdate 
         ? "Name" 
         : "O título é o que chama a atenção!"
@@ -55,7 +57,6 @@ function PostAndPatch({isUpdate}) {
       text={isUpdate ? "Email" : "Descrição"}
       id={isUpdate ? "email" : "description"} 
       type={isUpdate ? "email" : "text"} 
-      getValue={takeValue} 
       holder={isUpdate 
         ? "name@example.com" 
         : "Por que as pessoas devem se mobilizar por sua causa?"
@@ -68,7 +69,6 @@ function PostAndPatch({isUpdate}) {
       }
       id={isUpdate ? "password" : "goal_value"} 
       type={isUpdate ? "password" : "number"} 
-      getValue={takeValue} 
       holder={isUpdate && "********"}
       />
 
