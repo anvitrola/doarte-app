@@ -16,9 +16,9 @@
 
 # About
 
-A ideia central da Doarte é unir causas e projetos que precisam de um intermediário competente e integro.
+Doarte's central idea is to bring together causes and projects that need a competent and integrated intermediary.
 
-Aplicação web construída com React.js e integração com API própria.
+Web application built with React.js and integration with its own API.
 
 <div align="center">
     <img src="/.github/index.png" width="700" /> 
@@ -56,7 +56,6 @@ Aplicação web construída com React.js e integração com API própria.
 - [Peter Helder](https://github.com/petersilvahs)
 
 <br>
-
 
 <div align="center">
   <h1>Open Source</h1>
