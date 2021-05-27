@@ -11,6 +11,8 @@ import FloatingDiv from "./components/floatingDiv/FloatingDiv";
 import GenericDashboard from "./components/genericDashboard/GenericDashboard";
 import FormArea from "./components/formArea/FormArea";
 import Error404 from "./components/error/Error404";
+import Aliados from "./components/aliados/Aliados";
+import QuestionsPage from "./components/questions/QuestionsPage";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { authenticated } = useContext(Context);
@@ -53,6 +55,11 @@ const Routes = () => {
       <Route path="/signUp" component={() => <AdForm signUp={true} />} />
 
       <Route path="/explore" component={() => <GenericDashboard />} />
+
+      <Route path="/aliados" component={() => <Aliados/>} />
+
+      <Route path="/duvidas" component={() => <QuestionsPage/>} />
+
 
       <Route exact path="*" component={() => <Error404/>} />
     </Switch>
