@@ -21,7 +21,7 @@ A ideia central da Doarte é unir causas e projetos que precisam de um intermedi
 Aplicação web construída com React.js e integração com API própria.
 
 <div align="center">
-    <img src="/.github/index.png" width="700" /> 
+    <img src="/.github/page01.png" width="700" /> 
     <img src="/" width="700" />
     <img src="/" width="700" /> 
     <img src="" width="700" /> 
