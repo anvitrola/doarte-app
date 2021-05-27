@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-//import { useParams } from "react-router";
 
 //api services
 import { updateUser } from "./../../services/userServices";
@@ -14,7 +13,6 @@ import { Form } from "./PostAndPatch.styles";
 
 
 function PostAndPatch({isUpdate}) {
-  //let { id } = useParams(); --> está dando undefined. why? to be discovered...
   const [err, setErr] = useState(false)
 
   const formElement = useRef(null);
@@ -33,6 +31,7 @@ function PostAndPatch({isUpdate}) {
     });
 
   };
+  
   function takeValue(){
     const form = formElement.current;
     let data;
@@ -43,10 +42,9 @@ function PostAndPatch({isUpdate}) {
         email: form['email'].value,
         password: form['password'].value,
       }
-    }else{
+    } else{
       data = {
         title: form['title'].value,
-        category: form['category'].value,
         goal_value: form['goal_value'].value,
         deadline: form['deadline'].value,
         description: form['description'].value,
@@ -54,7 +52,7 @@ function PostAndPatch({isUpdate}) {
     }
    
     return data;
-  }
+  };
 
   
   return (
@@ -91,9 +89,6 @@ function PostAndPatch({isUpdate}) {
       type={isUpdate ? "password" : "number"} 
       holder={isUpdate && "********"}
       />
-      {!isUpdate && (
-        <FormField text={"Categoria: "} id={"category"} type={"text"}/>
-      )}
 
       {!isUpdate && (
         <FormField text={"Prazo final: "} id={"deadline"} type={"date"}/>
