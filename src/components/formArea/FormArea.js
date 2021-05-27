@@ -31,7 +31,7 @@ function FormArea({profile}) {
             setUser(await getUser());
         }
         fetchUser();    
-    }, []);
+    },[]);
     
     return (
         <Container>
