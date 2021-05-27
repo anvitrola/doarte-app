@@ -1,7 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 //authentication context
 import { Context } from "../../contexts/AuthContext";
+
+//services
+import { getUser } from './../../services/userServices';
 
 //components
 import CustomCarousel from "../customCarousel/CustomCarousel";
@@ -19,12 +22,25 @@ import ProductExhi from "../productExhi/ProductExhi";
 function GenericDashboard() {
     const { authenticated, userID } = useContext(Context);
 
+    const [user, setUser] = useState({
+        name:"Default",
+        amount_money:0
+    });
+
+
+    useEffect(() => {
+        async function fetchUser() {
+            setUser(await getUser());
+        }
+        fetchUser();    
+    }, []);
+
     return (
         <Main>
             <TextBox 
             title={!authenticated 
                 ? "Doarte: A arte de doar." 
-                : `Bem vindo de volta, ${userID}!`
+                : `Bem vindo de volta, ${user.name}!`
             } 
             subtitle={"Gentileza gera gentileza"}/>
 
@@ -32,17 +48,19 @@ function GenericDashboard() {
                 <HighlightButton primary={true} text={authenticated ? "Criar vaquinha" : "Cadastre-se"}/>
             </LinkBox>
 
-            <img src={CircleImage} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
+            <img 
+            src={CircleImage} 
+            alt="Logo do site, um círculo formado por mãos, girando."/>
 
             <Highlights>
                 {authenticated ? (
-                    <ProductExhi/>
+                    <ProductExhi isPublic={false}/>
                 ) : (
-                <CustomCarousel>
-                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
-                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
-                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
-                </CustomCarousel>
+                    <CustomCarousel>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                    </CustomCarousel>
                 )}
             </Highlights>
 

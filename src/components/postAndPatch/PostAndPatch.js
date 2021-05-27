@@ -1,8 +1,8 @@
-import { useRef } from "react";
-//import { useParams } from "react-router";
+import { useState, useRef } from "react";
 
 //api services
 import { updateUser } from "./../../services/userServices";
+import { createProduct } from "../../services/productServices";
 
 //components
 import HighlightButton from "../buttons/HighlightButton";
@@ -11,30 +11,48 @@ import FormField from "../formField/FormField";
 //styled components
 import { Form } from "./PostAndPatch.styles";
 
+
 function PostAndPatch({isUpdate}) {
-  //let { id } = useParams(); --> está dando undefined. why? to be discovered...
-  
+  const [err, setErr] = useState(false)
+
   const formElement = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const user = takeValue();
   
-    updateUser(user);
+    const data = takeValue()
+
+    isUpdate? 
+    updateUser(data) 
+    : 
+    createProduct(data).then(response => {
+      if(response === undefined)setErr(true);
+      else(alert('Vaquinha criada com sucesso!'))
+    });
+
   };
+  
   function takeValue(){
     const form = formElement.current;
-
-    let user =
-    {
-      name: form['name'].value,
-      email: form['email'].value,
-      password: form['password'].value,
+    let data;
+    if(isUpdate){
+      data =
+      {
+        name: form['name'].value,
+        email: form['email'].value,
+        password: form['password'].value,
+      }
+    } else{
+      data = {
+        title: form['title'].value,
+        goal_value: form['goal_value'].value,
+        deadline: form['deadline'].value,
+        description: form['description'].value,
+      }
     }
    
-    return user;
-  }
+    return data;
+  };
 
   
   return (
