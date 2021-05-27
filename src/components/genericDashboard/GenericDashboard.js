@@ -48,19 +48,29 @@ function GenericDashboard() {
                 <HighlightButton primary={true} text={authenticated ? "Criar vaquinha" : "Cadastre-se"}/>
             </LinkBox>
 
-            <img src={CircleImage} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
+            <img 
+            src={CircleImage} 
+            alt="Logo do site, um círculo formado por mãos, girando."/>
 
             <Highlights>
                 {authenticated ? (
                     <ProductExhi isPublic={false}/>
                 ) : (
-                    <ProductExhi isPublic={true}/>
+                    <CustomCarousel>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                        <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                    </CustomCarousel>
                 )}
             </Highlights>
 
             <Products>
                 <h2>Outros projetos</h2>
-                <ProductExhi isPublic={true}/>
+                <CustomCarousel>
+                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                    <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
+                </CustomCarousel>
             </Products>
         </Main>
     )
