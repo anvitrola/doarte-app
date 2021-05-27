@@ -20,14 +20,14 @@ function TinyUpdate({ isDelete, id }) {
     event.preventDefault();
 
     const form = formElement.current;
-    
+
     let data = {
       title: form["title"].value,
       goal_value: form["goal_value"].value,
       description: form["description"].value,
     };
     updateProduct(data, id).then((response) =>
-      alert("Vaquinha Atualizada com sucesso!")
+      alert(response.message)
     );
   };
   const handleDelete = (event) => {
@@ -42,6 +42,7 @@ function TinyUpdate({ isDelete, id }) {
       smaller={isDelete}
       metod={"PATCH"}
       onSubmit={isDelete ? handleDelete : handleUpdate}
+      ref={formElement}
     >
       {!isDelete && (
         <>
@@ -53,7 +54,7 @@ function TinyUpdate({ isDelete, id }) {
           <FormField text="Descrição" id={"description"} type={"text"} />
           <FormField
             text="Nova meta da vaquinha"
-            id={"description"}
+            id={"goal_value"}
             type={"number"}
           />
         </>
