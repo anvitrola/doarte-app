@@ -12,24 +12,24 @@ import { Exhibition, Cards } from "./ProductExhi.styles";
 function ProductExhi({ isPublic }) {
   const [products, setProducts] = useState([]);
 
-  let data = [];
+ 
 
   useEffect(() => {
 
     async function fetchUserProducts() {
-      data = [...(await getUserProducts())];
+      let data = [...(await getUserProducts())];
       setProducts(data);
-      console.log(data);
+    
     }
 
     async function fetchAllProducts() {
-      data = [...(await getProducts())];
+      let data = [...(await getProducts())];
       setProducts(data);
-      console.log(data);
+      
     }
     
     isPublic ? fetchAllProducts() : fetchUserProducts();
-  }, []);
+  });
 
   return (
     <Exhibition>
