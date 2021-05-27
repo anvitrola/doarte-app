@@ -1,46 +1,55 @@
 import {api} from '../services/api';
-
-export const getProducts = () => {
+export const getProducts = async () => {
     try{
-        const response  = await api.get("fundraiser", {
-            params: {
-              _limit: 10,
-              _sort: 'createdAt',
-              _order: 'desc'
-            }
-        });
+        const response  = await api.get("fundraiser/findAll");
 
-        const data = response.json();
+        if (!response.status === 200) throw new Error(JSON.stringify(response));
 
-        const products = data.map(product => {
-            return {
-                title: product.title,
-                owner: product.owner,
-                category: product.category,
-                goal_value: product.goal_value,
-                current_value: product.current_value,
-                deadline: calculateDeadline(product.createdAt, product.deadline),
-                description: product.description,
-                status: product.status
-            }
-        });
+        const data = response.data;
 
-        return products
+        return data;
     }
     catch (err) {
         console.log(err);
     }
 };
 
-export const createProduct = (title, category, goal_value, deadline, description) => {
+export const getUserProducts = async () => {
     try{
-        api.post("fundraiser/create", {
-            title: title,
-            category: category,
-            goal_value: goal_value,
-            deadline: deadline,
-            description: description,
+        const response  = await api.get("fundraiser/findUsersFundraisers", {
+            params: {
+              _limit: 10,
+              _sort: 'createdAt',
+              _order: 'desc'
+            },
+            headers:{
+                'x-access-token':localStorage.getItem('@doartexszsA-token')
+            }
         });
+
+        if (!response.status === 200) throw new Error(JSON.stringify(response));
+
+        const data = response.data;
+
+
+        return data;
+    }
+    catch (err) {
+        console.log(err);
+    }
+};
+
+export const createProduct = async (product) => {
+    try{
+        const response = await api.post("fundraiser/create", product,{
+            headers:{
+              'x-access-token':localStorage.getItem('@doartexszsA-token')
+            }
+        });
+      
+        if (!response.status === 200) throw new Error();
+
+        return response.data;
     }
     catch (err){
         console.log(err);

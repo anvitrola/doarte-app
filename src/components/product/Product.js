@@ -13,24 +13,25 @@ import TinyForm from "../tinyForm/TinyForm";
 //styled components
 import { Card } from './Product.styles';
 
-function Product({title, desc, amount, current}) {
+function Product({title, id, desc, amount, current, isPublic}) {
     const { authenticated } = useContext(Context);
 
     return (
         <Card>
+            <div id={String(id)}></div>
             <h3>{title}</h3>
             <p>{desc}</p>
             <Progress amount={amount} current={current}/>
 
-            {!authenticated && (
+            {!authenticated && isPublic &&(
                 <Link to="/signUp">
                     <HighlightButton text={ "DOAR"}/>
                 </Link>
             )}
 
-            {authenticated && (
+            {authenticated && isPublic &&(
                 <ModalTemplate text={"DOAR"}>
-                    <TinyForm/>
+                    <TinyForm id={id}/>
                 </ModalTemplate>
             )}
 
