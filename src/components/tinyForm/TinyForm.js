@@ -50,19 +50,11 @@ function TinyForm({isDelete,id}) {
                 />
             )}
 
-            {isDelete?
-            <DefaultButton 
-            text={"Confirmar"}
-            primary={true} 
-            type={"submit"}
-            /> :
             <DefaultButton 
             text={"Confirmar"}
             primary={true} 
             type={"submit"}
             />
-
-            }
             
         </Form>
     )
