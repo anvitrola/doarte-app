@@ -1,5 +1,10 @@
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
+import { FiEdit } from 'react-icons/fi';
+import { GrClose } from 'react-icons/gr';
+
+//contexts
+import { IconContext } from "react-icons";
 
 //authentication context
 import { Context } from "../../contexts/AuthContext";
@@ -8,19 +13,45 @@ import { Context } from "../../contexts/AuthContext";
 import HighlightButton from '../buttons/HighlightButton';
 import Progress from '../progress/Progress';
 import ModalTemplate from "../modal/Modal";
+import TinyUpdate from "../tinyUpdate/TinyUpdate";
 import TinyForm from "../tinyForm/TinyForm";
 
 //styled components
-import { Card } from './Product.styles';
+import { Card, EditBox, ShowFormButton } from './Product.styles';
 
-function Product({title, desc, amount, current}) {
+function Product({title, desc, amount, current, isUsers}) {
     const { authenticated } = useContext(Context);
+    const [edit, setEdit] = useState(false);
+
+    function showForm (){
+        setEdit(true)
+    }
+
+    function closeForm(){
+        setEdit(false)
+    }
 
     return (
         <Card>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <Progress amount={amount} current={current}/>
+            {authenticated && isUsers && (
+                <EditBox>
+                    <ShowFormButton onClick={!edit ? showForm : closeForm}>
+                        <IconContext.Provider value={{ color: "var(--blue)", size: "1.5rem"}}>
+                            {!edit ? <FiEdit/> : <GrClose/>}
+                        </IconContext.Provider>
+                    </ShowFormButton>
+                </EditBox>
+            )}
+
+            {authenticated && edit && (<TinyUpdate/>)}
+
+            {authenticated && !edit &&  (
+            <>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <Progress amount={amount} current={current}/>
+            </>
+            )}
 
             {!authenticated && (
                 <Link to="/signUp">
@@ -28,7 +59,7 @@ function Product({title, desc, amount, current}) {
                 </Link>
             )}
 
-            {authenticated && (
+            {authenticated && !edit && !isUsers && (
                 <ModalTemplate text={"DOAR"}>
                     <TinyForm/>
                 </ModalTemplate>

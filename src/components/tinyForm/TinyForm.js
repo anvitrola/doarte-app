@@ -1,5 +1,5 @@
 //react
-import {useContext} from 'react'
+import { useContext } from 'react'
 
 //components
 import DefaultButton from "../buttons/DefaultButton";

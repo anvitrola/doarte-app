@@ -8,7 +8,6 @@ function Progress({amount, current}) {
 
     return (
         <Bar>
-            <h6>META: R${amount}</h6>
             <ProgressBar 
                 completed={percent}
                 bgColor={"var(--orange)"}
@@ -18,7 +17,9 @@ function Progress({amount, current}) {
                 labelColor={"var(--blue)"}
                 borderRadius={"10px"}
             />
-            <h6>Valor arrecadado: R${current}</h6>
+            <h6>arrecadado: R${current}</h6>
+            <h6>META: R${amount}</h6>
+
         </Bar>
     )
 };
