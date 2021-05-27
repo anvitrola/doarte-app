@@ -36,21 +36,26 @@ export const ShowFormButton = styled.button`
 export const ProductInfo = styled.div
 `
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "desc desc"
+    "bar bar";
 
     h3{
+        grid-area: title;
         color: var(--blue);
         font-family: 'Montserrat', sans-serif;
     }
 
     div{
+        grid-area: bar;
         width: 100%;
     }
 
     p{
+        grid-area: desc;
         line-height: 1.2rem;
         text-align: left;
         margin: 1rem;
