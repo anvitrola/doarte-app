@@ -6,6 +6,7 @@ export const Card = styled.div
     width: 300px;
     padding: 1.5rem;
     height: 522px;
+    margin: 0 10px;
     border-radius: 10px;
     background: linear-gradient(to bottom, var(--bronze) 1%, var(--snow) 30%);
     border: 1px solid var(--orange);

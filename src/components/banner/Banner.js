@@ -1,11 +1,16 @@
+import { Link } from "react-router-dom";
+
 //components
 import InfoBar from '../infoBar/InfoBar';
 import TextBox from '../textBox/TextBox';
 import HighlightButton from '../buttons/HighlightButton';
 
+//image
+import Picture from "../../images/image01.png";
+
 //styled components
 import { Container } from './Banner.styles';
-import Picture from "../../images/image01.png";
+
 
 function Banner() {
     return (
@@ -17,11 +22,14 @@ function Banner() {
                 subtitle={"A ajuda financeira que você precisa de maneira flexível e prática"}
                 main={true}
             />
-            <HighlightButton 
-                text={"QUERO DOAR"} 
-                position={"button"}
-                primary={true}
-            />
+
+            <Link to="/signUp">
+                <HighlightButton 
+                    text={"QUERO DOAR"} 
+                    position={"button"}
+                    primary={true}
+                />
+            </Link>
         </Container>
     )
 }

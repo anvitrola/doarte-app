@@ -11,15 +11,24 @@ export const Container = styled.main
     display: grid;
     grid-template-areas:
         "greeting greeting image"
-        "form form image";
+        "form form image"
+        "delete delete delete";
     grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
 
     img{
-        width: 300px;
-        grid-area: image;
-        justify-self: center;
-        align-self: center;
+        display:none;
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+
+        img{
+            width:50%;
+        }
     }
 `;
 
@@ -47,3 +56,8 @@ export const Greetings = styled.section
     }
 `;
 
+export const DeleteArea = styled.section
+`
+    grid-area: delete;
+    align-self: end;
+`

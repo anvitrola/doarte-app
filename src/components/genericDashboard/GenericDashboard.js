@@ -9,11 +9,12 @@ import Product from "../product/Product";
 import TextBox from "../textBox/TextBox";
 
 //images
-import Picture from "../../images/16.png";
+import CircleImage from "../../images/circle.png";
 
 //styled components
 import { Main, Products, Highlights, LinkBox } from './GenericDashboard.styles';
 import HighlightButton from "../buttons/HighlightButton";
+import ProductExhi from "../productExhi/ProductExhi";
 
 function GenericDashboard() {
     const { authenticated, userID } = useContext(Context);
@@ -31,15 +32,18 @@ function GenericDashboard() {
                 <HighlightButton primary={true} text={authenticated ? "Criar vaquinha" : "Cadastre-se"}/>
             </LinkBox>
 
-            <img src={Picture} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
+            <img src={CircleImage} alt="Contorno de cor preta de dois personagens juntos, um de aparência masculina e outro de aparência feminina, que aparentam estar conversando."/>
 
             <Highlights>
-                {authenticated ? (<h2>Suas vaquinhas</h2>) : (<h2>Destaques</h2>)}
+                {authenticated ? (
+                    <ProductExhi/>
+                ) : (
                 <CustomCarousel>
                     <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
                     <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
                     <Product title={"S.O.S Maré"} desc={"loremloremlorem"} amount={1000} current={100}/>
                 </CustomCarousel>
+                )}
             </Highlights>
 
             <Products>

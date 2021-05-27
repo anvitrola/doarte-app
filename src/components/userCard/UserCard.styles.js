@@ -13,7 +13,8 @@ export const Card = styled.div`
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
+    margin:2rem 2rem;
   }
 
 `;
@@ -50,7 +51,10 @@ export const Profile = styled.div`
   }
   
   @media (max-width: 768px) {
-    min-width: 100%;
+    width: 100%;
+    div{
+      width: 100%;
+    }
   }
 `;
 

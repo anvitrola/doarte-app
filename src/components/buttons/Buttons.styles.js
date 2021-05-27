@@ -34,4 +34,9 @@ export const FancyButton = styled.button`
     background-color: var(--white);
     border: 1px solid var(--orange);
   }
+
+  @media (max-width: 767px) {
+    height:40px;
+    font-size:14px;
+  }
 `;

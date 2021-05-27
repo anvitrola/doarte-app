@@ -7,6 +7,8 @@ import { Context } from "../../contexts/AuthContext";
 //components
 import HighlightButton from '../buttons/HighlightButton';
 import Progress from '../progress/Progress';
+import ModalTemplate from "../modal/Modal";
+import TinyForm from "../tinyForm/TinyForm";
 
 //styled components
 import { Card } from './Product.styles';
@@ -20,9 +22,18 @@ function Product({title, desc, amount, current}) {
             <p>{desc}</p>
             <Progress amount={amount} current={current}/>
 
-            <Link to={authenticated ? "/donate" : "/signUp"}>
-                <HighlightButton text={ "DOAR"}/>
-            </Link>
+            {!authenticated && (
+                <Link to="/signUp">
+                    <HighlightButton text={ "DOAR"}/>
+                </Link>
+            )}
+
+            {authenticated && (
+                <ModalTemplate text={"DOAR"}>
+                    <TinyForm/>
+                </ModalTemplate>
+            )}
+
         </Card>
     )
 };

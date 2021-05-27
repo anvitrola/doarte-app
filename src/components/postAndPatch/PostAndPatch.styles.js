@@ -6,7 +6,7 @@ export const Form = styled.form`
   width: ${(props) => (props.larger ? "35rem" : "33rem")};  
   border-radius: 10px;
   display: flex;
-  box-shadow: 20px 15px var(--blue);
+  box-shadow: 20px 15px var(--yellow);
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -22,7 +22,6 @@ export const Form = styled.form`
   input {
     width: 90%;
     padding: 0.3rem;
-    border: none;
     border-radius: 10px;
 
     &::placeholder {
@@ -31,10 +30,25 @@ export const Form = styled.form`
   }
 
   button {
-    width: 7rem;
+    width: 50%;
     height: 2.3rem;
     border-radius: 3px;
     background-color: var(--blue);
     color: var(--white);
   }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:85%;
+    box-shadow: 12px 10px var(--yellow);
+
+    button{
+      height:2.6rem;
+      width: 40%;
+      padding:2px;
+
+    }
+    }
 `;

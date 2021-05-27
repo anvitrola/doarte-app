@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -15,57 +15,77 @@ import BrandLogo from "../../images/logo-doarte.png";
 //styled components
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
+
 function AdForm({ signUp }) {
   const { handleAuth } = useContext(Context);
 
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [err,setErr] = useState(false);
+
+  const formElement = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    signUp
-
-    ? createUser(user)
-    : loginUser(user)
-      .then(({ acessToken, id }) => {
-        handleAuth(acessToken, id);
-        console.log(acessToken)
+  
+    const user = takeValue();
+   
+    if(signUp){
+      createUser(user)
+      .then(response => {
+        if(response === undefined)setErr(true);
+        else(alert(response))
       })
+    } 
+    else {
+      loginUser(user)
+      .then((data) => {
+        console.log(data)
+        if(data === undefined)setErr(true)
+        else handleAuth(data.acessToken, data.id);
+      })
+    }
   };
 
-  const takeValue = (e) => {
-    const { id, value } = e.target;
+  function takeValue(){
+    const form = formElement.current;
 
-    setUser((prevState) => ({ ...prevState, [id]: value }));
+    let user =
+    {
+      name: form['name'].value,
+      email: form['email'].value,
+      password: form['password'].value,
+    }
+   
+    return user;
+  }
 
-    console.log(user);
-  };
+  
 
   return (
     <Container>
-      <Form method="POST" onSubmit={handleSubmit}>
+      <Form method="POST" onSubmit={handleSubmit} ref={formElement}>
         <Logo
           src={BrandLogo}
           alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
         />
 
+        {err && !signUp && (<h6>Usuário e/ou senha inválidos</h6>)}
+        {err && signUp && (<h6>Oooops! Usuário já cadastrado!</h6>)}
+
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} id={"name"} type={"text"} getValue={takeValue} />
+            <FormField text={"Nome"} id={"name"} type={"text"}  />
           )}
 
 
-          <FormField text={"Email"} id={"email"} type={"email"} getValue={takeValue} />
-          <FormField text={"Senha"} id={"password"} type={"password"} getValue={takeValue} />
+          <FormField text={"Email"} id={"email"} type={"email"}  />
+          <FormField text={"Senha"} id={"password"} type={"password"}  />
 
 
         </Fields>
 
-        <SubmitButton type={"submit"} text={signUp ? "Cadastrar" : "Entrar"} />
+        <SubmitButton type="submit">
+          {signUp ? "Cadastrar" : "Entrar"}
+        </SubmitButton>
 
         <h3>OU</h3>
         <SocialMediaLogin />
