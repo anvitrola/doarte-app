@@ -1,12 +1,14 @@
 import { api } from '../services/api';
 
+const config = {
+  headers:{
+    'x-access-token':localStorage.getItem('@doartexszsA-token')
+  }
+}
+
 export const getUser = async () => {
     try{
-      const response = await api.get("user",{
-        headers:{
-          'x-access-token':localStorage.getItem('@doartexszsA-token')
-        }
-      });
+      const response = await api.get("user",config);
  
       if (!response.status === 200) throw new Error(JSON.stringify(response));
   
@@ -53,11 +55,7 @@ export const updateUser = async (data) => {
       }
     }
     
-    const response = await api.patch("user/update", user,{
-      headers:{
-        'x-access-token':localStorage.getItem('@doartexszsA-token')
-      }
-    });
+    const response = await api.patch("user/update", user,config);
     
     if (!response.status === 200) throw new Error();
 
@@ -71,11 +69,7 @@ export const updateUser = async (data) => {
 
 export const deleteUser = async () => {
   try{
-    const response = await api.patch("user/delete",{
-      headers:{
-        'x-access-token':localStorage.getItem('@doartexszsA-token')
-      }
-    });
+    const response = await api.patch("user/delete",config);
     
     if (!response.status === 200) throw new Error();
 
@@ -89,11 +83,7 @@ export const deleteUser = async () => {
 export const donation = async (value,product_id) => {
   try{
     
-    const response = await api.post(`user/donation/${product_id}`, value,{
-      headers:{
-        'x-access-token':localStorage.getItem('@doartexszsA-token')
-      }
-    });
+    const response = await api.post(`user/donation/${product_id}`, value, config);
     
     if (!response.status === 200) throw new Error();
 
