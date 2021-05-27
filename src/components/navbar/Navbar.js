@@ -18,7 +18,7 @@ function Navbar() {
         )}
 
         <li>
-          <NavLink to={authenticated ? "/explore" : "/"}>Aliados</NavLink>
+          <NavLink to={"/aliados"}>Aliados</NavLink>
         </li>
 
         <li>
