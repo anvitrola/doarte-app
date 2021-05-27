@@ -27,7 +27,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
 
 const Routes = () => {
-    const { userID } = useContext(Context);
+    //const { userID } = useContext(Context);
     return (
     <Switch>
       <Route
@@ -46,7 +46,7 @@ const Routes = () => {
         component={() => <FormArea profile={true} />}
       />
 
-      <PrivateRoute path={`/create/${userID}`} component={() => <FormArea />} />
+      <PrivateRoute path={`/create`} component={() => <FormArea />} />
 
       <Route path="/signIn" component={() => <AdForm />} />
 
