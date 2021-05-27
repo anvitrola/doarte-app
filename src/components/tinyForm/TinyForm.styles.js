@@ -12,4 +12,4 @@ export const Form = styled.form
     label{
         width: 93%;
     }
-`
+`;

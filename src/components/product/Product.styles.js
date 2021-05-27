@@ -4,7 +4,7 @@ export const Card = styled.div
 `
     grid-area: prod;
     width: 300px;
-    padding: 1.5rem;
+    padding: 1.3rem;
     height: 522px;
     margin: 0 10px;
     border-radius: 10px;
@@ -15,13 +15,20 @@ export const Card = styled.div
     align-items: center;
     justify-content: space-around;
 
-    div{
-        align-self: flex-start;
-        width: 90%;
-    }
-
     @media (max-width: 768px) {
         height: 400px;
         margin-bottom: 1.5rem;
     }
 `;
+
+export const EditBox = styled.div
+`   
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+`;
+
+export const ShowFormButton = styled.button`
+    background: none;
+    border: none;
+`

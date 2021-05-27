@@ -15,17 +15,17 @@ export const Main = styled.main`
     "one one"
     "two two";
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr repeat(2, 5fr);
+  grid-template-rows: 5rem 15rem repeat(2, 2fr);
   border: 1px solid var(--white);
   border-radius: 10px;
-  grid-gap: 3rem;
+  grid-gap: 1rem;
 
   img {
     grid-area: pic;
     align-self: center;
     justify-self: center;
-    margin: 8rem 0 0 20rem;
-    width: 45%;
+    margin: 12rem 0 0 12rem;
+    width: 50%;
     transform: translate(-50%, -50%);
     animation: rotate 12s infinite linear;
   }
