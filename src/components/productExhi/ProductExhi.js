@@ -13,7 +13,7 @@ import { getUserProducts, getProducts } from "./../../services/productServices";
 //styled components
 import { Exhibition, Cards } from "./ProductExhi.styles";
 
-function ProductExhi({ main, isPublic }) {
+function ProductExhi({ isPublic }) {
   const [products, setProducts] = useState([]);
 
   let data = [];
