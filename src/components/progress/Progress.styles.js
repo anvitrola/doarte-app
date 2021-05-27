@@ -8,6 +8,7 @@ export const Bar = styled.div
     align-items: flex-start;
 
     h6{
+        align-self: center;
         font-size: 14px;
         color: var(--blue);
         font-family: 'Rubik', sans-serif;
