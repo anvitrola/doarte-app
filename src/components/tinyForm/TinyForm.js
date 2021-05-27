@@ -60,10 +60,6 @@ function TinyForm({isDelete,id}) {
             text={"Confirmar"}
             primary={true} 
             type={"submit"}
-<<<<<<< Updated upstream
-            clickEvent={isDelete && handleDelete}
-=======
->>>>>>> Stashed changes
             />
 
             }
