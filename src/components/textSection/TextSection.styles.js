@@ -14,7 +14,7 @@ export const TextContainer = styled.section`
 
   img {
     grid-area: image;
-    width: 350px;
+    width: 500px;
     align-self: center;
   }
 

@@ -53,7 +53,7 @@ Aplicação web construída com React.js e integração com API própria.
 
 - [Rafael Almeida](https://github.com/RafaelVi)
 
-- [Peter Helder](https://github.com/petersilvahs)
+- [Peter Silva](https://github.com/petersilvahs)
 
 <br>
 

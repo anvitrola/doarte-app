@@ -5,7 +5,7 @@ import HighlightButton from '../buttons/HighlightButton';
 
 //styled components
 import { Container } from './Banner.styles';
-import Picture from "../../images/16.png";
+import Picture from "../../images/image01.png";
 
 function Banner() {
     return (

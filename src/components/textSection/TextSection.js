@@ -3,7 +3,7 @@ import TextBox from '../textBox/TextBox';
 import ProList from '../proList/ProList';
 
 //image
-import Picture from "../../images/1.png";
+import Picture from "../../images/image09.png";
 
 //styled components
 import { TextContainer } from './TextSection.styles';
