@@ -33,7 +33,7 @@ function Product({title, id, desc, amount, current, isPublic}) {
 
     return (
         <Card>
-            {authenticated && isPublic && (
+            {authenticated && !isPublic && (
                 <EditBox>
                     <ShowFormButton onClick={!edit ? showForm : closeForm}>
                         <IconContext.Provider value={{ color: "var(--blue)", size: "1.5rem"}}>
@@ -59,7 +59,7 @@ function Product({title, id, desc, amount, current, isPublic}) {
                 </Link>
             )}
 
-            {authenticated && !edit && !isPublic && (
+            {authenticated && !edit && isPublic && (
                 <ModalTemplate text={"DOAR"}>
                     <TinyForm id={id}/>
                 </ModalTemplate>
