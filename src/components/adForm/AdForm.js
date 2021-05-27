@@ -37,7 +37,6 @@ function AdForm({ signUp }) {
     else {
       loginUser(user)
       .then((data) => {
-        console.log(data)
         if(data === undefined)setErr(true)
         else handleAuth(data.acessToken, data.id);
       })
