@@ -18,15 +18,9 @@ export const getProducts = async () => {
   }
 };
 
-export const getproductProducts = async () => {
+export const getUserProducts = async () => {
   try {
-    const response = await api.get("fundraiser/findproductsFundraisers", {
-      params: {
-        _limit: 10,
-        _sort: "createdAt",
-        _order: "desc",
-      },config
-    });
+    const response = await api.get("fundraiser/findUserFundraisers",config);
 
     if (!response.status === 200) throw new Error(JSON.stringify(response));
 
@@ -50,14 +44,18 @@ export const createProduct = async (product) => {
   }
 };
 
-export const deleteProduct = (id) => {
-  try {
-    api.delete(`fundraiser/delete/${id}`);
-  } catch (err) {
-    console.log(err);
-  }
-};
-
+export const deleteProduct = async (product_id) => {
+    try{
+      const response = await api.patch(`fundraiser/delete/${product_id}`,config);
+      
+      if (!response.status === 200) throw new Error();
+  
+     return(response);
+    } 
+    catch (err){
+      console.log(err);
+    }
+  };
 export const updateProduct =  async (data,product_id) => {
     try{
       let product = {};
