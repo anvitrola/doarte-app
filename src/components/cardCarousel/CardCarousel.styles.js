@@ -12,7 +12,7 @@ export const Cards = styled.section`
     border-radius: 8px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 33rem;
     height:100%;
     grid-gap: 0.2px;

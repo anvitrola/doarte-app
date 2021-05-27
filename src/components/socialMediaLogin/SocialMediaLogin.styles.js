@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div
-`
+export const Container = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+
+  @media (max-width: 767px) {
+    width: 80%;
+  }
+`;
 
 export const Socials = styled.div`
   display: flex;
@@ -15,7 +18,7 @@ export const Socials = styled.div`
   border: 2px solid #f0d4a3;
   border-radius: 18px;
   margin: 10px;
-  padding: .3rem;
+  padding: 0.3rem;
 
   button {
     border: none;
@@ -28,8 +31,17 @@ export const Socials = styled.div`
     width: 70%;
   }
 
-  img{
+  img {
     width: 5%;
     margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height:40px;
+
+    img{
+      width: 10%;
+    }
   }
 `;

@@ -19,4 +19,8 @@ export const Input = styled.input
     width: 90%;
     padding: .5rem;
     border: 2px solid var(--bronze);
+
+    @media (max-width: 767px) {
+        width:50%;
+    }
 `;
