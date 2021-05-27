@@ -9,37 +9,32 @@ import { getUserProducts, getProducts } from "./../../services/productServices";
 //styled components
 import { Exhibition, Cards } from "./ProductExhi.styles";
 
-function ProductExhi({ isPublic }) {
+function ProductExhi({ isPublic, isMain }) {
   const [products, setProducts] = useState([]);
 
- 
-
   useEffect(() => {
-
     async function fetchUserProducts() {
       let data = [...(await getUserProducts())];
       setProducts(data);
-    
     }
 
     async function fetchAllProducts() {
       let data = [...(await getProducts())];
       setProducts(data);
-      
     }
-    
+
     isPublic ? fetchAllProducts() : fetchUserProducts();
   });
 
   return (
     <Exhibition>
-      <TextBox
-        title={
-          isPublic
-            ? "Algumas das causas que precisam de suporte"
-            : "Suas vaquinhas"
-        }
-      />
+      
+      {isPublic && isMain && (
+        <TextBox title={"Algumas causas que precisam de suporte"} />
+      )}
+
+      {!isPublic && <TextBox title={"Suas vaquinhas"} />}
+
       <Cards>
         {products.map((product) => {
           return (

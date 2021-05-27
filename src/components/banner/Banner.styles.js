@@ -16,7 +16,7 @@ export const Container = styled.section`
     grid-area: image;
     align-self: center;
     justify-self: center;
-    width: 700px;
+    width: 500px;
   }
 
   @media (max-width: 768px) {

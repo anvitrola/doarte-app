@@ -38,9 +38,11 @@ function GenericDashboard() {
         title={
           !authenticated
             ? "Doarte: A arte de doar."
-            : `Bem vindo de volta, ${user.name}!`
+            : `Bem vindo(a) de volta, ${user.name}!`
         }
-        subtitle={"Gentileza gera gentileza"}
+        subtitle={
+          "O Doarte surgiu da crença que atitudes individuais podem impactar, imensamente, no coletivo. Você pode ser a mudança que gostaria de ver no mundo e estar aqui é um passo para esse objetivo."
+        }
       />
 
       <LinkBox to={authenticated ? `/create/${userID}` : "/signUp"}>
