@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -15,19 +15,19 @@ import BrandLogo from "../../images/logo-doarte.png";
 //styled components
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
+
 function AdForm({ signUp }) {
   const { handleAuth } = useContext(Context);
 
-  const [err, setErr] = useState(false);
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [err,setErr] = useState(false);
+
+  const formElement = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
+    const user = takeValue();
+   
     if(signUp){
       createUser(user)
       .then(response => {
@@ -45,15 +45,24 @@ function AdForm({ signUp }) {
     }
   };
 
-  const takeValue = (e) => {
-    const { id, value } = e.target;
+  function takeValue(){
+    const form = formElement.current;
 
-    setUser((prevState) => ({ ...prevState, [id]: value }));
-  };
+    let user =
+    {
+      name: form['name'].value,
+      email: form['email'].value,
+      password: form['password'].value,
+    }
+   
+    return user;
+  }
+
+  
 
   return (
     <Container>
-      <Form method="POST" onSubmit={handleSubmit}>
+      <Form method="POST" onSubmit={handleSubmit} ref={formElement}>
         <Logo
           src={BrandLogo}
           alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
@@ -64,12 +73,12 @@ function AdForm({ signUp }) {
 
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} id={"name"} type={"text"} getValue={takeValue} />
+            <FormField text={"Nome"} id={"name"} type={"text"}  />
           )}
 
 
-          <FormField text={"Email"} id={"email"} type={"email"} getValue={takeValue} />
-          <FormField text={"Senha"} id={"password"} type={"password"} getValue={takeValue} />
+          <FormField text={"Email"} id={"email"} type={"email"}  />
+          <FormField text={"Senha"} id={"password"} type={"password"}  />
 
 
         </Fields>

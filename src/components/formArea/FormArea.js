@@ -27,11 +27,10 @@ function FormArea({profile}) {
     });
 
     useEffect(() => {
-        const fetchedUser = async () => {
-            const data = await getUser();
-            return data;
+        async function fetchUser() {
+            setUser(await getUser());
         }
-        setUser(fetchedUser);     
+        fetchUser();    
     }, []);
     
     return (
