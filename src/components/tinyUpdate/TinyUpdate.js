@@ -1,9 +1,11 @@
-//react
-import { useRef } from "react";
+//hooks
+import { useForm } from "react-hook-form";
+
 //components
 import DefaultButton from "../buttons/DefaultButton";
 import FormField from "../formField/FormField";
 import TextBox from "../textBox/TextBox";
+
 //api services
 import { deleteProduct, updateProduct } from "../../services/productServices";
 
@@ -13,26 +15,17 @@ import { useHistory } from "react-router";
 import ModalTemplate from '../modal/Modal';
 
 function TinyUpdate({ isDelete, id }) {
-  const formElement = useRef(null);
 
-  const handleUpdate = (event) => {
-    event.preventDefault();
+  const { register, handleSubmit } = useForm();
 
-    const form = formElement.current;
 
-    let data = {
-      title: form["title"].value,
-      goal_value: form["goal_value"].value,
-      description: form["description"].value,
-    };
+  const handleUpdate = (data) => {
 
     updateProduct(data, id).then((response) =>
       alert(response.message)
     );
   };
-
-  const handleDelete = (event) => {
-    event.preventDefault();
+  const handleDelete = () => {
 
     deleteProduct(id).then((response) =>
       alert("Vaquinha deleteda com sucesso.")
@@ -40,26 +33,31 @@ function TinyUpdate({ isDelete, id }) {
     
     useHistory.push("/explore");
   };
-
+  const onSubmit = (data) => {
+    isDelete ? handleDelete() : handleUpdate(data);
+  }
   return (
     <Form
       smaller={isDelete}
       metod={"PATCH"}
-      onSubmit={isDelete ? handleDelete : handleUpdate}
-      ref={formElement}
+      onSubmit={handleSubmit(onSubmit)}
     >
       {!isDelete && (
         <>
           <FormField
             text="Qual é o novo título da sua vaquinha?"
-            id={"title"}
+            name={"title"}
             type={"text"}
+            register={register}
+            required
           />
-          <FormField text="Descrição" id={"description"} type={"text"} />
+          <FormField text="Descrição" name={"description"} type={"text"} register={register} required />
           <FormField
             text="Nova meta da vaquinha"
-            id={"goal_value"}
+            name={"goal_value"}
             type={"number"}
+            register={register}
+            required
           />
         </>
       )}
