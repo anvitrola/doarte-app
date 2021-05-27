@@ -6,10 +6,11 @@ import TextBox from '../textBox/TextBox';
 import HighlightButton from '../buttons/HighlightButton';
 
 //image
-import Picture from "../../images/16.png";
+import Picture from "../../images/image01.png";
 
 //styled components
 import { Container } from './Banner.styles';
+
 
 function Banner() {
     return (

@@ -35,7 +35,7 @@ function InfoBar() {
           <Text>
             <b>20+</b>
           </Text>
-          <Text>estados</Text>
+          <Text>países</Text>
         </TextDiv>
       </InfoDiv>
 
