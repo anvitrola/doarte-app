@@ -26,8 +26,14 @@ function PostAndPatch({isUpdate}) {
     updateUser(data) 
     : 
     createProduct(data).then(response => {
-      if(response === undefined)setErr(true);
-      else(alert('Vaquinha criada com sucesso!'))
+
+      if(response === undefined){
+        setErr(true);
+        alert(err);
+      }
+      else{
+        alert('Vaquinha criada com sucesso!')
+      }
     });
   };
   
@@ -53,7 +59,6 @@ function PostAndPatch({isUpdate}) {
     return data;
   };
 
-  
   return (
     <Form 
     larger={isUpdate ? false : true} 

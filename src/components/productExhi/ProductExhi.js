@@ -1,7 +1,3 @@
-import React, { useContext } from "react";
-
-import { Context } from "../../contexts/AuthContext";
-
 //components
 import { useEffect, useState } from "react";
 import Product from "../product/Product";
