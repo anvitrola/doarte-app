@@ -73,7 +73,7 @@ export const deleteUser = async () => {
     
     if (!response.status === 200) throw new Error();
 
-    console.log(response);
+    return(response.data);
   } 
   catch (err){
     console.log(err);
@@ -87,7 +87,7 @@ export const donation = async (value,product_id) => {
     
     if (!response.status === 200) throw new Error();
 
-    console.log(response.data);
+  
     return response.data;
   } 
   catch (err){
