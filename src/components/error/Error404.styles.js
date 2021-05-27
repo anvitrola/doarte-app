@@ -14,6 +14,17 @@ const Page = styled.div`
   a {
     margin: 4rem 18rem 4rem 0;
   }
+
+  @media (max-width: 767px) {
+    align-items: center;
+
+    img {
+    width: 80%;
+  }
+  a {
+    margin: 2rem 1rem 1rem 1rem;
+  }
+  }
 `;
 
 export default Page;

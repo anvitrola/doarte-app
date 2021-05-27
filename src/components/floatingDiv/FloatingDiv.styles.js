@@ -9,6 +9,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 150px;
+
+  @media (max-width: 767px) {
+    width:110%;
+    padding:5px;
+  }
 `;
 export const Div = styled.div`
   align-items: center;
@@ -20,7 +25,7 @@ export const Div = styled.div`
   border-radius: 10px;
   width: 80%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
    
     div {
       width: 100%;

@@ -1,7 +1,7 @@
 //components
 import TextBox from "../textBox/TextBox";
 import UserCard from "../userCard/UserCard";
-import CustomCarousel from "../customCarousel/CustomCarousel";
+import CustomCarousel ,{responsive} from "../customCarousel/CustomCarousel";
 
 //images
 import Augusto from "../../images/augusto.jpeg";
@@ -22,7 +22,7 @@ function CardCarousel() {
         }
       />
 
-      <CustomCarousel>
+      <CustomCarousel responsive={responsive.mobile} >
         <UserCard
           photo={Augusto}
           name={"Augusto Lins"}

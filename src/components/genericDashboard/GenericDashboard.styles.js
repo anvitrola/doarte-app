@@ -44,13 +44,23 @@ export const Main = styled.main`
     justify-self: center;
   }
 
-  h2{
-    font-family: 'Rubik', sans-serif;
+  h2 {
+    font-family: "Rubik", sans-serif;
     font-size: 25px;
     font-weight: 500;
     letter-spacing: 3px;
     margin-bottom: 1rem;
     color: var(--blue);
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin: 5rem 0 0rem 8rem;
+      width: 45%;
+    }
   }
 `;
 
@@ -58,18 +68,29 @@ export const Highlights = styled.section`
   width: 87%;
   grid-area: one;
   justify-self: center;
+  @media (max-width: 767px) {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Products = styled.section`
   width: 87%;
   grid-area: two;
   justify-self: center;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    width: 100%;
+   
+  }
 `;
 
-export const LinkBox = styled(Link)
-`
+export const LinkBox = styled(Link)`
   grid-area: button;
   align-self: center;
   justify-self: center;
-`
-
+`;

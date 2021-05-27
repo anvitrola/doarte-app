@@ -36,4 +36,19 @@ export const Form = styled.form`
     background-color: var(--blue);
     color: var(--white);
   }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:85%;
+    box-shadow: 12px 10px var(--yellow);
+
+    button{
+      height:2.6rem;
+      width: 40%;
+      padding:2px;
+
+    }
+    }
 `;

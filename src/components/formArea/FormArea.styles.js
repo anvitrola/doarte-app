@@ -17,10 +17,18 @@ export const Container = styled.main
     grid-gap: 30px;
 
     img{
-        width: 300px;
-        grid-area: image;
-        justify-self: center;
-        align-self: center;
+        display:none;
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+
+        img{
+            width:50%;
+        }
     }
 `;
 
