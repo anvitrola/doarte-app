@@ -24,7 +24,7 @@ function Aliados() {
           main={true}
         />
 
-        <a target="_blank" rel="noreferrer"  href="https://www.resilia.work/">
+        <a target="_blank" rel="noreferrer" href="https://www.resilia.work/">
           <HighlightButton
             text={"Conhecer"}
             position={"button"}

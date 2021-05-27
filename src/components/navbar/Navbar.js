@@ -24,13 +24,13 @@ function Navbar() {
         <li>
           <NavLink to="/explore">Explorar</NavLink>
         </li>
-        
+
         <li>
-          <NavLink to={authenticated ? "/explore" : "/"}>Dúvidas</NavLink>
+          <NavLink to={"/duvidas"}>Dúvidas</NavLink>
         </li>
       </List>
     </Nav>
   );
-};
+}
 
 export default Navbar;
