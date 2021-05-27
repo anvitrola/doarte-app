@@ -43,7 +43,7 @@ function Product({title, id, desc, amount, current, isPublic}) {
                 </EditBox>
             )}
 
-            {authenticated && edit && (<TinyUpdate/>)}
+            {authenticated && edit && (<TinyUpdate id={id}/>)}
 
             {!edit &&  (
             <div id={String(id)}>
