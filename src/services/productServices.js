@@ -1,81 +1,80 @@
-import {api} from '../services/api';
+import { api } from "../services/api";
+const config = {
+  headers: {
+    "x-access-token": localStorage.getItem("@doartexszsA-token"),
+  },
+};
 export const getProducts = async () => {
-    try{
-        const response  = await api.get("fundraiser/findAll");
+  try {
+    const response = await api.get("fundraiser/findAll");
 
-        if (!response.status === 200) throw new Error(JSON.stringify(response));
+    if (!response.status === 200) throw new Error(JSON.stringify(response));
 
-        const data = response.data;
+    const data = response.data;
 
-        return data;
-    }
-    catch (err) {
-        console.log(err);
-    }
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-export const getUserProducts = async () => {
-    try{
-        const response  = await api.get("fundraiser/findUsersFundraisers", {
-            params: {
-              _limit: 10,
-              _sort: 'createdAt',
-              _order: 'desc'
-            },
-            headers:{
-                'x-access-token':localStorage.getItem('@doartexszsA-token')
-            }
-        });
+export const getproductProducts = async () => {
+  try {
+    const response = await api.get("fundraiser/findproductsFundraisers", {
+      params: {
+        _limit: 10,
+        _sort: "createdAt",
+        _order: "desc",
+      },config
+    });
 
-        if (!response.status === 200) throw new Error(JSON.stringify(response));
+    if (!response.status === 200) throw new Error(JSON.stringify(response));
 
-        const data = response.data;
+    const data = response.data;
 
-
-        return data;
-    }
-    catch (err) {
-        console.log(err);
-    }
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const createProduct = async (product) => {
-    try{
-        const response = await api.post("fundraiser/create", product,{
-            headers:{
-              'x-access-token':localStorage.getItem('@doartexszsA-token')
-            }
-        });
-      
-        if (!response.status === 200) throw new Error();
+  try {
+    const response = await api.post("fundraiser/create", product, config);
 
-        return response.data;
-    }
-    catch (err){
-        console.log(err);
-    }
+    if (!response.status === 200) throw new Error();
+
+    return response.data;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const deleteProduct = (id) => {
-    try{
-        api.delete(`fundraiser/delete/${id}`);
-    }
-    catch (err){
-        console.log(err);
-    }
+  try {
+    api.delete(`fundraiser/delete/${id}`);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-export const updateProduct = (id, title, category, goal_value, deadline, description) => {
+export const updateProduct =  async (data,product_id) => {
     try{
-        api.patch(`fundraiser/update/${id}`, {
-            title: title,
-            category: category,
-            goal_value: goal_value,
-            deadline: deadline,
-            description: description,
-        });
-    }
-    catch (err) {
-        console.log(err);
+      let product = {};
+      for (const key in data) {
+        if (data[key] !== "") {
+          product = {...product,[key]:data[key]}
+        }
+      }
+      
+      const response = await api.patch(`fundraiser/update/${product_id}`, product, config);
+      
+      if (!response.status === 200) throw new Error();
+  
+      console.log(response.data);
+      return response.data;
+    } 
+    catch (err){
+      console.log(err);
     }
 };
