@@ -1,9 +1,14 @@
 import { api } from "../services/api";
-const config = {
-  headers: {
-    "x-access-token": localStorage.getItem("@doartexszsA-token"),
-  },
-};
+
+const getConfig = () => {
+  const config = {
+    headers:{
+      'x-access-token':localStorage.getItem('@doartexszsA-token')
+    }
+  }
+  return config
+}
+
 export const getProducts = async () => {
   try {
     const response = await api.get("fundraiser/findAll");
@@ -20,7 +25,7 @@ export const getProducts = async () => {
 
 export const getUserProducts = async () => {
   try {
-    const response = await api.get("fundraiser/findUserFundraisers",config);
+    const response = await api.get("fundraiser/findUserFundraisers",getConfig());
 
     if (!response.status === 200) throw new Error(JSON.stringify(response));
 
@@ -34,7 +39,7 @@ export const getUserProducts = async () => {
 
 export const createProduct = async (product) => {
   try {
-    const response = await api.post("fundraiser/create", product, config);
+    const response = await api.post("fundraiser/create", product, getConfig());
 
     if (!response.status === 200) throw new Error();
 
@@ -46,7 +51,7 @@ export const createProduct = async (product) => {
 
 export const deleteProduct = async (product_id) => {
     try{
-      const response = await api.patch(`fundraiser/delete/${product_id}`,config);
+      const response = await api.patch(`fundraiser/delete/${product_id}`,getConfig());
       
       if (!response.status === 200) throw new Error();
   
@@ -65,7 +70,7 @@ export const updateProduct =  async (data,product_id) => {
         }
       }
       
-      const response = await api.patch(`fundraiser/update/${product_id}`, product, config);
+      const response = await api.patch(`fundraiser/update/${product_id}`, product, getConfig());
       
       if (!response.status === 200) throw new Error();
   
