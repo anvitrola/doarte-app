@@ -13,7 +13,7 @@ function MainContent() {
         <Main>
             <Banner/>
             <TextSection/>
-            <ProductExhi main={true} isPublic={true}/>
+            <ProductExhi isPublic={true}/>
             <Map/>
             <CardCarousel/>
         </Main>
