@@ -17,7 +17,10 @@ export const Container = styled.main
     grid-gap: 30px;
 
     img{
-        display:none;
+        grid-area: image;
+        align-self: center;
+        justify-self: center;
+        width: 500px;
     }
 
     @media (max-width: 767px) {
