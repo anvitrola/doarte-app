@@ -1,7 +1,6 @@
 import { Label, Input } from "./FormField.styles";
 
 function FormField({text, name, register, type, holder, required}) {
-    console.log([name,register]);
     return (
         <>
             <Label htmlFor={name}>{text}</Label>
