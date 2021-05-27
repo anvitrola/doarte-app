@@ -22,14 +22,13 @@ function PostAndPatch({isUpdate}) {
   
     const data = takeValue()
 
-    isUpdate? 
+    isUpdate ? 
     updateUser(data) 
     : 
     createProduct(data).then(response => {
       if(response === undefined)setErr(true);
       else(alert('Vaquinha criada com sucesso!'))
     });
-
   };
   
   function takeValue(){

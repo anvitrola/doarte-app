@@ -56,7 +56,7 @@ function FormArea({profile}) {
             {profile &&(
                 <DeleteArea>
                     <ModalTemplate isDelete={true} text={"Deletar conta"}>
-                        <TinyForm isDelete={true}/>
+                        <TinyForm isDelete={true} isUser={true}/>
                     </ModalTemplate>
                 </DeleteArea>
             )}

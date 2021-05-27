@@ -10,7 +10,6 @@ import { deleteProduct, updateProduct } from "../../services/productServices";
 //styled components
 import { Form, DeleteButton } from "./TinyUpdate.styles";
 import { useHistory } from "react-router";
-import { Container, Greetings, DeleteArea } from '../formArea/FormArea.styles';
 import ModalTemplate from '../modal/Modal';
 
 function TinyUpdate({ isDelete, id }) {
@@ -26,17 +25,22 @@ function TinyUpdate({ isDelete, id }) {
       goal_value: form["goal_value"].value,
       description: form["description"].value,
     };
+
     updateProduct(data, id).then((response) =>
       alert("Vaquinha Atualizada com sucesso!")
     );
   };
+
   const handleDelete = (event) => {
     event.preventDefault();
+
     deleteProduct(id).then((response) =>
       alert("Vaquinha deleteda com sucesso.")
     );
+    
     useHistory.push("/explore");
   };
+
   return (
     <Form
       smaller={isDelete}
@@ -63,7 +67,9 @@ function TinyUpdate({ isDelete, id }) {
 
       <DefaultButton text={"Confirmar"} primary={true} type={"submit"} />
 
-      <DeleteButton>Deletar</DeleteButton>
+      <ModalTemplate isDelete={true} text={"deletar vaquinha"}>
+        <DeleteButton type={"submit"}>Deletar vaquinha</DeleteButton>
+      </ModalTemplate>
     </Form>
   );
 }

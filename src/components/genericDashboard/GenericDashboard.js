@@ -40,7 +40,7 @@ function GenericDashboard() {
             <TextBox 
             title={!authenticated 
                 ? "Doarte: A arte de doar." 
-                : `Bem vindo de volta, ${user.name}!`
+                : `Bem vindo de volta!`
             } 
             subtitle={"Gentileza gera gentileza"}/>
 

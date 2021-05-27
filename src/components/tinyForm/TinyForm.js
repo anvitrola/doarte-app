@@ -14,16 +14,17 @@ import { Context } from "../../contexts/AuthContext";
 
 //services
 import { deleteUser, donation } from "./../../services/userServices";
-import { DeleteButton } from "../tinyUpdate/TinyUpdate.styles";
 
 function TinyForm({ isDelete, id }) {
   const formElement = useRef(null);
   const { handleLogout } = useContext(Context);
+
   const handleDelete = (event) => {
     event.preventDefault();
     deleteUser();
     handleLogout();
   };
+
   const handleDonation = (event) => {
     event.preventDefault();
 
@@ -33,6 +34,7 @@ function TinyForm({ isDelete, id }) {
     };
     donation(value, id).then((response) => alert(response));
   };
+
   return (
     <Form
       smaller={isDelete}

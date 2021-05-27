@@ -19,16 +19,19 @@ function ProductExhi({ isPublic }) {
   let data = [];
 
   useEffect(() => {
+
     async function fetchUserProducts() {
       data = [...(await getUserProducts())];
       setProducts(data);
       console.log(data);
     }
+
     async function fetchAllProducts() {
       data = [...(await getProducts())];
       setProducts(data);
       console.log(data);
     }
+    
     isPublic ? fetchAllProducts() : fetchUserProducts();
   }, []);
 
