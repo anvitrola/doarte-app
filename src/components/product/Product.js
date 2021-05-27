@@ -45,7 +45,7 @@ function Product({title, desc, amount, current, isUsers}) {
 
             {authenticated && edit && (<TinyUpdate/>)}
 
-            {authenticated && !edit &&  (
+            {!edit &&  (
             <>
                 <h3>{title}</h3>
                 <p>{desc}</p>
