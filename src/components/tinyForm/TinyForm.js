@@ -1,5 +1,5 @@
 //react
-import {useContext} from 'react'
+import { useContext, useRef } from "react";
 
 //components
 import DefaultButton from "../buttons/DefaultButton";
@@ -7,45 +7,53 @@ import FormField from "../formField/FormField";
 import TextBox from "../textBox/TextBox";
 
 //styled components
-import { Form } from './TinyForm.styles';
+import { Form } from "./TinyForm.styles";
 
 //authentication context
 import { Context } from "../../contexts/AuthContext";
 
 //services
-import { deleteUser } from './../../services/userServices';
+import { deleteUser, donation } from "./../../services/userServices";
+import { DeleteButton } from "../tinyUpdate/TinyUpdate.styles";
 
-function TinyForm({isDelete}) {
-    const { handleLogout } = useContext(Context);
-    
-    const handleDelete = () =>{
-        deleteUser();
-        handleLogout();
-    }
-    return (
-        <Form smaller={isDelete} metod={isDelete ? "PATCH" : "POST"}>
-            {!isDelete && (
-                <FormField 
-                text="Qual valor você gostaria de doar para o projeto?"
-                type={"number"}
-                holder={"Mínimo de 25 moedas"}
-                />
-            )}
+function TinyForm({ isDelete, id }) {
+  const formElement = useRef(null);
+  const { handleLogout } = useContext(Context);
+  const handleDelete = (event) => {
+    event.preventDefault();
+    deleteUser();
+    handleLogout();
+  };
+  const handleDonation = (event) => {
+    event.preventDefault();
 
-            {isDelete && (
-                <TextBox
-                subtitle={"Você tem certeza?"}
-                />
-            )}
+    const form = formElement.current;
+    const value = {
+      donation_value: Number(form["donation_value"].value),
+    };
+    donation(value, id).then((response) => alert(response));
+  };
+  return (
+    <Form
+      smaller={isDelete}
+      metod={isDelete ? "PATCH" : "POST"}
+      ref={formElement}
+      onSubmit={isDelete ? handleDelete : handleDonation}
+    >
+      {!isDelete && (
+        <FormField
+          text="Qual valor você gostaria de doar para o projeto?"
+          type={"number"}
+          id={"donation_value"}
+          holder={"Mínimo de 25 moedas"}
+        />
+      )}
 
-            <DefaultButton 
-            text={"Confirmar"} 
-            primary={true} 
-            type={"submit"}
-            clickEvent={isDelete && handleDelete}
-            />
-        </Form>
-    )
+      {isDelete && <TextBox subtitle={"Você tem certeza?"} />}
+
+      <DefaultButton text={"Confirmar"} primary={true} type={"submit"} />
+    </Form>
+  );
 }
 
 export default TinyForm;

@@ -43,7 +43,7 @@ const Routes = () => {
       />
 
       <PrivateRoute
-        path={`/profile/${userID}`}
+        path={`/profile`}
         component={() => <FormArea profile={true} />}
       />
 
