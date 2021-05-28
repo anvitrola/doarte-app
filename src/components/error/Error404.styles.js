@@ -19,11 +19,11 @@ const Page = styled.div`
     align-items: center;
 
     img {
-    width: 80%;
-  }
-  a {
-    margin: 2rem 1rem 1rem 1rem;
-  }
+      width: 80%;
+    }
+    a {
+      margin: 2rem 1rem 1rem 1rem;
+    }
   }
 `;
 

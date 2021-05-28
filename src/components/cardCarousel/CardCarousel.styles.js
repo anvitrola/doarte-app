@@ -14,7 +14,7 @@ export const Cards = styled.section`
 
   @media (max-width: 767px) {
     width: 33rem;
-    height:100%;
+    height: 100%;
     grid-gap: 0.2px;
 
     div {

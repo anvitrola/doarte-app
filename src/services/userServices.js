@@ -1,101 +1,150 @@
-import { api } from '../services/api';
+import { api } from "../services/api";
 
 const getConfig = () => {
   const config = {
-    headers:{
-      'x-access-token':localStorage.getItem('@doartexszsA-token')
-    }
-  }
-  return config
-}
+    headers: {
+      "x-access-token": localStorage.getItem("@doartexszsA-token"),
+    },
+  };
+  return config;
+};
 
 
 export const getUser = async () => {
-    try{
-      const response = await api.get("user",getConfig());
- 
-      if (!response.status === 200) throw new Error(JSON.stringify(response));
-  
-      const data = response.data;
-      return(data);
-    } 
-    catch (err){
-      console.log('ERRO:' + err)
-    }
-};
+  try {
+    const response = await api.get("user", getConfig());
 
-export const createUser = async (user) => {
-  try{
-    const response = await api.post("auth/signUp", user);
-    
-    if (!response.status === 200) throw new Error();
+    if (!response.status === 200) throw new Error(JSON.stringify(response));
 
-    return response.data;
-  } 
-  catch (err){
-    console.log(err.message);
+    const data = response.data;
+    return data;
+  } catch (err) {
+    console.error(err);
   }
 };
 
-export const loginUser = async (user) => {  
-  try{
-    const response = await api.post("auth/signIn", user);
-    
+export const createUser = async (user) => {
+  try {
+    const response = await api.post("auth/signUp", user);
+
     if (!response.status === 200) throw new Error();
 
     return response.data;
-  } 
-  catch (err){
-    console.log(err);
+  } catch (err) {
+    console.error(err);
+  }
+
+};
+
+export const loginUser = async (user) => {
+  try {
+    const response = await api.post("auth/signIn", user);
+
+    if (!response.status === 200) throw new Error();
+
+    return response.data;
+  } catch (err) {
+    console.error(err);
   }
 };
 
 export const updateUser = async (data) => {
-  try{
-    let user = {};
-    for (const key in data) {
-      if (data[key] !== "") {
-        user = {...user,[key]:data[key]}
-      }
+  let user = {};
+  for (const key in data) {
+    if (data[key] !== "") {
+      user = {...user,[key]:data[key]}
     }
-    
-    const response = await api.patch("user/update", user,getConfig());
-    
-    if (!response.status === 200) throw new Error();
-
-    console.log(response.data);
-    return response.data;
-  } 
-  catch (err){
-    console.log(err);
   }
+  // try{
+    
+  //   const response = await api.patch("user/update", user,{
+  //     headers:{
+  //       'x-access-token':localStorage.getItem('@doartexszsA-token')
+  //     }
+  //   });
+    
+  //   if (!response.status === 200) throw new Error();
+
+    
+  //   return response.data;
+  // } 
+  // catch (err){
+  //   console.log(err);
+  // }
+  api.patch("user/update", user,{
+    headers:{
+      'x-access-token':localStorage.getItem('@doartexszsA-token')
+    }
+  }) 
+  .then(function (response) {
+    alert(response.data.message);
+  })
+  .catch(function (error) {
+    alert(error.response.data.message);
+  })
+
+  
 };
 
 export const deleteUser = async () => {
-  try{
-    const response = await api.patch("user/delete",getConfig());
-    
-    if (!response.status === 200) throw new Error();
+  // try{
+  //   const response = await api.patch("user/delete",{
+  //     headers:{
+  //       'x-access-token':localStorage.getItem('@doartexszsA-token')
+  //     }
+  //   });
 
-    return(response.data);
-  } 
-  catch (err){
-    console.log(err);
-  }
+  //   console.log(getConfig());
+    
+  //   if (!response.status === 200) throw new Error();
+
+  //   return response.data;
+  // } 
+  // catch (err){
+  //   console.log(err);
+  // }
+  api.patch("user/delete",{
+    headers:{
+      'x-access-token':localStorage.getItem('@doartexszsA-token')
+    }
+  })
+  .then(function (response) {
+    alert(response.data.message);
+  })
+  .catch(function (error) {
+    alert(error.response.data.message);
+  })
 };
 
 export const donation = async (value,product_id) => {
-  try{
+  // try{
     
-    const response = await api.post(`user/donation/${product_id}`, value, getConfig());
+  //   const response = await api.post(`user/donation/${product_id}`, value,{
+  //     headers:{
+  //       'x-access-token':localStorage.getItem('@doartexszsA-token')
+  //     }
+  //   });
     
-    if (!response.status === 200) throw new Error();
-
+  //   console.log(response);
   
-    return response.data;
-  } 
-  catch (err){
-    console.log(err);
-  }
-};
+  //   //return response.data;
+  // } 
+  // catch (err){
+  //   console.error(err);
+  //   //return err.data;
+  // }
 
+  value['donation_value'] = Number(value.donation_value);
+  
+  api.post(`user/donation/${product_id}`, value,{
+    headers:{
+      'x-access-token':localStorage.getItem('@doartexszsA-token')
+    }
+  })
+  .then(function (response) {
+    alert(response.data.message);
+  })
+  .catch(function (error) {
+    alert(error.response.data.message);
+  });
+};

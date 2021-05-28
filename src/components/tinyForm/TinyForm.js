@@ -1,7 +1,7 @@
 //hooks
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import history from '../../history';
+import history from "../../history";
 
 //components
 import DefaultButton from "../buttons/DefaultButton";
@@ -18,27 +18,24 @@ import { Context } from "../../contexts/AuthContext";
 import { deleteUser, donation } from "./../../services/userServices";
 
 function TinyForm({ isDelete, id }) {
-
   const { register, handleSubmit } = useForm();
 
-  const { handleLogout } = useContext(Context);
+  const { handleLogout, handleUser } = useContext(Context);
 
   const handleDelete = () => {
     deleteUser();
     handleLogout();
   };
 
-  const handleDonation = (value) => {
-    donation(value, id)
-    .then((response) => {
-      alert(response);
-    });
-    history.push('/explore');
+  const handleDonation = async (value) => {
+    await donation(value, id);
+    handleUser();
   };
 
   const onSubmit = (data) => {
-    isDelete? handleDelete():handleDonation(data);
-  }
+    isDelete ? handleDelete() : handleDonation(data);
+  };
+
   return (
     <Form
       smaller={isDelete}
@@ -55,6 +52,7 @@ function TinyForm({ isDelete, id }) {
           required
         />
       )}
+      {!isDelete && <TextBox subtitle={`Você tem ${localStorage.getItem('amount_money')} moedas`} />}
 
       {isDelete && <TextBox subtitle={"Você tem certeza?"} />}
 

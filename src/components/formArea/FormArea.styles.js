@@ -19,7 +19,7 @@ export const Container = styled.main`
     grid-area: image;
     align-self: center;
     justify-self: center;
-    width: 500px;
+    width: 450px;
   }
 
   @media (max-width: 767px) {

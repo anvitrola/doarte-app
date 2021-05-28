@@ -10,17 +10,20 @@ function SocialMediaLogin() {
   return (
     <Container>
       <Socials>
-        <img src={Google} alt="Mini ícone da logomarca da empresa Google"/>
+        <img src={Google} alt="Mini ícone da logomarca da empresa Google" />
         <button>Conectar com o Google</button>
       </Socials>
 
       <Socials>
-        <img src={Microsoft} alt="Mini ícone da logomarca da empresa Microsoft"/>
+        <img
+          src={Microsoft}
+          alt="Mini ícone da logomarca da empresa Microsoft"
+        />
         <button>Conectar com a Microsoft</button>
       </Socials>
 
       <Socials>
-        <img src={Github} alt="Mini ícone da logomarca da empresa GitHub"/>
+        <img src={Github} alt="Mini ícone da logomarca da empresa GitHub" />
         <button>Conectar com o Github</button>
       </Socials>
     </Container>

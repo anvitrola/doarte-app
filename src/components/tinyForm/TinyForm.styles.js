@@ -1,15 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Form = styled.form
-`
-    height: ${(props) => (props.smaller ? "3rem" : "10rem")};  
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+export const Form = styled.form`
+  height: ${(props) => (props.smaller ? "3rem" : "10rem")};
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-    label{
-        width: 93%;
-    }
+  label {
+    width: 93%;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
 `;
