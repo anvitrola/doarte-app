@@ -13,10 +13,11 @@ export const List = styled.ul`
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
-    justify-content:space-evenly;
-    align-items:space-around;
-    a{
-      margin:0.5rem;
+    justify-content: space-evenly;
+    align-items: space-around;
+    
+    a {
+      margin: 0.5rem;
     }
   }
 `;

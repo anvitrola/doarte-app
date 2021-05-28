@@ -40,7 +40,9 @@ function GenericDashboard() {
             ? "Doarte: A arte de doar."
             : `Bem vindo de volta, ${localStorage.getItem("Username")}!`
         }
-        subtitle={"Gentileza gera gentileza"}
+        subtitle={
+          "O Doarte surgiu da crença que atitudes individuais podem impactar, imensamente, no coletivo. Você pode ser a mudança que gostaria de ver no mundo e estar aqui é um passo para esse objetivo."
+        }
       />
 
       <LinkBox to={authenticated ? `/create` : "/signUp"}>
@@ -56,7 +58,7 @@ function GenericDashboard() {
       />
 
       <Highlights>
-        {authenticated ? <ProductExhi isPublic={false} /> : <ProductExhi isPublic={true} />}
+        {authenticated ? <ProductExhi isPublic={false} /> : <ProductExhi isPublic={true} isMain={true} />}
       </Highlights>
 
       <Products>

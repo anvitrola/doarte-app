@@ -27,13 +27,13 @@ export const Form = styled.form`
   justify-content: space-around;
   align-items: center;
 
-  h6{
+  h6 {
     font: 500 12px "Rubik", sans-serif;
     text-align: center;
     color: var(--red);
     margin-top: 1%;
   }
-  
+
   a {
     color: #3e9ec8;
     padding: 10px;
@@ -53,7 +53,7 @@ export const Form = styled.form`
   }
 
   @media (max-width: 768px) {
-		max-width: 90%;
+    max-width: 90%;
 
     button {
       width: 55%;
@@ -62,13 +62,13 @@ export const Form = styled.form`
     input {
       width: 100%;
     }
-	}
+  }
 `;
 
 export const SubmitButton = styled.button`
   color: var(--white);
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: var(--orange);
   padding: 1rem;
   border: 0;
@@ -77,13 +77,11 @@ export const SubmitButton = styled.button`
   margin: 2rem 0;
 `;
 
-export const Logo = styled.img
-`
-  width: 120px; 
+export const Logo = styled.img`
+  width: 120px;
 `;
 
-export const Fields = styled.div
-`
+export const Fields = styled.div`
   display: flex;
   width: 80%;
   flex-direction: column;

@@ -1,5 +1,6 @@
-//components
 import { useEffect, useState } from "react";
+
+//components
 import Product from "../product/Product";
 import TextBox from "../textBox/TextBox";
 
@@ -7,54 +8,75 @@ import TextBox from "../textBox/TextBox";
 import { getUserProducts, getProducts } from "./../../services/productServices";
 
 //styled components
-import { Exhibition, Cards } from "./ProductExhi.styles";
+import { Exhibition, Cards, NoContent } from "./ProductExhi.styles";
 
-function ProductExhi({ isPublic }) {
+function ProductExhi({ isPublic, isMain }) {
   const [products, setProducts] = useState([]);
 
- 
-
   useEffect(() => {
-
     async function fetchUserProducts() {
       let data = [...(await getUserProducts())];
       setProducts(data);
-    
     }
 
     async function fetchAllProducts() {
       let data = [...(await getProducts())];
       setProducts(data);
-      
     }
-    
+
     isPublic ? fetchAllProducts() : fetchUserProducts();
   },[]);
 
+  const publicHighlight = products.slice(0, 3);
+
   return (
     <Exhibition>
-      <TextBox
-        title={
-          isPublic
-            ? "Algumas das causas que precisam de suporte"
-            : "Suas vaquinhas"
-        }
-      />
-      <Cards>
-        {products.map((product) => {
-          return (
-            <Product
-              key={product.id}
-              title={product.title}
-              id={product.id}
-              desc={product.description}
-              amount={product.goal_value}
-              current={product.current_value}
-              isPublic={isPublic ? true : false}
-            />
-          );
-        })}
-      </Cards>
+      {isPublic && isMain && (
+        <TextBox title={"Algumas causas que precisam de suporte"} />
+      )}
+
+      {!isPublic && <TextBox title={"Suas vaquinhas"} />}
+
+      {!isMain ? (
+        <Cards>
+          {products.length === 0 ? (
+            <NoContent>
+              Poxa! Parece que você não possui nenhuma vaquinha ainda. Crie uma
+              e inicie uma causa em prol de algum bem coletivo ao seu redor!
+            </NoContent>
+          ) : (
+            products.map((product) => {
+              return (
+                <Product
+                  key={product.id}
+                  title={product.title}
+                  id={product.id}
+                  desc={product.description}
+                  amount={product.goal_value}
+                  current={product.current_value}
+                  isPublic={isPublic ? true : false}
+                />
+              );
+            })
+          )}
+        </Cards>
+      ) : (
+        <Cards>
+          {publicHighlight.map((product) => {
+            return (
+              <Product
+                key={product.id}
+                title={product.title}
+                id={product.id}
+                desc={product.description}
+                amount={product.goal_value}
+                current={product.current_value}
+                isPublic={isPublic ? true : false}
+              />
+            );
+          })}
+        </Cards>
+      )}
     </Exhibition>
   );
 }

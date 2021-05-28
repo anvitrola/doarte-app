@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
-export const Bar = styled.div
-`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+export const Bar = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 
-    h6{
-        align-self: center;
-        font-size: 14px;
-        color: var(--blue);
-        font-family: 'Rubik', sans-serif;
-        text-transform: uppercase;
-    }
+  h6 {
+    align-self: center;
+    font-size: 14px;
+    color: var(--blue);
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+  }
 
-    div{
-        width: 100px;
-    }
+  div {
+    width: 100px;
+  }
 `;

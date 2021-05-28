@@ -1,12 +1,13 @@
 const customStyles = {
   content: {
     display: "flex",
+    flexDirection: "column",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
-    alignContent: "space-between",
+    alignItems: "center",
     top: "50%",
     left: "50%",
-    maxWidth: "30.938rem",
+    width: "25rem",
     height: "15rem",
     borderRadius: "8px",
     backgroundColor: "var(--snow)",

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TextContainer = styled.section`
   width: 85%;
+  margin-top: 7rem;
   grid-area: text;
   justify-self: center;
   display: grid;
@@ -23,9 +24,10 @@ export const TextContainer = styled.section`
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
 
     img {
-      width: 200px;
+      width: 100%;
     }
   }
 `;

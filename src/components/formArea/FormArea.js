@@ -1,24 +1,29 @@
 //react
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 //icons
 import { IconContext } from "react-icons";
-import { FaPiggyBank } from 'react-icons/fa';
+import { FaPiggyBank } from "react-icons/fa";
 
 //components
-import PostAndPatch from '../postAndPatch/PostAndPatch';
+import PostAndPatch from "../postAndPatch/PostAndPatch";
 
 //services
-import { getUser } from './../../services/userServices';
+import { getUser } from "./../../services/userServices";
 
 //image
-import Picture from "../../images/4.png";
+import Picture from "../../images/image11.png";
 
 //styled components
-import { Container, Greetings, DeleteArea } from './FormArea.styles';
-import ModalTemplate from '../modal/Modal';
-import TinyForm from '../tinyForm/TinyForm';
+import { Container, Greetings, DeleteArea } from "./FormArea.styles";
+import ModalTemplate from "../modal/Modal";
+import TinyForm from "../tinyForm/TinyForm";
 
+function FormArea({ profile }) {
+  const [user, setUser] = useState({
+    name: "Default",
+    amount_money: 0,
+  });
 
 function FormArea({profile}) {
     
@@ -38,20 +43,19 @@ function FormArea({profile}) {
                 <h3>Inaugure uma causa!</h3>}
             </Greetings>
 
-            <PostAndPatch isUpdate={profile && true}/>
+      <PostAndPatch isUpdate={profile && true} />
 
-            <img src={Picture} alt="Bloco de notas ilustrado por um contorno preto"/>
+      <img src={Picture} alt="Bloco de notas ilustrado por um contorno preto" />
 
-            {profile &&(
-                <DeleteArea>
-                    <ModalTemplate isDelete={true} text={"Deletar conta"}>
-                        <TinyForm isDelete={true} isUser={true}/>
-                    </ModalTemplate>
-                </DeleteArea>
-            )}
-
-        </Container>
-    )
-};
-
-export default FormArea;
+      {profile && (
+        <DeleteArea>
+          <ModalTemplate isDelete={true} text={"Deletar conta"}>
+            <TinyForm isDelete={true} isUser={true} />
+          </ModalTemplate>
+        </DeleteArea>
+      )}
+    </Container>
+  );
+}
+}
+export default FormArea

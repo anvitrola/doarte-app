@@ -24,6 +24,5 @@ export const Main = styled.main`
     flex-direction: column;
     justify-content: center;
     grid-gap: 2.5rem;
-
   }
 `;

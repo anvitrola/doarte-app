@@ -1,59 +1,50 @@
-import { api } from '../services/api';
+import { api } from "../services/api";
 
 const getConfig = () => {
   const config = {
-    headers:{
-      'x-access-token':localStorage.getItem('@doartexszsA-token')
-    }
-  }
-  return config
-}
-
+    headers: {
+      "x-access-token": localStorage.getItem("@doartexszsA-token"),
+    },
+  };
+  return config;
+};
 
 
 export const getUser = async () => {
-    try{
-      const response = await api.get("user",{
-        headers:{
-          'x-access-token':localStorage.getItem('@doartexszsA-token')
-        }
-      });
- 
-      if (!response.status === 200) throw new Error(JSON.stringify(response));
-  
-     
-      return response.data;
-    } 
-    catch (err){
-      console.log('ERRO:' + err)
-    }
+  try {
+    const response = await api.get("user", getConfig());
 
+    if (!response.status === 200) throw new Error(JSON.stringify(response));
+
+    const data = response.data;
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 export const createUser = async (user) => {
-  try{
+  try {
     const response = await api.post("auth/signUp", user);
-    
+
     if (!response.status === 200) throw new Error();
 
     return response.data;
-  } 
-  catch (err){
-    console.log(err.message);
+  } catch (err) {
+    console.error(err);
   }
 
 };
 
-export const loginUser = async (user) => {  
-  try{
+export const loginUser = async (user) => {
+  try {
     const response = await api.post("auth/signIn", user);
-    
+
     if (!response.status === 200) throw new Error();
 
     return response.data;
-  } 
-  catch (err){
-    console.log(err);
+  } catch (err) {
+    console.error(err);
   }
 };
 
@@ -157,4 +148,3 @@ export const donation = async (value,product_id) => {
     alert(error.response.data.message);
   });
 };
-

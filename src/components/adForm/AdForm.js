@@ -19,11 +19,10 @@ import BrandLogo from "../../images/logo-doarte.png";
 //styled components
 import { Form, Container, SubmitButton, Logo, Fields } from "./AdForm.styles";
 
-
 function AdForm({ signUp }) {
   const { handleAuth } = useContext(Context);
 
-  const [err,setErr] = useState(false);
+  const [err, setErr] = useState(false);
 
   const { register, handleSubmit } = useForm();
 
@@ -43,7 +42,7 @@ function AdForm({ signUp }) {
       .then((data) => {
         if(data === undefined)setErr(true)
         else handleAuth(data.acessToken, data.id);
-      })
+      });
     }
   };
 
@@ -55,19 +54,34 @@ function AdForm({ signUp }) {
           alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
         />
 
-        {err && !signUp && (<h6>Usuário e/ou senha inválidos</h6>)}
-        {err && signUp && (<h6>Oooops! Usuário já cadastrado!</h6>)}
+        {err && !signUp && <h6>Usuário e/ou senha inválidos</h6>}
+        {err && signUp && <h6>Oooops! Usuário já cadastrado!</h6>}
 
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} register={register} name={"name"} type={"text"} required />
+            <FormField
+              text={"Nome"}
+              register={register}
+              name={"name"}
+              type={"text"}
+              required
+            />
           )}
 
-
-          <FormField text={"Email"} register={register} name={"email"} type={"email"} required />
-          <FormField text={"Senha"} register={register} name={"password"} type={"password"} required />
-
-
+          <FormField
+            text={"Email"}
+            register={register}
+            name={"email"}
+            type={"email"}
+            required
+          />
+          <FormField
+            text={"Senha"}
+            register={register}
+            name={"password"}
+            type={"password"}
+            required
+          />
         </Fields>
 
         <SubmitButton type="submit">

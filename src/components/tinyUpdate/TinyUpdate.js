@@ -15,7 +15,7 @@ import { deleteProduct, updateProduct } from "../../services/productServices";
 //styled components
 import { Form, DeleteButton } from "./TinyUpdate.styles";
 import { useHistory } from "react-router";
-import ModalTemplate from '../modal/Modal';
+import ModalTemplate from "../modal/Modal";
 
 function TinyUpdate({ id }) {
 
@@ -25,7 +25,6 @@ function TinyUpdate({ id }) {
 
 
   const handleDelete = () => {
-
     deleteProduct(id).then((response) =>
       alert(response.message)
     );
@@ -53,7 +52,13 @@ function TinyUpdate({ id }) {
             register={register}
             
           />
-          <FormField text="Descrição" name={"description"} type={"text"} register={register} />
+          <FormField
+            text="Descrição"
+            name={"description"}
+            type={"text"}
+            register={register}
+            required
+          />
           <FormField
             text="Nova meta da vaquinha"
             name={"goal_value"}

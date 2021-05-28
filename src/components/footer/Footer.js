@@ -11,9 +11,13 @@ import { FooterContainer, Lists, Signature } from "./Footer.styles";
 function Footer() {
   return (
     <FooterContainer>
-      
       <Signature>
-        <img src={Logo} alt={"Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."}/>
+        <img
+          src={Logo}
+          alt={
+            "Logo da Doarte. A palavra escrita normalmente, mas a letra 'O' é um círculo formado por mãos que se apoiam."
+          }
+        />
 
         <p>
           A ideia central da Doarte é unir causas e projetos que precisam de um
@@ -22,15 +26,18 @@ function Footer() {
 
         <section>
           <IconContext.Provider
-            value={{ color: "var(--orange)", size: "1.7rem" }}>
+            value={{ color: "var(--orange)", size: "1.7rem" }}
+          >
             <FaFacebook />
           </IconContext.Provider>
           <IconContext.Provider
-            value={{ color: "var(--orange)", size: "1.7rem" }}>
+            value={{ color: "var(--orange)", size: "1.7rem" }}
+          >
             <FaInstagram />
           </IconContext.Provider>
           <IconContext.Provider
-            value={{ color: "var(--orange)", size: "1.7rem"}}>
+            value={{ color: "var(--orange)", size: "1.7rem" }}
+          >
             <FaTwitter />
           </IconContext.Provider>
         </section>

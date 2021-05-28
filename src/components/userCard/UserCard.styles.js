@@ -14,9 +14,8 @@ export const Card = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin:2rem 2rem;
+    margin: 2rem 2rem;
   }
-
 `;
 
 export const Profile = styled.div`
@@ -49,10 +48,10 @@ export const Profile = styled.div`
       color: var(--blue);
     }
   }
-  
+
   @media (max-width: 768px) {
     width: 100%;
-    div{
+    div {
       width: 100%;
     }
   }

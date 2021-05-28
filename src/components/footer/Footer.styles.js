@@ -25,9 +25,9 @@ export const Lists = styled.div`
   @media (max-width: 768px) {
     display: flex;
     width: 100%;
-    padding:0.3rem;
+    padding: 0.3rem;
 
-    ul{
+    ul {
       margin: 0.2rem;
       padding: 0.3rem;
     }
