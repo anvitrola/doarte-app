@@ -29,7 +29,6 @@ function AuthProvider({ children }) {
     //saving token in localstorage under our key
     localStorage.setItem(TOKEN_KEY, token);
 
-<<<<<<< HEAD
     async function handleAuth(token, id){
         //saving token in localstorage under our key
         setAuthenticated(true);
@@ -59,29 +58,6 @@ function AuthProvider({ children }) {
             {children}
         </Context.Provider>
     );
-};
-
- export {Context, AuthProvider}
-=======
-    setAuthenticated(true);
-    setUserID(id);
-    history.push("/explore");
-  }
-
-  function handleLogout() {
-    setAuthenticated(false);
-    localStorage.removeItem(TOKEN_KEY);
-    history.push("/");
-  }
-
-  return (
-    <Context.Provider
-      value={{ authenticated, handleAuth, handleLogout, userID }}
-    >
-      {children}
-    </Context.Provider>
-  );
+  };
 }
-
-export { Context, AuthProvider };
->>>>>>> 393e408f7741409a6c3326ebeffc74dbfba10d95
+export {Context, AuthProvider}
