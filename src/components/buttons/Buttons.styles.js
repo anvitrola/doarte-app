@@ -10,6 +10,7 @@ export const CommonButton = styled.button`
   font: 500 16px "Rubik", sans-serif;
   color: ${(props) => (props.primary ? "var(--orange)" : "var(--black)")};
   transition: all 0.3s;
+
   &:hover {
     color: var(--white);
     background-color: var(--orange);
@@ -36,7 +37,7 @@ export const FancyButton = styled.button`
   }
 
   @media (max-width: 767px) {
-    height:40px;
-    font-size:14px;
+    height: 40px;
+    font-size: 14px;
   }
 `;

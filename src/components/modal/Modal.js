@@ -26,7 +26,7 @@ function ModalTemplate({ text, isDelete, children }) {
       ) : (
         <HighlightButton clickEvent={openModal} text={text} />
       )}
-      
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

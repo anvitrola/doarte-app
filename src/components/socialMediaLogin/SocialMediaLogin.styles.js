@@ -38,9 +38,9 @@ export const Socials = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
-    height:40px;
+    height: 40px;
 
-    img{
+    img {
       width: 10%;
     }
   }

@@ -41,21 +41,24 @@ function ProductExhi({ isPublic, isMain }) {
         <Cards>
           {products.length === 0 ? (
             <NoContent>
-              Poxa! Parece que você não possui nenhuma vaquinha ainda. Crie uma e inicie uma causa em prol de algum bem coletivo ao seu redor!
+              Poxa! Parece que você não possui nenhuma vaquinha ainda. Crie uma
+              e inicie uma causa em prol de algum bem coletivo ao seu redor!
             </NoContent>
-          ) : products.map((product) => {
-            return (
-              <Product
-                key={product.id}
-                title={product.title}
-                id={product.id}
-                desc={product.description}
-                amount={product.goal_value}
-                current={product.current_value}
-                isPublic={isPublic ? true : false}
-              />
-            );
-          })}
+          ) : (
+            products.map((product) => {
+              return (
+                <Product
+                  key={product.id}
+                  title={product.title}
+                  id={product.id}
+                  desc={product.description}
+                  amount={product.goal_value}
+                  current={product.current_value}
+                  isPublic={isPublic ? true : false}
+                />
+              );
+            })
+          )}
         </Cards>
       ) : (
         <Cards>

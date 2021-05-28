@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Form = styled.form`
   grid-area: form;
   padding: 1.5rem;
-  width: ${(props) => (props.larger ? "35rem" : "33rem")};  
+  width: ${(props) => (props.larger ? "35rem" : "33rem")};
   border-radius: 10px;
   display: flex;
   box-shadow: 20px 15px var(--yellow);
@@ -41,14 +41,13 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:85%;
+    width: 85%;
     box-shadow: 12px 10px var(--yellow);
 
-    button{
-      height:2.6rem;
+    button {
+      height: 2.6rem;
       width: 40%;
-      padding:2px;
-
+      padding: 2px;
     }
-    }
+  }
 `;

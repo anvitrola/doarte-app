@@ -17,64 +17,77 @@ const QuestionsPage = () => {
           doações. Quer ver? Confere esse passo-a-passo abaixo:
         </p>
         <ul>
-          <li> <span>1)</span> Acesse o site www.doarte.com.br</li>
-          <li> <span>2)</span> Clique em "Criar sua vaquinha"</li>
           <li>
-          <span>3)</span>  A primeira coisa que você fará na tela seguinte é criar o seu
-            usuário.
-          </li>
-          <li>
-          <span>3.1)</span>  Você pode optar por vincular o seu e-mail Google a Doarte. Isso
-            apenas agiliza o preenchimento do formulário e reduz a fadiga de
-            escrever boa parte das informações :)
-          </li>
-          <li>
-          <span>3.2)</span> Caso não tenha uma conta no Facebook, clique em "Cadastre-se"
-            para preencher o formulário manualmente.
+            {" "}
+            <span>1)</span> Acesse o site www.doarte.com.br
           </li>
           <li>
             {" "}
-            <span>4)</span>  Preencha os dados necessários para a criação da sua conta (nome,
-            e-mail e senha) e escolha a sua senha.
+            <span>2)</span> Clique em "Criar sua vaquinha"
+          </li>
+          <li>
+            <span>3)</span> A primeira coisa que você fará na tela seguinte é
+            criar o seu usuário.
+          </li>
+          <li>
+            <span>3.1)</span> Você pode optar por vincular o seu e-mail Google a
+            Doarte. Isso apenas agiliza o preenchimento do formulário e reduz a
+            fadiga de escrever boa parte das informações :)
+          </li>
+          <li>
+            <span>3.2)</span> Caso não tenha uma conta no Facebook, clique em
+            "Cadastre-se" para preencher o formulário manualmente.
           </li>
           <li>
             {" "}
-            <span>4.1)</span> Posteriormente, você poderá acessar sua conta do Vakinha usando
-            o seu email e a senha fornecida. Então guarde bem essas informações.
-          </li>
-          <li>
-          <span>5)</span>  Você vai começar a criar a sua campanha agora que é um usuário do
-            site! Então vamos lá.
+            <span>4)</span> Preencha os dados necessários para a criação da sua
+            conta (nome, e-mail e senha) e escolha a sua senha.
           </li>
           <li>
             {" "}
-            <span>6)</span> Se a página de "Criar a Vaquinha" não estiver aparecendo, clique
-            no botão de "Criar sua vaquinha" novamente.
+            <span>4.1)</span> Posteriormente, você poderá acessar sua conta do
+            Vakinha usando o seu email e a senha fornecida. Então guarde bem
+            essas informações.
+          </li>
+          <li>
+            <span>5)</span> Você vai começar a criar a sua campanha agora que é
+            um usuário do site! Então vamos lá.
           </li>
           <li>
             {" "}
-            <span>7)</span>  Preencha as informações básicas da sua campanha, tais como:
-            título, finalidade, meta financeira e data de encerramento.
+            <span>6)</span> Se a página de "Criar a Vaquinha" não estiver
+            aparecendo, clique no botão de "Criar sua vaquinha" novamente.
           </li>
           <li>
             {" "}
-            <span>8)</span> Insira uma descrição curta da sua campanha. Em algumas palavras,
-            resuma o porquê você está começando essa campanha.
-          </li>
-          <li> <span>9)</span>  Escolha uma imagem bacana para ilustrar a sua vaquinha! </li>
-          <li>
-          <span>10)</span>  O vídeo é opcional, caso você tenha um vídeo explicando a sua
-            campanha, salve no Youtube e coloque o link do vídeo nesse campo.
+            <span>7)</span> Preencha as informações básicas da sua campanha,
+            tais como: título, finalidade, meta financeira e data de
+            encerramento.
           </li>
           <li>
             {" "}
-            <span>11)</span>  Na descrição, descreva de forma mais detalhada o por que da sua
-            campanha, o que você fará com o dinheiro, como você fará para
-            atingir o que pretende, etc.
+            <span>8)</span> Insira uma descrição curta da sua campanha. Em
+            algumas palavras, resuma o porquê você está começando essa campanha.
           </li>
           <li>
-          <span>12)</span>  Clique em "Criar vaquinha" e pronto! Sua campanha está no ar!
-            Bem fácil, né?
+            {" "}
+            <span>9)</span> Escolha uma imagem bacana para ilustrar a sua
+            vaquinha!{" "}
+          </li>
+          <li>
+            <span>10)</span> O vídeo é opcional, caso você tenha um vídeo
+            explicando a sua campanha, salve no Youtube e coloque o link do
+            vídeo nesse campo.
+          </li>
+          <li>
+            {" "}
+            <span>11)</span> Na descrição, descreva de forma mais detalhada o
+            por que da sua campanha, o que você fará com o dinheiro, como você
+            fará para atingir o que pretende, etc.
+          </li>
+          <li>
+            <span>12)</span> Clique em "Criar vaquinha" e pronto! Sua campanha
+            está no ar! Bem fácil, né?
           </li>
         </ul>
       </Article>
@@ -85,12 +98,12 @@ const QuestionsPage = () => {
         </div>
         <p>
           O sucesso das campanhas que arrecadam bastante está na divulgação!
-          Portanto, divulgue o máximo que conseguir.
-          Você pode usar os botões de compartilhamento que estão na capa da sua vaquinha para compartilhá-la
-          no Facebook. Twitter e Whatsapp.
-          Para enviar aos seus amigos via WhatsApp, basta copiar o link curto localizado abaixo da imagem de
-          capa da campanha e colar nas conversas e grupos que desejar.
-          Para divulgar no Instagram, você pode tirar um print da página da sua
+          Portanto, divulgue o máximo que conseguir. Você pode usar os botões de
+          compartilhamento que estão na capa da sua vaquinha para compartilhá-la
+          no Facebook. Twitter e Whatsapp. Para enviar aos seus amigos via
+          WhatsApp, basta copiar o link curto localizado abaixo da imagem de
+          capa da campanha e colar nas conversas e grupos que desejar. Para
+          divulgar no Instagram, você pode tirar um print da página da sua
           vaquinha e postar no Feed ou Stories. Lembre-se de mostrar a
           importância da sua vaquinha e elabore um texto bem informativo para
           postar junto com a foto, se você postar no Feed. Se você for postar
@@ -104,8 +117,7 @@ const QuestionsPage = () => {
 
       <Article>
         <div>
-        <h3>Como funciona o site da Doarte? </h3>
-
+          <h3>Como funciona o site da Doarte? </h3>
         </div>
         <p>
           A Doarte é um site para se fazer a tradicional vaquinha (que é uma
@@ -137,29 +149,27 @@ const QuestionsPage = () => {
       </Article>
       <Article>
         <div>
-        <h3>O site da Doarte é seguro?</h3>
+          <h3>O site da Doarte é seguro?</h3>
         </div>
         <p>
-        Pode acreditar que sim! Nós da Doarte somos realmente neuróticos por
-        segurança, pois lidamos não apenas com dinheiro, mas também com o seu
-        sonho. Temos o suporte de empresas especializadas que nos ajudam a
-        reavaliar mensalmente nossos processos de segurança. Então, pode confiar
-        que fazemos tudo e mais um pouco para deixar você tranquilo.
+          Pode acreditar que sim! Nós da Doarte somos realmente neuróticos por
+          segurança, pois lidamos não apenas com dinheiro, mas também com o seu
+          sonho. Temos o suporte de empresas especializadas que nos ajudam a
+          reavaliar mensalmente nossos processos de segurança. Então, pode
+          confiar que fazemos tudo e mais um pouco para deixar você tranquilo.
         </p>
-       
       </Article>
       <Article>
         <div>
-        <h3> Posso arrecadar mais do que a meta definida?</h3>
+          <h3> Posso arrecadar mais do que a meta definida?</h3>
         </div>
         <p>
-        Sim, você pode! A sua meta é apenas uma forma simbólica de estipular um
-        objetivo para a sua campanha. Recomendamos sempre colocar uma meta, pois
-        mostra maior confiabilidade e transparência para seus futuros
-        contribuintes. Você pode ultrapassá-la sem problemas! Já tivemos
-        diversas campanhas que superaram os 100% :)
+          Sim, você pode! A sua meta é apenas uma forma simbólica de estipular
+          um objetivo para a sua campanha. Recomendamos sempre colocar uma meta,
+          pois mostra maior confiabilidade e transparência para seus futuros
+          contribuintes. Você pode ultrapassá-la sem problemas! Já tivemos
+          diversas campanhas que superaram os 100% :)
         </p>
-        
       </Article>
     </Container>
   );

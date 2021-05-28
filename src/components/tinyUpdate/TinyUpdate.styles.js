@@ -1,25 +1,23 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Form = styled.form
-`
-    width: 90%;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+export const Form = styled.form`
+  width: 90%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-    label{
-        width: 93%;
-    }
+  label {
+    width: 93%;
+  }
 
-    button{
-        margin-top: 1rem;
-    }
+  button {
+    margin-top: 1rem;
+  }
 `;
 
-export const DeleteButton = styled.button
-`
+export const DeleteButton = styled.button`
     color: var(--white);
     font-family: "Rubik", sans-serif;
     width: 150px;
@@ -28,4 +26,4 @@ export const DeleteButton = styled.button
     border-radius: 50px;
     background: var(--red);
 }
-`
+`;

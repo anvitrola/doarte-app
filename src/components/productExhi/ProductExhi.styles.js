@@ -11,9 +11,9 @@ export const Exhibition = styled.section`
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    h1{
-      width:100%;
-      font-size:26px;
+    h1 {
+      width: 100%;
+      font-size: 26px;
     }
   }
 `;
@@ -32,8 +32,7 @@ export const Cards = styled.div`
   }
 `;
 
-export const NoContent = styled.h3
-`
+export const NoContent = styled.h3`
   color: var(--orange);
   width: 50%;
-`
+`;

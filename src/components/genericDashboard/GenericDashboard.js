@@ -58,7 +58,11 @@ function GenericDashboard() {
       />
 
       <Highlights>
-        {authenticated ? <ProductExhi /> : <ProductExhi isPublic={true} isMain={true}/>}
+        {authenticated ? (
+          <ProductExhi />
+        ) : (
+          <ProductExhi isPublic={true} isMain={true} />
+        )}
       </Highlights>
 
       <Products>

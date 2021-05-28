@@ -2,12 +2,12 @@ import { api } from "../services/api";
 
 const getConfig = () => {
   const config = {
-    headers:{
-      'x-access-token':localStorage.getItem('@doartexszsA-token')
-    }
-  }
-  return config
-}
+    headers: {
+      "x-access-token": localStorage.getItem("@doartexszsA-token"),
+    },
+  };
+  return config;
+};
 
 export const getProducts = async () => {
   try {
@@ -19,13 +19,16 @@ export const getProducts = async () => {
 
     return data;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
 export const getUserProducts = async () => {
   try {
-    const response = await api.get("fundraiser/findUserFundraisers",getConfig());
+    const response = await api.get(
+      "fundraiser/findUserFundraisers",
+      getConfig()
+    );
 
     if (!response.status === 200) throw new Error(JSON.stringify(response));
 
@@ -33,7 +36,7 @@ export const getUserProducts = async () => {
 
     return data;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
@@ -45,39 +48,44 @@ export const createProduct = async (product) => {
 
     return response.data;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
 export const deleteProduct = async (product_id) => {
-    try{
-      const response = await api.patch(`fundraiser/delete/${product_id}`,getConfig());
-      
-      if (!response.status === 200) throw new Error();
-  
-     return(response);
-    } 
-    catch (err){
-      console.log(err);
-    }
-  };
-export const updateProduct =  async (data,product_id) => {
-    try{
-      let product = {};
-      for (const key in data) {
-        if (data[key] !== "") {
-          product = {...product,[key]:data[key]}
-        }
+  try {
+    const response = await api.patch(
+      `fundraiser/delete/${product_id}`,
+      getConfig()
+    );
+
+    if (!response.status === 200) throw new Error();
+
+    return response;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export const updateProduct = async (data, product_id) => {
+  try {
+    let product = {};
+    for (const key in data) {
+      if (data[key] !== "") {
+        product = { ...product, [key]: data[key] };
       }
-      
-      const response = await api.patch(`fundraiser/update/${product_id}`, product, getConfig());
-      
-      if (!response.status === 200) throw new Error();
-  
-      console.log(response.data);
-      return response.data;
-    } 
-    catch (err){
-      console.log(err);
     }
+
+    const response = await api.patch(
+      `fundraiser/update/${product_id}`,
+      product,
+      getConfig()
+    );
+
+    if (!response.status === 200) throw new Error();
+
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
 };

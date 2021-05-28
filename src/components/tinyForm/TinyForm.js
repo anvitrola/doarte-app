@@ -1,7 +1,7 @@
 //hooks
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import history from '../../history';
+import history from "../../history";
 
 //components
 import DefaultButton from "../buttons/DefaultButton";
@@ -18,7 +18,6 @@ import { Context } from "../../contexts/AuthContext";
 import { deleteUser, donation } from "./../../services/userServices";
 
 function TinyForm({ isDelete, id }) {
-
   const { register, handleSubmit } = useForm();
 
   const { handleLogout } = useContext(Context);
@@ -29,19 +28,20 @@ function TinyForm({ isDelete, id }) {
   };
 
   const handleDonation = (value) => {
-    donation(value, id)
-    .then((response) => {
-      if(response === undefined) {
-        alert("Operação não concluída. Verifique o valor ou você não pode doar para si mesmo!")
-      } else{
+    donation(value, id).then((response) => {
+      if (response === undefined) {
+        alert(
+          "Operação não concluída. Verifique o valor ou você não pode doar para si mesmo!"
+        );
+      } else {
         alert("Doação realizada com sucesso!");
       }
     });
-    history.push('/explore');
+    history.push("/explore");
   };
 
   const onSubmit = (data) => {
-    isDelete? handleDelete():handleDonation(data);
+    isDelete ? handleDelete() : handleDonation(data);
   };
 
   return (
