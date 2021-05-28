@@ -34,7 +34,7 @@ export const ShowFormButton = styled.button`
 export const ProductInfo = styled.div`
   width: 90%;
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
   grid-template-areas:
     "title title"
     "desc desc"

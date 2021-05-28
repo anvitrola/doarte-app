@@ -1,7 +1,6 @@
 //hooks
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import history from "../../history";
 
 //components
 import DefaultButton from "../buttons/DefaultButton";

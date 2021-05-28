@@ -32,12 +32,6 @@ function Header() {
 
       <Navbar />
 
-      {authenticated && (
-        <Link to={`/profile`}>
-          <DefaultButton text={"Meu perfil"} />
-        </Link>
-      )}
-
       {!authenticated ? (
         <Buttons>
           <Link to="/signUp">
@@ -48,7 +42,12 @@ function Header() {
           </Link>
         </Buttons>
       ) : (
-        <DefaultButton text={"Sair"} primary={true} clickEvent={handleLogout} />
+        <Buttons>
+          <Link to={`/profile`}>
+          <DefaultButton primary={true} text={"Meu perfil"} />
+        </Link>
+          <DefaultButton text={"Sair"} clickEvent={handleLogout} />
+        </Buttons>
       )}
     </HeaderContainer>
   );
