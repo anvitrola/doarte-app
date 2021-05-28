@@ -5,15 +5,15 @@ export const CommonButton = styled.button`
   height: 2rem;
   border: ${(props) => (props.primary ? "1px solid var(--orange)" : "none")};
   border-radius: 50px;
-  background: transparent;
+  background: ${(props) => (props.primary ? "var(--orange)" : "transparent")};
   padding: 0.3rem;
   font: 500 16px "Rubik", sans-serif;
-  color: ${(props) => (props.primary ? "var(--orange)" : "var(--black)")};
+  color: ${(props) => (props.primary ? "var(--white)" : "var(--black)")};
   transition: all 0.3s;
 
   &:hover {
-    color: var(--white);
-    background-color: var(--orange);
+    color: var(--orange);
+    background-color: var(--white);
     border: 1px solid var(--orange);
   }
 `;
