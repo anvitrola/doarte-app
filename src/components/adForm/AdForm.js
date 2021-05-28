@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import history from '../../history';
 
 //hooks
 import React, { useContext, useState } from "react";
@@ -31,7 +32,10 @@ function AdForm({ signUp }) {
       createUser(user)
       .then(response => {
         if(response === undefined)setErr(true);
-        else(alert(response))
+        else{
+          alert(response)
+          history.push('/signIn')
+        }
       })
     } 
     else {

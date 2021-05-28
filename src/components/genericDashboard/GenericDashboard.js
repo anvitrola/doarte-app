@@ -18,7 +18,7 @@ import HighlightButton from "../buttons/HighlightButton";
 import ProductExhi from "../productExhi/ProductExhi";
 
 function GenericDashboard() {
-  const { authenticated, userID } = useContext(Context);
+  const { authenticated} = useContext(Context);
 
   const [user, setUser] = useState({
     name: "Default",
@@ -38,12 +38,12 @@ function GenericDashboard() {
         title={
           !authenticated
             ? "Doarte: A arte de doar."
-            : `Bem vindo de volta, ${user.name}!`
+            : `Bem vindo de volta, ${localStorage.getItem("Username")}!`
         }
         subtitle={"Gentileza gera gentileza"}
       />
 
-      <LinkBox to={authenticated ? `/create/${userID}` : "/signUp"}>
+      <LinkBox to={authenticated ? `/create` : "/signUp"}>
         <HighlightButton
           primary={true}
           text={authenticated ? "Criar vaquinha" : "Cadastre-se"}
@@ -56,7 +56,7 @@ function GenericDashboard() {
       />
 
       <Highlights>
-        {authenticated ? <ProductExhi /> : <ProductExhi isPublic={true} />}
+        {authenticated ? <ProductExhi isPublic={false} /> : <ProductExhi isPublic={true} />}
       </Highlights>
 
       <Products>

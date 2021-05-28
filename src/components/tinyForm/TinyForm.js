@@ -21,15 +21,16 @@ function TinyForm({ isDelete, id }) {
 
   const { register, handleSubmit } = useForm();
 
-  const { handleLogout } = useContext(Context);
+  const { handleLogout, handleUser } = useContext(Context);
 
   const handleDelete = () => {
     deleteUser();
     handleLogout();
   };
 
-  const handleDonation = (value) => {
-    donation(value, id).then((response) => alert(response));
+  const handleDonation = async (value) => {
+    await donation(value, id);
+    handleUser();
   };
 
   const onSubmit = (data) => {
@@ -51,6 +52,7 @@ function TinyForm({ isDelete, id }) {
           required
         />
       )}
+      {!isDelete && <TextBox subtitle={`Você tem ${localStorage.getItem('amount_money')} moedas`} />}
 
       {isDelete && <TextBox subtitle={"Você tem certeza?"} />}
 

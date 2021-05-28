@@ -29,7 +29,7 @@ function ProductExhi({ isPublic }) {
     }
     
     isPublic ? fetchAllProducts() : fetchUserProducts();
-  });
+  },[]);
 
   return (
     <Exhibition>

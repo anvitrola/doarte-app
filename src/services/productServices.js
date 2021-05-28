@@ -51,7 +51,7 @@ export const createProduct = async (product) => {
 
 export const deleteProduct = async (product_id) => {
     try{
-      const response = await api.patch(`fundraiser/delete/${product_id}`,getConfig());
+      const response = await api.patch(`fundraiser/delete/${product_id}`,{"":""},getConfig());
       
       if (!response.status === 200) throw new Error();
   

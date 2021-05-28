@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 
 import history from '../history';
+import { getUser } from '../services/userServices';
 
 const Context = createContext();
 
@@ -25,23 +26,32 @@ function AuthProvider({children}){
         setLoading(false);
     }, []);
 
-    function handleAuth(token, id){
+    async function handleAuth(token, id){
         //saving token in localstorage under our key
-        localStorage.setItem(TOKEN_KEY, token);
-
         setAuthenticated(true);
-        setUserID(id);
+        localStorage.setItem(TOKEN_KEY, token);
+        await handleUser();
+        //setUserID(id);
+        
+    }
+    async function handleUser(){
+        
+        const user = await getUser();
+        localStorage.setItem('Username', user.name);
+        localStorage.setItem('amount_money', user.amount_money);
         history.push('/explore');
     }
 
     function handleLogout(){
         setAuthenticated(false);
         localStorage.removeItem(TOKEN_KEY);
+        localStorage.removeItem('Username');
+        localStorage.removeItem('amount_money');
         history.push('/');
     }
 
     return(
-        <Context.Provider value={{authenticated, handleAuth, handleLogout, userID}}>
+        <Context.Provider value={{authenticated, handleAuth, handleLogout, handleUser}}>
             {children}
         </Context.Provider>
     );
