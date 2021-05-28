@@ -14,7 +14,7 @@
 
 </div>
 
-# About
+## 💻 Project
 
 Doarte's central idea is to bring together causes and projects that need a competent and integrated intermediary.
 
@@ -27,7 +27,7 @@ Web application built with React.js and integration with its own API.
     <img src="" width="700" /> 
 </div>
 
-# Techs
+## ✨ Technologies
 
 - [React.js](https://reactjs.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
