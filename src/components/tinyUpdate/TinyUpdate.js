@@ -12,36 +12,29 @@ import { deleteProduct, updateProduct } from "../../services/productServices";
 //styled components
 import { Form, DeleteButton } from "./TinyUpdate.styles";
 import { useHistory } from "react-router";
-import ModalTemplate from '../modal/Modal';
+import ModalTemplate from "../modal/Modal";
 
 function TinyUpdate({ isDelete, id }) {
-
   const { register, handleSubmit } = useForm();
 
-
   const handleUpdate = (data) => {
-
-    updateProduct(data, id).then((response) =>
-      alert(response.message)
-    );
+    updateProduct(data, id).then((response) => alert(response.message));
   };
-  const handleDelete = () => {
 
+  const handleDelete = () => {
     deleteProduct(id).then((response) =>
       alert("Vaquinha deleteda com sucesso.")
     );
-    
+
     useHistory.push("/explore");
   };
+
   const onSubmit = (data) => {
     isDelete ? handleDelete() : handleUpdate(data);
-  }
+  };
+
   return (
-    <Form
-      smaller={isDelete}
-      metod={"PATCH"}
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <Form smaller={isDelete} metod={"PATCH"} onSubmit={handleSubmit(onSubmit)}>
       {!isDelete && (
         <>
           <FormField
@@ -51,7 +44,13 @@ function TinyUpdate({ isDelete, id }) {
             register={register}
             required
           />
-          <FormField text="Descrição" name={"description"} type={"text"} register={register} required />
+          <FormField
+            text="Descrição"
+            name={"description"}
+            type={"text"}
+            register={register}
+            required
+          />
           <FormField
             text="Nova meta da vaquinha"
             name={"goal_value"}
@@ -67,6 +66,7 @@ function TinyUpdate({ isDelete, id }) {
       <DefaultButton text={"Confirmar"} primary={true} type={"submit"} />
 
       <ModalTemplate isDelete={true} text={"deletar vaquinha"}>
+        <h5>Você tem certeza?</h5>
         <DeleteButton type={"submit"}>Deletar vaquinha</DeleteButton>
       </ModalTemplate>
     </Form>

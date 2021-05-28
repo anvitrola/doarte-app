@@ -20,9 +20,12 @@ export const Form = styled.form
 
 export const DeleteButton = styled.button
 `
-    background: none;
-    border: none;
-    font-size: .8rem;
-    color: var(--red);
+    color: var(--white);
     font-family: "Rubik", sans-serif;
+    width: 150px;
+    height: 2rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--red);
+}
 `

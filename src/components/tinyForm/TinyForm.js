@@ -31,14 +31,19 @@ function TinyForm({ isDelete, id }) {
   const handleDonation = (value) => {
     donation(value, id)
     .then((response) => {
-      alert(response);
+      if(response === undefined) {
+        alert("Operação não concluída. Verifique o valor ou você não pode doar para si mesmo!")
+      } else{
+        alert("Doação realizada com sucesso!");
+      }
     });
     history.push('/explore');
   };
 
   const onSubmit = (data) => {
     isDelete? handleDelete():handleDonation(data);
-  }
+  };
+
   return (
     <Form
       smaller={isDelete}
