@@ -11,7 +11,6 @@ import CircleImage from "../../images/circle.png";
 
 //styled components
 import { Main, Products, Highlights, LinkBox } from "./GenericDashboard.styles";
-import HighlightButton from "../buttons/HighlightButton";
 import ProductExhi from "../productExhi/ProductExhi";
 
 function GenericDashboard() {
@@ -36,10 +35,7 @@ function GenericDashboard() {
       />
 
       <LinkBox to={authenticated ? `/create` : "/signUp"}>
-        <HighlightButton
-          primary={true}
-          text={authenticated ? "Criar vaquinha" : "Cadastre-se"}
-        />
+        {authenticated ? "Criar vaquinha" : "Cadastre-se"}
       </LinkBox>
 
       <img

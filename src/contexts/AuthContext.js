@@ -6,8 +6,6 @@ import { getUser } from "../services/userServices";
 const Context = createContext();
 
 function AuthProvider({ children }) {
-  const [userID, setUserID] = useState(null);
-
   const [authenticated, setAuthenticated] = useState(false);
   // eslint-disable-next-line
   const [loading, setLoading] = useState(true);

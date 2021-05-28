@@ -25,7 +25,7 @@ function ProductExhi({ isPublic, isMain }) {
     }
 
     isPublic ? fetchAllProducts() : fetchUserProducts();
-  },[]);
+  },[isPublic]);
 
   const publicHighlight = products.slice(0, 3);
 
