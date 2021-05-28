@@ -20,12 +20,12 @@ Doarte's central idea is to bring together causes and projects that need a compe
 Web application built with React.js and integration with its own API.
 
 <div align="center">
-    <img src="/.github/page01.png" width="700" /> 
-    <img src="/.github/page02.png" width="700" /> 
-    <img src="/.github/page03.png" width="700" /> 
-    <img src="/.github/page04.png" width="700" />
-    <img src="/.github/page05.png" width="700" />  
-    <img src="/.github/page06.png"" width="700" /> 
+    <img src="/.github/page01.png/" width="700" /> 
+    <img src="/.github/page02.png/" width="700" /> 
+    <img src="/.github/page03.png/" width="700" /> 
+    <img src="/.github/page04.png/" width="700" />
+    <img src="/.github/page05.png/" width="700" />  
+    <img src="/.github/page06.png/"" width="700" /> 
 </div>
 
 
