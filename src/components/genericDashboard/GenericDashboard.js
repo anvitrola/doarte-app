@@ -1,10 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 //authentication context
 import { Context } from "../../contexts/AuthContext";
-
-//services
-import { getUser } from "./../../services/userServices";
 
 //components
 import TextBox from "../textBox/TextBox";
@@ -20,16 +17,9 @@ import ProductExhi from "../productExhi/ProductExhi";
 function GenericDashboard() {
   const { authenticated} = useContext(Context);
 
-  const [user, setUser] = useState({
-    name: "Default",
-    amount_money: 0,
-  });
 
   useEffect(() => {
-    async function fetchUser() {
-      setUser(await getUser());
-    }
-    fetchUser();
+    localStorage.getItem("Username");
   }, []);
 
   return (
@@ -38,7 +28,7 @@ function GenericDashboard() {
         title={
           !authenticated
             ? "Doarte: A arte de doar."
-            : `Bem vindo de volta, ${localStorage.getItem("Username")}!`
+            : `Bem vindo(a), ${localStorage.getItem("Username")}!`
         }
         subtitle={
           "O Doarte surgiu da crença que atitudes individuais podem impactar, imensamente, no coletivo. Você pode ser a mudança que gostaria de ver no mundo e estar aqui é um passo para esse objetivo."

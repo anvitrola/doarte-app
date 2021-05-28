@@ -76,6 +76,7 @@ function TinyUpdate({ id }) {
 
     </Form>
       <ModalTemplate isDelete={true} text={"deletar vaquinha"}>
+        <h5>Você tem certeza?</h5>
         <DeleteButton type={"button"} onClick={handleDelete} >Deletar vaquinha</DeleteButton>
         
       </ModalTemplate>

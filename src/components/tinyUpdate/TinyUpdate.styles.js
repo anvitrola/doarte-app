@@ -25,5 +25,11 @@ export const DeleteButton = styled.button`
     border: none;
     border-radius: 50px;
     background: var(--red);
+
+    h5{
+      font-family: 'Montserrat', sans-serif;
+      color: var(--gray);
+    }
 }
+
 `;

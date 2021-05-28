@@ -2,6 +2,9 @@
 import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 
+//history
+import history from '../../history';
+
 //api services
 import { updateUser } from "./../../services/userServices";
 import { createProduct } from "../../services/productServices";
@@ -25,8 +28,8 @@ function PostAndPatch({ isUpdate }) {
 
   const handleUpdate = async (data) => {
     await updateUser(data);
-    
-    handleUser();
+    await handleUser();
+    history.push('/explore');
   
    
   }

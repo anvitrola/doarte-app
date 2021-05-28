@@ -27,23 +27,9 @@ function TinyForm({ isDelete, id }) {
     handleLogout();
   };
 
-<<<<<<< HEAD
   const handleDonation = async (value) => {
     await donation(value, id);
     handleUser();
-=======
-  const handleDonation = (value) => {
-    donation(value, id).then((response) => {
-      if (response === undefined) {
-        alert(
-          "Operação não concluída. Verifique o valor ou você não pode doar para si mesmo!"
-        );
-      } else {
-        alert("Doação realizada com sucesso!");
-      }
-    });
-    history.push("/explore");
->>>>>>> 393e408f7741409a6c3326ebeffc74dbfba10d95
   };
 
   const onSubmit = (data) => {

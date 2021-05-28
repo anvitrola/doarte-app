@@ -43,6 +43,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+h5 {
+  font-size: 1.3rem;
+}
+
 button {
   cursor: pointer;
 }

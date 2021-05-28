@@ -109,7 +109,7 @@ export const deleteUser = async () => {
     }
   })
   .then(function (response) {
-    alert(response);
+    alert(response.data.message);
   })
   .catch(function (error) {
     alert(error.response.data.message);

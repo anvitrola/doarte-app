@@ -1,15 +1,9 @@
-//react
-import { useState, useEffect } from "react";
-
 //icons
 import { IconContext } from "react-icons";
 import { FaPiggyBank } from "react-icons/fa";
 
 //components
 import PostAndPatch from "../postAndPatch/PostAndPatch";
-
-//services
-import { getUser } from "./../../services/userServices";
 
 //image
 import Picture from "../../images/image11.png";
@@ -18,12 +12,6 @@ import Picture from "../../images/image11.png";
 import { Container, Greetings, DeleteArea } from "./FormArea.styles";
 import ModalTemplate from "../modal/Modal";
 import TinyForm from "../tinyForm/TinyForm";
-
-function FormArea({ profile }) {
-  const [user, setUser] = useState({
-    name: "Default",
-    amount_money: 0,
-  });
 
 function FormArea({profile}) {
     
@@ -57,5 +45,5 @@ function FormArea({profile}) {
     </Container>
   );
 }
-}
+
 export default FormArea
