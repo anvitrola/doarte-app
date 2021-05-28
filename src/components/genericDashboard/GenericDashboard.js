@@ -38,7 +38,7 @@ function GenericDashboard() {
         title={
           !authenticated
             ? "Doarte: A arte de doar."
-            : `Bem vindo(a) de volta, ${user.name}!`
+            : `Bem vindo(a), ${user.name}!`
         }
         subtitle={
           "O Doarte surgiu da crença que atitudes individuais podem impactar, imensamente, no coletivo. Você pode ser a mudança que gostaria de ver no mundo e estar aqui é um passo para esse objetivo."
@@ -58,7 +58,7 @@ function GenericDashboard() {
       />
 
       <Highlights>
-        {authenticated ? <ProductExhi /> : <ProductExhi isPublic={true} />}
+        {authenticated ? <ProductExhi /> : <ProductExhi isPublic={true} isMain={true}/>}
       </Highlights>
 
       <Products>

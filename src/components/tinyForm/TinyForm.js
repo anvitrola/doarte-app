@@ -1,12 +1,12 @@
 //hooks
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import history from '../../history';
 
 //components
 import DefaultButton from "../buttons/DefaultButton";
 import FormField from "../formField/FormField";
 import TextBox from "../textBox/TextBox";
-
 
 //styled components
 import { Form } from "./TinyForm.styles";
@@ -29,7 +29,11 @@ function TinyForm({ isDelete, id }) {
   };
 
   const handleDonation = (value) => {
-    donation(value, id).then((response) => alert(response));
+    donation(value, id)
+    .then((response) => {
+      alert(response);
+    });
+    history.push('/explore');
   };
 
   const onSubmit = (data) => {

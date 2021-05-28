@@ -31,3 +31,9 @@ export const Cards = styled.div`
     margin: 0 auto;
   }
 `;
+
+export const NoContent = styled.h3
+`
+  color: var(--orange);
+  width: 50%;
+`
