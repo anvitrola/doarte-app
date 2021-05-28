@@ -23,10 +23,10 @@ Web application built with React.js and integration with its own API.
       
 
 <div align="center">
-    <img src="https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif" width="500" height="400" />
+    <img src="https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif" width="400" height="400" />
 
    </div>
-## ✨ Technologies
+##✨ Technologies
 
 - [React.js](https://reactjs.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
