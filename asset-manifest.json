@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/anvitrola/doarte-app/static/css/main.32e9b0d4.chunk.css",
+    "main.js": "/anvitrola/doarte-app/static/js/main.a512e24b.chunk.js",
+    "main.js.map": "/anvitrola/doarte-app/static/js/main.a512e24b.chunk.js.map",
+    "runtime-main.js": "/anvitrola/doarte-app/static/js/runtime-main.bff834ba.js",
+    "runtime-main.js.map": "/anvitrola/doarte-app/static/js/runtime-main.bff834ba.js.map",
+    "static/css/2.984c9f37.chunk.css": "/anvitrola/doarte-app/static/css/2.984c9f37.chunk.css",
+    "static/js/2.1f50f9d0.chunk.js": "/anvitrola/doarte-app/static/js/2.1f50f9d0.chunk.js",
+    "static/js/2.1f50f9d0.chunk.js.map": "/anvitrola/doarte-app/static/js/2.1f50f9d0.chunk.js.map",
+    "index.html": "/anvitrola/doarte-app/index.html",
+    "static/css/2.984c9f37.chunk.css.map": "/anvitrola/doarte-app/static/css/2.984c9f37.chunk.css.map",
+    "static/css/main.32e9b0d4.chunk.css.map": "/anvitrola/doarte-app/static/css/main.32e9b0d4.chunk.css.map",
+    "static/js/2.1f50f9d0.chunk.js.LICENSE.txt": "/anvitrola/doarte-app/static/js/2.1f50f9d0.chunk.js.LICENSE.txt",
+    "static/media/404page.c5dbf26b.png": "/anvitrola/doarte-app/static/media/404page.c5dbf26b.png",
+    "static/media/augusto.38a3a019.jpeg": "/anvitrola/doarte-app/static/media/augusto.38a3a019.jpeg",
+    "static/media/circle.d3e7d4aa.png": "/anvitrola/doarte-app/static/media/circle.d3e7d4aa.png",
+    "static/media/daniel.ea7d7588.jpeg": "/anvitrola/doarte-app/static/media/daniel.ea7d7588.jpeg",
+    "static/media/githubimg.56aecad3.png": "/anvitrola/doarte-app/static/media/githubimg.56aecad3.png",
+    "static/media/googleimg.921239e7.png": "/anvitrola/doarte-app/static/media/googleimg.921239e7.png",
+    "static/media/image01.4706398b.png": "/anvitrola/doarte-app/static/media/image01.4706398b.png",
+    "static/media/image09.d974a538.png": "/anvitrola/doarte-app/static/media/image09.d974a538.png",
+    "static/media/image11.1dabe05d.png": "/anvitrola/doarte-app/static/media/image11.1dabe05d.png",
+    "static/media/logo-doarte.be40211f.png": "/anvitrola/doarte-app/static/media/logo-doarte.be40211f.png",
+    "static/media/mappoints.4d407055.png": "/anvitrola/doarte-app/static/media/mappoints.4d407055.png",
+    "static/media/microsoftimg.13681a0b.png": "/anvitrola/doarte-app/static/media/microsoftimg.13681a0b.png",
+    "static/media/styles.css": "/anvitrola/doarte-app/static/media/revicons.e8746a62.woff",
+    "static/media/stone.72d270d2.png": "/anvitrola/doarte-app/static/media/stone.72d270d2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bff834ba.js",
+    "static/css/2.984c9f37.chunk.css",
+    "static/js/2.1f50f9d0.chunk.js",
+    "static/css/main.32e9b0d4.chunk.css",
+    "static/js/main.a512e24b.chunk.js"
+  ]
+}
