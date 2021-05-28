@@ -23,7 +23,7 @@ Web application built with React.js and integration with its own API.
       
 
 <div align="center">
-    <img src="https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif" width="600" height="300" />
+    <img src="https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif" width="600" height="600" />
 
    </div>
 ## ✨ Technologies
