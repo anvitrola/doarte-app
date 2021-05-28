@@ -34,18 +34,18 @@ Web application built with React.js and integration with its own API.
 - [Styled-components](https://styled-components.com/docs/basics#getting-started)
 - [Axios](https://www.npmjs.com/package/axios)
 
-# Requeriments
+## Requeriments
 
 - [Git](https://git-scm.com/) installed
 - [Node](https://node.js.org/) installed
 - Npm or [Yarn](https://yarnpkg.com/) installed
 
-# Initializing the app
+## Initializing the app
 
 - Run `npm install` or `yarn install`.
 - Run `yarn dev` and access `http://localhost:3000`
 
-# Contributors
+## Contributors
 
 - [Ana Vitória Viana](https://github.com/anvitrola)
 
@@ -55,7 +55,6 @@ Web application built with React.js and integration with its own API.
 
 - [Peter Silva](https://github.com/petersilvahs)
 
-<br>
 
 <div align="center">
   <h1>Open Source</h1>
