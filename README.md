@@ -20,13 +20,13 @@ Doarte's central idea is to bring together causes and projects that need a compe
 
 Web application built with React.js and integration with its own API.
 
-      
+![alt text](https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif "Logo Title Text 1")
 
 <div align="center">
     <img src="https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif" width="400" height="400" />
-
-   </div>
-##✨ Technologies
+</div>
+   
+## ✨ Technologies
 
 - [React.js](https://reactjs.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
