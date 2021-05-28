@@ -13,7 +13,7 @@
 
 </div>
 
-# About
+## 💻 Project
 
 Doarte's central idea is to bring together causes and projects that need a competent and integrated intermediary.
 
@@ -28,25 +28,28 @@ Web application built with React.js and integration with its own API.
     <img src="/.github/page06.png"" width="700" /> 
 </div>
 
-# Techs
+  ![alt text](https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif "Logo Title Text 1")
+
+   
+## ✨ Technologies
 
 - [React.js](https://reactjs.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Styled-components](https://styled-components.com/docs/basics#getting-started)
 - [Axios](https://www.npmjs.com/package/axios)
 
-# Requeriments
+## Requeriments
 
 - [Git](https://git-scm.com/) installed
 - [Node](https://node.js.org/) installed
 - Npm or [Yarn](https://yarnpkg.com/) installed
 
-# Initializing the app
+## Initializing the app
 
 - Run `npm install` or `yarn install`.
 - Run `yarn dev` and access `http://localhost:3000`
 
-# Contributors
+## Contributors
 
 - [Ana Vitória Viana](https://github.com/anvitrola)
 
@@ -56,7 +59,6 @@ Web application built with React.js and integration with its own API.
 
 - [Peter Silva](https://github.com/petersilvahs)
 
-<br>
 
 <div align="center">
   <h1>Open Source</h1>
