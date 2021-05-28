@@ -28,7 +28,6 @@ Web application built with React.js and integration with its own API.
     <img src="/.github/page06.png"" width="700" /> 
 </div>
 
-  ![alt text](https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif "Logo Title Text 1")
 
    
 ## ✨ Technologies
