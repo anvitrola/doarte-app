@@ -1,5 +1,4 @@
 <div align="center">
-      <h1></h1>
     <img src="/.github/logo.png" width="400"/>  
     <h1></h1>
     <p>Doarte | A arte de doar  </p>    
@@ -10,7 +9,7 @@
         <a href="https://nlw4moveit-p6fhlbbtu-brunosampaiodev.vercel.app/">
         <a href=""><img src="https://img.shields.io/badge/licence-MIT-red" alt="Repo License" /></a>
     </p>     
-       <hr />    
+       <hr />
 
 </div>
 
@@ -22,9 +21,11 @@ Web application built with React.js and integration with its own API.
 
 <div align="center">
     <img src="/.github/page01.png" width="700" /> 
-    <img src="/" width="700" />
-    <img src="/" width="700" /> 
-    <img src="" width="700" /> 
+    <img src="/.github/page02.png" width="700" /> 
+    <img src="/.github/page03.png" width="700" /> 
+    <img src="/.github/page04.png" width="700" />
+    <img src="/.github/page05.png" width="700" />  
+    <img src="/.github/page06.png"" width="700" /> 
 </div>
 
   ![alt text](https://media.giphy.com/media/TTXxq2pcvNc3Wt9tiH/giphy.gif "Logo Title Text 1")

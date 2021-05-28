@@ -9555,6 +9555,11 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.9.tgz"
   "version" "6.0.9"
 
+"react-hook-form@^7.6.8":
+  "integrity" "sha512-Ri+XImhd/2bY4rV+aME0ij3G1L3cyhAErlhKmhDkgJx3NjCNQ+5et2Y1qp87mSDIyZq5UOFtRm0tDXEaTP3DPw=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.6.8.tgz"
+  "version" "7.6.8"
+
 "react-icons@^4.2.0":
   "integrity" "sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.2.0.tgz"
@@ -9717,7 +9722,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16.8 || ^17", "react@^17.0.2":
+"react@^17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
