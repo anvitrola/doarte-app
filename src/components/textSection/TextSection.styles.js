@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const TextContainer = styled.section`
   width: 85%;
-  margin-top: 7rem;
   grid-area: text;
   justify-self: center;
   display: grid;
