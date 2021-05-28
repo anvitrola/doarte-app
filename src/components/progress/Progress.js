@@ -4,7 +4,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import { Bar } from './Progress.styles';
 
 function Progress({amount, current}) {
-    const percent = (current * 100)/amount;
+    const percent = Math.floor((current * 100)/amount);
 
     return (
         <Bar>

@@ -15,16 +15,16 @@ export const Main = styled.main`
     "one one"
     "two two";
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 5rem 15rem repeat(2, 2fr);
+  grid-template-rows: 10rem 10rem auto auto;
   border: 1px solid var(--white);
   border-radius: 10px;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
 
   img {
     grid-area: pic;
     align-self: center;
     justify-self: center;
-    margin: 12rem 0 0 12rem;
+    margin: 12rem 0 0 15rem;
     width: 50%;
     transform: translate(-50%, -50%);
     animation: rotate 12s infinite linear;
@@ -65,9 +65,10 @@ export const Main = styled.main`
 `;
 
 export const Highlights = styled.section`
-  width: 87%;
+  width: 95%;
   grid-area: one;
   justify-self: center;
+
   @media (max-width: 767px) {
     width: 80%;
     display: flex;
@@ -78,14 +79,13 @@ export const Highlights = styled.section`
 `;
 
 export const Products = styled.section`
-  width: 87%;
+  width: 95%;
   grid-area: two;
   justify-self: center;
   text-align: center;
 
   @media (max-width: 767px) {
     width: 100%;
-   
   }
 `;
 

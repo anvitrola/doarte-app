@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import React, { useContext, useRef, useState } from "react";
+
+//hooks
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
 
 //services to access api
 import { createUser, loginUser } from "../../services/userServices";
@@ -21,13 +24,9 @@ function AdForm({ signUp }) {
 
   const [err,setErr] = useState(false);
 
-  const formElement = useRef(null);
+  const { register, handleSubmit } = useForm();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  
-    const user = takeValue();
-   
+  const onSubmit = (user) => {
     if(signUp){
       createUser(user)
       .then(response => {
@@ -38,31 +37,15 @@ function AdForm({ signUp }) {
     else {
       loginUser(user)
       .then((data) => {
-        console.log(data)
         if(data === undefined)setErr(true)
         else handleAuth(data.acessToken, data.id);
       })
     }
   };
 
-  function takeValue(){
-    const form = formElement.current;
-
-    let user =
-    {
-      name: form['name'].value,
-      email: form['email'].value,
-      password: form['password'].value,
-    }
-   
-    return user;
-  }
-
-  
-
   return (
     <Container>
-      <Form method="POST" onSubmit={handleSubmit} ref={formElement}>
+      <Form method="POST" onSubmit={handleSubmit(onSubmit)}>
         <Logo
           src={BrandLogo}
           alt="Logotimo do site Doarte. Um círculo composto por várias mãos"
@@ -73,12 +56,12 @@ function AdForm({ signUp }) {
 
         <Fields>
           {signUp && (
-            <FormField text={"Nome"} id={"name"} type={"text"}  />
+            <FormField text={"Nome"} register={register} name={"name"} type={"text"} required />
           )}
 
 
-          <FormField text={"Email"} id={"email"} type={"email"}  />
-          <FormField text={"Senha"} id={"password"} type={"password"}  />
+          <FormField text={"Email"} register={register} name={"email"} type={"email"} required />
+          <FormField text={"Senha"} register={register} name={"password"} type={"password"} required />
 
 
         </Fields>

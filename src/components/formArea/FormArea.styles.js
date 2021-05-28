@@ -18,7 +18,8 @@ export const Container = styled.main`
   img {
     grid-area: image;
     align-self: center;
-    width: 80%;
+    justify-self: center;
+    width: 500px;
   }
 
   @media (max-width: 767px) {
@@ -28,7 +29,7 @@ export const Container = styled.main`
     width: 100%;
 
     img {
-      display: none;
+      width: 50%;
     }
   }
 `;

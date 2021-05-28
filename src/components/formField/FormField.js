@@ -1,10 +1,10 @@
 import { Label, Input } from "./FormField.styles";
 
-function FormField({text, id, type, holder}) {
+function FormField({text, name, register, type, holder, required}) {
     return (
         <>
-            <Label htmlFor={id}>{text}</Label>
-            <Input type={type} id={id}  placeholder={holder}/>
+            <Label htmlFor={name}>{text}</Label>
+            <Input type={type} name={name} {...register(name,{required})}  placeholder={holder}/>
         </>
     )
 }

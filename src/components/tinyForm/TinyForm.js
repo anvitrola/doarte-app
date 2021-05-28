@@ -1,5 +1,7 @@
-//react
-import { useContext, useRef } from "react";
+//hooks
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
+import history from '../../history';
 
 //components
 import DefaultButton from "../buttons/DefaultButton";
@@ -14,38 +16,43 @@ import { Context } from "../../contexts/AuthContext";
 
 //services
 import { deleteUser, donation } from "./../../services/userServices";
-import { DeleteButton } from "../tinyUpdate/TinyUpdate.styles";
 
 function TinyForm({ isDelete, id }) {
-  const formElement = useRef(null);
+
+  const { register, handleSubmit } = useForm();
+
   const { handleLogout } = useContext(Context);
-  const handleDelete = (event) => {
-    event.preventDefault();
+
+  const handleDelete = () => {
     deleteUser();
     handleLogout();
   };
-  const handleDonation = (event) => {
-    event.preventDefault();
 
-    const form = formElement.current;
-    const value = {
-      donation_value: Number(form["donation_value"].value),
-    };
-    donation(value, id).then((response) => alert(response));
+  const handleDonation = (value) => {
+    donation(value, id)
+    .then((response) => {
+      alert(response);
+    });
+    history.push('/explore');
   };
+
+  const onSubmit = (data) => {
+    isDelete? handleDelete():handleDonation(data);
+  }
   return (
     <Form
       smaller={isDelete}
       metod={isDelete ? "PATCH" : "POST"}
-      ref={formElement}
-      onSubmit={isDelete ? handleDelete : handleDonation}
+      onSubmit={handleSubmit(onSubmit)}
     >
       {!isDelete && (
         <FormField
           text="Qual valor você gostaria de doar para o projeto?"
           type={"number"}
-          id={"donation_value"}
+          register={register}
+          name={"donation_value"}
           holder={"Mínimo de 25 moedas"}
+          required
         />
       )}
 
