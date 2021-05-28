@@ -28,10 +28,20 @@ export const Section = styled.section`
     margin-top: 1.5rem;
     justify-self: end;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Stone = styled.img`
   width: 300px;
+  @media (max-width: 768px) {
+    width: 60%;
+  }
 `;
 
 export const Resilia = styled.img`
