@@ -98,7 +98,7 @@ $ npm start
 
 <p>Precisa rodar o back-end? Não, o nosso servidor está rodando no Heroku e, portanto, não há necessidade. No entanto, caso você queira, <a href="https://github.com/anvitrola/doarte-api">aqui</a> há uma explicação de como rodar o nosso back-end localmente. 😋🌸</p>
 
----
+
 
 ## Desenvolvedores responsáveis 👩🏻👨🏻👨🏻👨🏻⚜
 
@@ -140,7 +140,7 @@ $ npm start
   </tr>     
 </table>
 
----
+
 
 </br>
 <div align="center">
