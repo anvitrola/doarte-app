@@ -74,7 +74,7 @@
 
 - [Git](https://git-scm.com/) instalado
 - [Node.Js](https://node.js.org/) instalado
-- Npm ou [Yarn](https://yarnpkg.com/) instalado
+- [Npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) instalado
 - Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ### 🐙Rodando o projeto
