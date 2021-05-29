@@ -100,13 +100,43 @@ $ npm start
 
 ## Desenvolvedores responsáveis 👩🏻👨🏻👨🏻👨🏻⚜
 
-- [Ana Vitória Viana](https://github.com/anvitrola)
 
-- [Elivelton Souza](https://github.com/EliveltonSouzaDev)
-
-- [Rafael Almeida](https://github.com/RafaelVi)
-
-- [Peter Silva](https://github.com/petersilvahs)
+<table>      
+  <tr>    
+    <td align="center">
+      <a href="https://github.com/anvitrola">
+        <img src="https://avatars.githubusercontent.com/u/62806299" width="100px;" alt="Foto de perfil do Github"/><br>
+        <sub>
+          <b>Ana Vitória Viana</b>
+        </sub>
+      </a>
+    </td>    
+    <td align="center">
+      <a href="https://github.com/RafaelVi">
+        <img src="https://avatars3.githubusercontent.com/u/43658933" width="100px;" alt="Foto de perfil do Github"/><br>
+        <sub>
+          <b>Rafael Almeida</b>
+        </sub>
+      </a>
+    </td> 
+    <td align="center">
+      <a href="https://github.com/EliveltonSouzaDev">
+        <img src="https://avatars.githubusercontent.com/u/67668057" width="100px;" alt="Foto de perfil do Github"/><br>
+        <sub>
+          <b>Elivelton Souza</b>
+        </sub>
+      </a>
+    </td>         
+    <td align="center">
+      <a href="https://github.com/petersilvahs">
+        <img src="https://avatars.githubusercontent.com/u/75394512" width="100px;" alt="Foto de perfil do Github"/><br>
+        <sub>
+          <b>Peter Silva</b>
+        </sub>
+      </a>
+    </td>      
+  </tr>     
+</table>
 
 </br>
 <div align="center">
