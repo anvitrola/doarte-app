@@ -31,7 +31,7 @@
 <p>A aplicação é uma Single Page Application (SPA), foi construída com React.js e tem integração com <a href="https://github.com/anvitrola/doarte-api">API própria</a>.
     Para visualizar o projeto há duas opções:
     <ul>
-    <li>Clique <a href="https://anvitrola.github.io">aqui</a> para acessar a aplicação via web. 🔗 (versão instável)</li>
+    <li>Clique <a href="https://doarte-app.herokuapp.com/">aqui</a> para acessar a aplicação via web. 🔗 (versão instável)</li>
     <li>Para rodá-la localmente em sua máquina leia atentamente o fim desse arquivo 😉.</li>
    <ul>
 </p>
