@@ -137,7 +137,7 @@ $ npm start
     </td>      
   </tr>     
 </table>
-
+---
 </br>
 <div align="center">
     <img src="/.github/page01.png/" width="700" /> 
